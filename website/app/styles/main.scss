@@ -1,3 +1,9 @@
-* {
-	color: lightseagreen;
-}
+@import './configs/reset.scss';
+@import './configs/fonts.scss';
+@import './configs/variables.scss';
+@import './configs/typography.scss';
+@import './configs/global.scss';
+@import './configs/inputs.scss';
+@import './configs/scrollbar.scss';
+
+
