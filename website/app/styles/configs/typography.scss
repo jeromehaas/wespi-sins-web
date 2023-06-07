@@ -41,6 +41,13 @@ h1, h2, h3, h4, p, a, li, td {
 
 }
 
+.paragraph {
+	font-family: Messina-Sans, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5;
+}
+
 @media (max-width: 400px) {
 
 	.heading {
@@ -57,6 +64,10 @@ h1, h2, h3, h4, p, a, li, td {
 			font-size: 40px;
 		}
 
+	}
+
+	.paragraph {
+		font-size: 15px;
 	}
 
 }
