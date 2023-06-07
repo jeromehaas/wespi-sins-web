@@ -48,6 +48,16 @@ h1, h2, h3, h4, p, a, li, td {
 	line-height: 1.5;
 }
 
+.anchor {
+
+	&__label {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1.5;
+	}
+
+}
+
 @media (max-width: 400px) {
 
 	.heading {
