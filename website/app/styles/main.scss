@@ -1,3 +1,4 @@
+/* CONFIGS */
 @import './configs/reset.scss';
 @import './configs/fonts.scss';
 @import './configs/variables.scss';
@@ -5,3 +6,9 @@
 @import './configs/global.scss';
 @import './configs/inputs.scss';
 @import './configs/scrollbar.scss';
+
+/* ATOMS */
+@import '/components/01-atoms/heading/heading.scss';
+@import '/components/01-atoms/paragraph/paragraph.scss';
+@import '/components/01-atoms/anchor/anchor.scss';
+@import '/components/01-atoms/button/button.scss';
