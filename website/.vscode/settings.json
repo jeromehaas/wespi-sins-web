@@ -50,6 +50,7 @@
 	},
 
 	// GIT
-	"git.openRepositoryInParentFolders": "never"
+	"git.openRepositoryInParentFolders": "never",
+	"workbench.colorTheme": "GMK Olive Theme"
 
 }
