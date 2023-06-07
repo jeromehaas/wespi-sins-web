@@ -1,11 +1,10 @@
-import './globals.css'
+import './styles/main.scss'
 
 const RootLayout = ({ children }) => {
 
   return (
     <html lang="de">
       <body>
-				hello
 				{children}
 			</body>
     </html>
