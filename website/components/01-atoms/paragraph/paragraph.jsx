@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Paragraph = ({ className, children }) => {
+const Paragraph = ({ className = '', children }) => {
 
 	return (
 		<p className={ ` ${ className } paragraph` }>
@@ -13,10 +13,6 @@ const Paragraph = ({ className, children }) => {
 Paragraph.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
-};
-
-Paragraph.defaultProps = {
-	className: '',
 };
 
 export default Paragraph;

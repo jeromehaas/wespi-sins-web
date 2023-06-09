@@ -15,7 +15,7 @@
 
 	&__box {
 		width: 32px;
-		height: 22px;
+		height: 24px;
 		display: inline-block;
 		position: relative;
 		vertical-align: middle;
@@ -48,11 +48,11 @@
 	}
 	
 	&__inner::before {
-		top: -10px;
+		top: -8px;
 	}
 	
 	&__inner::after {
-		bottom: -10px;
+		bottom: -8px;
 	}
 	
 	
@@ -85,6 +85,20 @@
 			bottom: 0;
 			transform: rotate(-90deg);
 			transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+		}
+
+	}
+
+	@media (max-width: 350px) {
+
+		&__box {
+			width: 24px;
+		}
+	
+		&__inner,
+		&__inner::before,
+		&__inner::after {
+			width: 24px;
 		}
 
 	}

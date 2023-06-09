@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Hamburger = ({ className, isOpen, onClick }) => {
+const Hamburger = ({ className = '', isOpen = false, onClick = null }) => {
 
 	return (
 		<button className={ ` ${ className } hamburger hamburger--squeeze ${ isOpen ? 'hamburger--is-open' : '' } ` } type="button" aria-label="Hamburger" onClick={ onClick }>
@@ -16,12 +16,6 @@ Hamburger.propTypes = {
 	className: PropTypes.string,
 	isOpen: PropTypes.bool,
 	onClick: PropTypes.func,
-};
-
-Hamburger.defaultProps = {
-	className: '',
-	isOpen: false,
-	onClick: null,
 };
 
 export default Hamburger;
