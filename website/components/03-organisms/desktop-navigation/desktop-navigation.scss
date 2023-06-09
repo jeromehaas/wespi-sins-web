@@ -1,0 +1,30 @@
+.desktop-navigation {
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		height: 32px;
+	}
+
+	&__links, .links {
+
+		&__item {
+			margin-right: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 750px) {
+		display: none;	
+	}
+
+}
