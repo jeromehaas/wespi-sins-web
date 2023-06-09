@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-const Anchor = ({ className, children, href, onClick }) => {
+const Anchor = ({ className, children, href, onClick, hasArrow }) => {
 
 	return (
 		<Link className={ ` ${ className } anchor` } href={ href } onClick={ onClick }>
 			<span className="anchor__label">{ children }</span>
-			<svg className="anchor__icon icon" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M24 11.125L28.5 6.5L24 1.875M1.5 6.5L28.5 6.5L1.5 6.5Z" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-			</svg>
+			{ hasArrow ? (
+				<svg className="anchor__icon icon" width="30" height="13" viewBox="0 0 30 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M24 11.125L28.5 6.5L24 1.875M1.5 6.5L28.5 6.5L1.5 6.5Z" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+			) : null }
 		</Link>
 	);
 
@@ -19,12 +21,14 @@ Anchor.propTypes = {
 	children: PropTypes.node.isRequired,
 	href: PropTypes.string,
 	onClick: PropTypes.func,
+	hasArrow: PropTypes.bool,
 };
 
 Anchor.defaultProps = {
 	className: '',
 	href: '#',
 	onClick: null,
+	hasArrow: false,
 };
 
 export default Anchor;

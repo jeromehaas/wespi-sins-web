@@ -6,6 +6,7 @@
 	transition: all 0.2s ease;
 	cursor: pointer;
 	display: inline-block;
+	text-align: center;
 
 	&:hover, &:active, &:focus {
 		background-color: $brown-60;
