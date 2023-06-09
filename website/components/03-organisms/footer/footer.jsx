@@ -6,10 +6,10 @@ import Link from 'next/link';
 import Button from 'components/01-atoms/button/button';
 import Anchor from 'components/01-atoms/anchor/anchor';
 
-const Footer = ({ className }) => {
+const Footer = () => {
 
 	return (
-		<Section className={ `${ className } footer` }>
+		<Section className="footer">
 			<Image className="footer__logo" src="/logos/logo-wespi-sins-bw-full.png" width="300" height="300" alt="WESPI SINS Papeterie- und Bluemeparadies" />
 			<address className="footer__contact-details contact-details">
 				<Heading className="contact-details__heading" level="h4">WESPI SINS <br /> Papeterie- und Bluemeparadies</Heading>
