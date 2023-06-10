@@ -1,0 +1,20 @@
+.article {
+	max-width: 640px;
+
+	& .heading {
+		margin-bottom: 12px;
+	}
+
+	& .paragraph {
+		margin-bottom: 40px;
+	}
+
+	@media (max-width: 1050px ) {
+
+		& .paragraph {
+			margin-bottom: 32px;
+		}
+
+	}
+
+}
