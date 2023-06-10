@@ -6,6 +6,7 @@
 @import './configs/global.scss';
 @import './configs/inputs.scss';
 @import './configs/scrollbar.scss';
+@import './configs/animations.scss';
 
 /* ATOMS */
 @import '/components/01-atoms/heading/heading.scss';
@@ -17,6 +18,7 @@
 @import '/components/01-atoms/submit-button/submit-button.scss';
 @import '/components/01-atoms/action/action.scss';
 @import '/components/01-atoms/picture/picture.scss';
+@import '/components/01-atoms/markdown/markdown.scss';
 
 /* ORGANISMS */
 @import '/components/03-organisms/footer/footer.scss';
@@ -24,6 +26,7 @@
 @import '/components/03-organisms/desktop-navigation/desktop-navigation.scss';
 @import '/components/03-organisms/mobile-navigation/mobile-navigation.scss';
 @import '/components/03-organisms/start-intro/start-intro.scss';
+@import '/components/03-organisms/start-news/start-news.scss';
 
 /* LAYOUTS */
 @import '/components/04-layouts/section/section.scss';
