@@ -1,0 +1,39 @@
+.start-intro {
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 520px auto;
+		grid-column-gap: 32px;;
+	}
+
+	@media (max-width: 1300px) {
+
+		&__inner {
+			grid-template-columns: 320px auto;
+		}
+
+	}
+
+	@media (max-width: 1050px) {
+
+		&__inner {
+			grid-template-columns: 280px auto;
+		}
+
+	}
+
+	@media (max-width: 900px) {
+
+		&__inner {
+			grid-template-columns: auto;
+			grid-template-rows: auto auto;
+		}
+
+		&__spacer {
+			display: none;
+		}
+		
+	}
+
+
+}

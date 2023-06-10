@@ -1,7 +1,7 @@
 .mobile-navigation {
 	position: relative;
-	background: blue;
 	padding: 0 !important;
+	display: none;
 
 	&__bar, .bar {
 		padding: 0 32px;
@@ -110,7 +110,10 @@
 
 	&__placeholder {
 		height: 80px;
-		background-color: lightseagreen;
+	}
+
+	@media (max-width: 750px) {
+		display: block;
 	}
 
 	@media (max-width: 350px) {
