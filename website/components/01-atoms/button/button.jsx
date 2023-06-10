@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-const Button = ({ className, children, href, onClick }) => {
+const Button = ({ className = '', children = null, href = '#', onClick = null }) => {
 
 	return (
 		<Link className={ ` ${ className } button` } href={ href } onClick={ onClick }>
@@ -16,12 +16,6 @@ Button.propTypes = {
 	children: PropTypes.node.isRequired,
 	href: PropTypes.string,
 	onClick: PropTypes.func,
-};
-
-Button.defaultProps = {
-	className: '',
-	href: '#',
-	onClick: null,
 };
 
 export default Button;

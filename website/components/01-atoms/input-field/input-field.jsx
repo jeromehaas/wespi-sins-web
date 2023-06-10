@@ -1,7 +1,7 @@
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import PropTypes from 'prop-types';
 
-const InputField = ({ className, id, label, placeholder, type, register, validation, isRequired, errorText, errors }) => {
+const InputField = ({ className = '', id = '', label = '', placeholder = '', type = '', register = null, validation = null, isRequired = false, errorText = '', errors = [] }) => {
 
 	return (
 		<div className={ `${ className } input-field ${ errors && errors[id] ? 'input-field--error' : null }` }>
@@ -27,13 +27,6 @@ InputField.propTypes = {
 			message: PropTypes.string,
 		}),
 	}),
-};
-
-InputField.defaultProps = {
-	className: '',
-	isRequired: false,
-	errorText: '',
-	errors: [],
 };
 
 export default InputField;

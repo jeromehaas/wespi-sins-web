@@ -8,12 +8,17 @@
 
 	&__logo {
 		height: 32px;
+		width: auto;
+		z-index: 30;
+		position: relative;
 	}
 
 	&__links, .links {
 
 		&__item {
 			margin-right: 24px;
+			z-index: 30;
+			position: relative;
 
 			&:last-child {
 				margin-right: 0;
@@ -23,7 +28,7 @@
 
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 850px) {
 		display: none;	
 	}
 

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-const Anchor = ({ className, children, href, onClick, hasArrow }) => {
+const Anchor = ({ className = '', children = null, href = '#', onClick = null, hasArrow = false }) => {
 
 	return (
 		<Link className={ ` ${ className } anchor` } href={ href } onClick={ onClick }>
@@ -22,13 +22,6 @@ Anchor.propTypes = {
 	href: PropTypes.string,
 	onClick: PropTypes.func,
 	hasArrow: PropTypes.bool,
-};
-
-Anchor.defaultProps = {
-	className: '',
-	href: '#',
-	onClick: null,
-	hasArrow: false,
 };
 
 export default Anchor;
