@@ -1,0 +1,46 @@
+.bee {
+	padding: 64px 0 !important;
+	height: 160px;
+
+	&__inner, .inner {
+		padding: 0 32px 0 0;
+		position: relative;;
+		height: 480px !important;
+	}
+
+	&__image {
+		width: 320px;
+		height: auto;
+		display: block;
+		right: calc(100% - (320px + 32px));
+		position: absolute;;
+	}
+
+	@media (max-width: 900px) {
+
+		&__inner, .inner {
+			height: 360px !important;
+		}
+
+		&__image {
+			width: 240px;
+			right: calc(100% - (120px + 32px));
+		}
+
+	}
+
+	@media (max-width: 600px) {
+
+		&__inner {
+			padding: 0 16px 0 0;
+		}
+
+		&__image {
+			width: 240px;
+			right: calc(100% - (120px + 16px));
+		}
+
+
+	}
+
+}
