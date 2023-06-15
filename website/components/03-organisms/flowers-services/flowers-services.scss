@@ -1,0 +1,88 @@
+.flowers-services {
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 32px;
+		padding-bottom: 120px;
+	}
+
+	&__box, .box {
+		width: 100%;
+		height: 100%;
+
+		&__image {
+			width: 100%;
+			height: 480px;
+			display: block;
+			margin-bottom: 48px;
+		}
+
+		&__content, .content {
+			width: calc(100% - 104px);
+			margin-left: auto;
+		}
+
+	}
+
+	@media (max-width: 1000px) {
+
+		&__inner {
+			padding-bottom: 80px;
+		}
+
+		&__box, .box {
+
+			&__image {
+				height: 320px;
+			}
+
+			&__content, .content {
+				width: calc(100% - 48px);
+				margin-left: auto;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 850px) {
+
+		&__inner {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: auto auto;
+			grid-gap: 32px;
+			padding-bottom: 32px;
+		}
+
+		&__box, .box {
+			margin-bottom: 32px;
+
+			&__image {
+				height: 400px;
+				margin-bottom: 24px;
+			}
+
+			&__content, .content {
+				width: 100%;
+				margin-left: unset;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 600px) {
+
+		&__box, .box {
+
+			&__image {
+				height: 320px;
+			}
+
+		}
+
+	}
+
+}
