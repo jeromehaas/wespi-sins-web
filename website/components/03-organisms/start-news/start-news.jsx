@@ -70,7 +70,7 @@ const StartNews = () => {
 					<div className="item__inner">
 						<Action className="item__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
 						<div className="item__content content">
-							<Picture className="content__image animation--fade-in" src="/" alt="Adventausstellung" width={ 640 } height={ 400 } />
+							<Picture className="content__image animation--fade-in" src="/images/placeholder.png" alt="Adventausstellung" width={ 640 } height={ 400 } />
 							<Heading className="content__heading animation--fade-in" level="h2">Adventsausstellung vom 15. bis 19. November 2023</Heading>
 							<Markdown className="content__text animation--fade-in">
 								An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.
@@ -84,7 +84,7 @@ const StartNews = () => {
 					<div className="item__inner">
 						<Action className="item__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
 						<div className="item__content content">
-							<Picture className="content__image animation--fade-in" src="/" alt="Adventausstellung" width={ 640 } height={ 400 } />
+							<Picture className="content__image animation--fade-in" src="/images/placeholder.png" alt="Adventausstellung" width={ 640 } height={ 400 } />
 							<Heading className="content__heading animation--fade-in" level="h2">Sins im Advent</Heading>
 							<Markdown className="content__text animation--fade-in">
 								An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.

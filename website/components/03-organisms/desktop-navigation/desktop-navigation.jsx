@@ -8,7 +8,7 @@ const DesktopNavigation = () => {
 	return (
 		<Section className="desktop-navigation">
 			<Link className="desktop-navigation__logo-link" href="/">
-				<Image className="desktop-navigation__logo" src="/logos/logo-wespi-sins-bw-text-only.svg" width="300" height="300" alt="WESPI SINS Papeterie- und Bluemeparadies" />
+				<Image className="desktop-navigation__logo" src="/logos/logo-wespi-sins-bw-text-only.svg" width="300" height="300" alt="WESPI SINS Papeterie- und Bluemeparadies" priority />
 			</Link>
 			<div className="desktop-navigation__links links">
 				<Anchor className="links__item" href="/">Papeterie</Anchor>

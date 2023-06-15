@@ -116,6 +116,19 @@
 		display: block;
 	}
 
+	@media (max-width: 600px) {
+
+		&__bar, .bar {
+			padding: 0 16px;
+		}
+
+
+		&__menu, .menu {
+			padding: 32px 16px;
+		}
+
+	}
+
 	@media (max-width: 350px) {
 
 		&__bar, .bar {
