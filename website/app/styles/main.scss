@@ -21,6 +21,11 @@
 @import '/components/01-atoms/markdown/markdown.scss';
 @import '/components/01-atoms/hyperlink/hyperlink.scss';
 
+/* MOLECULES */
+@import '/components/02-molecules/slider/slider.scss';
+@import '/components/02-molecules/slider-navigation/slider-navigation.scss';
+
+
 /* ORGANISMS */
 @import '/components/03-organisms/footer/footer.scss';
 @import '/components/03-organisms/opening-times/opening-times.scss';
@@ -35,6 +40,7 @@
 @import '/components/03-organisms/flowers-impression/flowers-impression.scss';
 @import '/components/03-organisms/flowers-intro/flowers-intro.scss';
 @import '/components/03-organisms/flowers-services/flowers-services.scss';
+@import '/components/03-organisms/flowers-teaser-house-creations/flowers-teaser-house-creations.scss';
 
 /* LAYOUTS */
 @import '/components/04-layouts/section/section.scss';
