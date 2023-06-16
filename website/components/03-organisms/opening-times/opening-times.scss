@@ -3,8 +3,16 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 320px  440px auto;
+		grid-template-columns: 400px  440px auto;
 		grid-column-gap: 32px;
+	}
+
+	@media (max-width: 1350px) { 
+
+		&__inner, .intro {
+			grid-template-columns: 320px  440px auto;
+		}
+	
 	}
 
 	@media (max-width: 1050px) {

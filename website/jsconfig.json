@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
     "paths": {
-      "components/*": ["./app/components/*"],
+      "components/*": ["./components/*"],
       "styles/*": ["./app/styles/*"],
+      "hooks/*": ["./hooks/*"],
     }
   }
 }

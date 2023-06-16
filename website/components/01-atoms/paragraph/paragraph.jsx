@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const Paragraph = ({ className = '', children }) => {
+const Paragraph = ({ className = '', children = null, onClick = null }) => {
 
 	return (
-		<p className={ ` ${ className } paragraph` }>
+		<p className={ ` ${ className } paragraph` } onClick={ onClick }>
 			{ children }
 		</p>
 	);

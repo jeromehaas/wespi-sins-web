@@ -1,11 +1,14 @@
-import './styles/main.scss';
+import 'styles/main.scss';
+import Website from 'components/04-layouts/website/website';
 
 const RootLayout = ({ children }) => {
 
 	return (
 		<html lang="de">
 			<body>
-				{children}
+				<Website>
+					{children}
+				</Website>
 			</body>
 		</html>
 	);

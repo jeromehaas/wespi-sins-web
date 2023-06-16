@@ -44,10 +44,10 @@ const StartHero = () => {
 		const context = gsap.context(() => {
 			themeTimelineRef.current = gsap.timeline({ onComplete: updateTheme });
 			themeTimelineRef.current.call(() => { return playVideo(); }, null, 0);
-			themeTimelineRef.current.to('.start-hero .background-video__video', { autoAlpha: '0', duration: 0.2 }, 0);
+			themeTimelineRef.current.to('.start-hero .background-video__video', { autoAlpha: '0', duration: 0.3 }, 0);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { right: '100%', duration: 0 }, 0);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { left: '0%', duration: 0 }, 0);
-			themeTimelineRef.current.to(`.start-hero .background-video__video[data-theme="${ theme }"]`, { autoAlpha: 1, duration: 0.2 }, 0);
+			themeTimelineRef.current.to(`.start-hero .background-video__video[data-theme="${ theme }"]`, { autoAlpha: 1, duration: 0.3 }, 0);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { right: '0%', duration: 4 }, 0.5);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { left: '100%', duration: 1 }, 4.5);
 		}, startHeroRef);

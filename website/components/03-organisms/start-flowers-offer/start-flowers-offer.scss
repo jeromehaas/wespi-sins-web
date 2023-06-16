@@ -7,7 +7,7 @@
 	
 	&__intro, .intro {
 		display: grid;
-		grid-template-columns: 520px auto;
+		grid-template-columns: 400px auto;
 		grid-column-gap: 32px;
 		margin-bottom: 64px;
 	}
@@ -70,6 +70,10 @@
 
 	@media (max-width: 1350px) { 
 
+		&__intro, .intro {
+			grid-template-columns: 320px auto;
+		}
+
 		&__impressions, .impressions {
 			grid-template-rows: repeat(21, 48px);
 
@@ -93,14 +97,6 @@
 
 			}
 
-		}
-
-	}
-
-	@media (max-width: 1300px) {
-
-		&__intro, .intro {
-			grid-template-columns: 320px auto;
 		}
 
 	}
@@ -130,6 +126,14 @@
 
 			}
 
+		}
+
+	}
+
+	@media (max-width: 1050px) {
+
+		&__intro, .intro {
+			grid-template-columns: 240px auto;
 		}
 
 	}

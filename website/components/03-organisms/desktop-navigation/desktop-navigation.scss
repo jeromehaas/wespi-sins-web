@@ -28,6 +28,18 @@
 
 	}
 
+	@media (max-width: 900px) {
+
+		&__links, .links {
+
+			&__item {
+				margin-right: 16px;
+			}
+
+		}
+
+	}
+
 	@media (max-width: 850px) {
 		display: none;	
 	}

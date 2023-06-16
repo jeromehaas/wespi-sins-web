@@ -111,17 +111,24 @@ h1, h2, h3, h4, p, a, li, td, label, input {
 	
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
 
 	.heading {
 		hyphens: auto;
+	}
+
+}
+
+@media (max-width: 850px) {
+
+	.heading {
 	
 		&--h1 {
 			font-size: 32px;
 		}
 
 		&--h3 {
-			font-size: 32px;
+			font-size: 40px;
 		}
 
 	}
