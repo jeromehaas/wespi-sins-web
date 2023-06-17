@@ -1,0 +1,25 @@
+.about-us-quote {
+
+	&__inner {
+		padding-bottom: 80px;
+	}
+
+	&__content, .content {
+		max-width: 720px;
+		margin: 0 auto;
+
+		&__heading {
+			margin-bottom: 8px;
+		}
+
+	}
+
+	@media (max-width: 1050px) {
+
+		&__inner {
+			padding-bottom: 80px;
+		}
+
+	}
+
+}
