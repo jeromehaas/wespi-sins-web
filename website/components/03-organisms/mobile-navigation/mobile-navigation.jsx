@@ -45,6 +45,7 @@ const MobileNavigation = () => {
 		if (pathname === targetPath) {
 			toggleMenu();
 		} else {
+			toggleMenu();
 			router.push(targetPath);
 		};
 	};

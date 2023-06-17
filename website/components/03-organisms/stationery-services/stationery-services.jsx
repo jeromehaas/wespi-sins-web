@@ -27,7 +27,6 @@ const StationeryServices = () => {
 			</div>
 		</Section>
 	);
-
 };
 
 export default StationeryServices;
