@@ -10,17 +10,20 @@ import SliderNavigation from 'components/02-molecules/slider-navigation/slider-n
 
 const FlowersTeaserHouseCreations = () => {
 
-	// DEFINE IMPRESSIONS
+	// DEFINE IMAGES
 	const images = [
-		{ id: 1, src: 'https://picsum.photos/id/63/1920/1080', alt: 'Placeholder' },
-		{ id: 2, src: 'https://picsum.photos/id/61/1920/1080', alt: 'Placeholder' },
-		{ id: 3, src: 'https://picsum.photos/id/96/1080/1350', alt: 'Placeholder' },
-		{ id: 4, src: 'https://picsum.photos/id/107/1920/1080', alt: 'Placeholder' },
-		{ id: 5, src: 'https://picsum.photos/id/125/1080/1350', alt: 'Placeholder' },
+		{ id: 1, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
+		{ id: 2, src: '/images/placeholders/placeholder-portrait.png', width: 1080, height: 1350, alt: 'Placeholder' },
+		{ id: 3, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
+		{ id: 4, src: '/images/placeholders/placeholder-portrait.png', width: 1080, height: 1350, alt: 'Placeholder' },
+		{ id: 5, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
 	];
 
 	// BRING IN SLIDER
-	const sliderController = useSlider({ images });
+	const sliderController = useSlider({
+		images: images,
+		direction: 'rtl',
+	});
 
 	// SETUP REFS
 	const flowersTeaserHouseCreationsRef = useRef();

@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 
-const useSlider = ({ images }) => {
+const useSlider = ({ images, direction }) => {
 
 	// SETUP STATE
 	const [counter, setCounter] = useState(1);
@@ -18,6 +18,7 @@ const useSlider = ({ images }) => {
 	const handleTouchStart = (e) => {
 		setTouchEnd(0);
 		setTouchStart(e.targetTouches[0].clientX);
+		setUserHasInteracted(true);
 	};
 
 	// HANDLE TOUCH MOVE
@@ -31,14 +32,18 @@ const useSlider = ({ images }) => {
 		const distance = touchStart - touchEnd;
 		const isRightSwipe = distance > 50;
 		const isLeftSwipe = distance < -50;
-		if (viewportWidth >= 950) {
+		if (viewportWidth >= 950 && direction === 'rtl') {
 			if (isLeftSwipe && (counter <= images.length - 1)) setCounter((value) => { return value + 1; });
 			if (isRightSwipe && (counter > 1)) setCounter((value) => { return value - 1; });
-		} else {
-			if (isRightSwipe && (counter <= images.length - 1)) setCounter((value) => { return value + 1; });
+		};
+		if (viewportWidth >= 950 && direction === 'ltr') {
 			if (isLeftSwipe && (counter > 1)) setCounter((value) => { return value - 1; });
+			if (isRightSwipe && (counter <= images.length - 1)) setCounter((value) => { return value + 1; });
+		};
+		if (viewportWidth < 950) {
+			if (isLeftSwipe && (counter > 1)) setCounter((value) => { return value - 1; });
+			if (isRightSwipe && (counter <= images.length - 1)) setCounter((value) => { return value + 1; });
 		}
-		setUserHasInteracted(true);
 	};
 
 	// HANDLE JUMP
@@ -95,6 +100,7 @@ const useSlider = ({ images }) => {
 		viewportWidth,
 		counter,
 		images,
+		direction,
 	};
 
 };

@@ -13,11 +13,17 @@ const Slider = ({ className = '', sliderController = null }) => {
 	useEffect(() => {
 		gsap.context(() => {
 			sliderTimelineRef.current = gsap.timeline();
-			if (sliderController.viewportWidth && sliderController.viewportWidth >= 950) {
+			if (sliderController.viewportWidth && sliderController.viewportWidth >= 950 && sliderController.direction === 'rtl') {
 				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { left: '0%' }, 0);
 				sliderTimelineRef.current.to(`.slider__item:nth-child(-n+${ sliderController.counter })`, { left: '0%' }, 0);
 				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { left: 'calc(-100% - 120px)' }, 0);
 				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { left: 'calc(-200% - 120px)' }, 0);
+			}
+			if (sliderController.viewportWidth && sliderController.viewportWidth >= 950 && sliderController.direction === 'ltr') {
+				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { right: '0%' }, 0);
+				sliderTimelineRef.current.to(`.slider__item:nth-child(-n+${ sliderController.counter })`, { right: '0%' }, 0);
+				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { right: 'calc(-100% - 120px)' }, 0);
+				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { right: 'calc(-200% - 120px)' }, 0);
 			}
 			if (sliderController.viewportWidth && sliderController.viewportWidth < 950) {
 				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { right: '0%' }, 0);
@@ -29,10 +35,10 @@ const Slider = ({ className = '', sliderController = null }) => {
 	}, [sliderController.counter]);
 
 	return (
-		<div className={ `${ className } slider ` } onTouchStart={ sliderController.handleTouchStart } onTouchMove={ sliderController.handleTouchMove } onTouchEnd={ sliderController.handleTouchEnd } ref={ sliderRef }>
+		<div className={ `${ className } slider slider--${ sliderController.direction }` } onTouchStart={ sliderController.handleTouchStart } onTouchMove={ sliderController.handleTouchMove } onTouchEnd={ sliderController.handleTouchEnd } ref={ sliderRef }>
 			{ sliderController.images.map((image) => {
 				return (
-					<Picture className="slider__item" src={ image.src } key={ image.id } alt={ image.alt } />
+					<Picture className="slider__item" src={ image.src } key={ image.id } alt={ image.alt } width={ image.width } height={ image.height } />
 				);
 			})}
 		</div>

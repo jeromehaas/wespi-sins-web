@@ -19,7 +19,7 @@ const StartStationeryOffer = () => {
 			<div className="start-stationery⁻offer__impressions impressions">
 				<div className="impressions__item item">
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholder.png" />
+						<Picture className="item__image" src="/images/placeholders/placeholder-portrait.png" />
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Schule</Heading>
@@ -32,7 +32,7 @@ const StartStationeryOffer = () => {
 						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholder.png" />
+						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />
 					</div>
 				</div>
 			</div>
