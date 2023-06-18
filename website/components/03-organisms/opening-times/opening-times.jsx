@@ -6,14 +6,16 @@ const OpeningTimes = () => {
 
 	return (
 		<Section className="opening-times">
-			<Heading className="opening-times__heading" level="h2">ÖFFNUNGSZEITEN</Heading>
-			<div className="opening-times__item item">
-				<Heading className="opening-times__heading" level="h4">Montag, Dienstag, Donnerstag und Freitag</Heading>
-				<Paragraph className="opening-times__times">08.30 – 12.00, 14.00 – 18.30 Uhr</Paragraph>
-			</div>
-			<div className="opening-times__item item">
-				<Heading className="opening-times__heading" level="h4">Samstag</Heading>
-				<Paragraph className="opening-times__times">08.00 – 15.00 Uhr</Paragraph>
+			<Heading className="opening-times__heading" level="h2">Öffnungszeiten</Heading>
+			<div className="opening-times__content content">
+				<div className="content__item item">
+					<Heading className="item__heading" level="h4">Montag, Dienstag, Donnerstag und Freitag</Heading>
+					<Paragraph className="item__times">08.30 – 12.00, 14.00 – 18.30 Uhr</Paragraph>
+				</div>
+				<div className="content__item item">
+					<Heading className="item__heading" level="h4">Samstag</Heading>
+					<Paragraph className="item__times">08.00 – 15.00 Uhr</Paragraph>
+				</div>
 			</div>
 		</Section>
 	);

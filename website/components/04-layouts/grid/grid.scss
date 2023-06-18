@@ -1,19 +1,21 @@
-.about-us-quote {
+.grid {
+	position: fixed;
+	top: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	pointer-events: none;
+	z-index: 1000;
 
 	&__inner {
-		padding-bottom: 80px;
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-column-gap: 32px;
 	}
 
-	&__content, .content {
-		grid-column: 3 / span 8;
-
-		&__heading {
-			margin-bottom: 8px;
-		}
-
+	&__column {
+		background-color: transparentize($red-80, 0.9);
+		border-left: 0.5px solid red;
+		border-right: 0.5px solid red;
 	}
 
 	@media (max-width: 600px) {
@@ -21,7 +23,7 @@
 		&__inner {
 			grid-column-gap: 24px;
 		}
-
+		
 	}
 
 	@media (max-width: 400px) {
@@ -29,7 +31,7 @@
 		&__inner {
 			grid-column-gap: 16px;
 		}
-
+		
 	}
-	
+
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
 import Anchor from 'components/01-atoms/anchor/anchor';
@@ -29,7 +29,7 @@ const StartNews = () => {
 		gsap.context(() => {
 			announcementTimelineRef.current = gsap.timeline();
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"]`, { bottom: '0%' }, 0);
-			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .item__navigator`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .item__navigator`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 0.75);
+			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__navigator`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__navigator`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 0.75);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__image`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__image`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__heading `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__heading`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1.25);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__text`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__text`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1.5);
@@ -44,7 +44,7 @@ const StartNews = () => {
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__text', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__heading', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.25);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__image', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.5);
-			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .item__navigator', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.75);
+			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__navigator', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.75);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item', { bottom: '100%' });
 		}, startNewsRef);
 	};
@@ -68,22 +68,24 @@ const StartNews = () => {
 			<div className="start-news__announcements announcements">
 				<div className="announcements__item item" data-id="1">
 					<div className="item__inner">
-						<Action className="item__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
 						<div className="item__content content">
-							<Picture className="content__image animation--fade-in" src="/images/placeholders/placeholder-landscape.png" alt="Adventausstellung" width={ 640 } height={ 400 } />
-							<Heading className="content__heading animation--fade-in" level="h2">Adventsausstellung vom 15. bis 19. November 2023</Heading>
-							<Markdown className="content__text animation--fade-in">
-								An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.
-								Lassen Sie sich inspirieren!
-								Neben Blumen finden Sie bei uns weitere Geschenkideen für Weihnachten oder andere Gelegenheiten. Lassen Sie sich bei uns inspirieren und besuchen Sie uns an der Bahnhofstrasse 15. Wir freuen uns sehr.
-							</Markdown>
+							<div className="item__content content">
+								<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
+								<Picture className="content__image animation--fade-in" src="/images/placeholders/placeholder-landscape.png" alt="Adventausstellung" width={ 640 } height={ 400 } />
+								<Heading className="content__heading animation--fade-in" level="h2">Adventsausstellung vom 15. bis 19. November 2023</Heading>
+								<Markdown className="content__text animation--fade-in">
+									An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.
+									Lassen Sie sich inspirieren!
+									Neben Blumen finden Sie bei uns weitere Geschenkideen für Weihnachten oder andere Gelegenheiten. Lassen Sie sich bei uns inspirieren und besuchen Sie uns an der Bahnhofstrasse 15. Wir freuen uns sehr.
+								</Markdown>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div className="announcements__item item" data-id="2">
 					<div className="item__inner">
-						<Action className="item__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
 						<div className="item__content content">
+							<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
 							<Picture className="content__image animation--fade-in" src="/images/placeholders/placeholder-landscape.png" alt="Adventausstellung" width={ 640 } height={ 400 } />
 							<Heading className="content__heading animation--fade-in" level="h2">Sins im Advent</Heading>
 							<Markdown className="content__text animation--fade-in">

@@ -9,7 +9,6 @@ const StationeryTeaser = () => {
 	// RENDER
 	return (
 		<Section className="stationery-teaser">
-			<div className="stationery-teaser__spacer" />
 			<Article className="stationery-teaser__content content">
 				<Heading className="content__heading" level="h2">Bequem online bestellen</Heading>
 				<Paragraph className="content__text">Als bestehender Kunde können Sie jederzeit hier online bestellen. Die Bestellung ist innerhalb von maximal fünf Arbeitstagen bei uns abholbereit und wird mittels Monatsrechnung verrechnet. Falls Sie noch kein Kunde von uns sind, rufen Sie uns am besten an. </Paragraph>

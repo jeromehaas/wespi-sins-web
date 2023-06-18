@@ -54,7 +54,7 @@ const MobileNavigation = () => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			menuTimelineRef.current = gsap.timeline({ paused: true });
-			menuTimelineRef.current.to('.mobile-navigation .navigation__menu', { left: 0, duration: 0.5 }, 0);
+			menuTimelineRef.current.to('.mobile-navigation .navigation__menu', { right: '0%', duration: 0.5 }, 0);
 			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__links', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.5);
 			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__contact-details', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.75);
 			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__business-hours', { autoAlpha: 1, top: '0', duration: 0.5 }, 1);

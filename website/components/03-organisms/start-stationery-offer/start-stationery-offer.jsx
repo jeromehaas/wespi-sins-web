@@ -10,7 +10,6 @@ const StartStationeryOffer = () => {
 	return (
 		<Section className="start-stationery-offer">
 			<div className="start-stationery__intro intro">
-				<div className="intro__spacer" />
 				<Article className="intro__content content">
 					<Heading className="content__heading" level="h2">Angebot Papeterieparadies</Heading>
 					<Paragraph className="content__text">Ob Druckerpatrone, schöne Karten oder Geschenkverpackungen – in unserem Sortiment finden Sie das, was Sie brauchen.</Paragraph>

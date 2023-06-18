@@ -69,7 +69,7 @@ const StartHero = () => {
 					<Article className="item__content content content">
 						<Heading className="content__heading" level="h2">Papeterie</Heading>
 						<Paragraph className="content__text">Von Schul oder Büromaterial über Geschenkideen bis zu Grusskarten</Paragraph>
-						<Anchor className="content__link" href="#" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="content__link" href="/stationery" hasArrow>Mehr erfahren</Anchor>
 					</Article>
 					<div className="item__progress progress">
 						<figure className="progress__background" />
@@ -80,7 +80,7 @@ const StartHero = () => {
 					<Article className="item__content content content">
 						<Heading className="content__heading" level="h2">Blumen</Heading>
 						<Paragraph className="content__text">Freude bereiten mit Geschenken aus der Natur.</Paragraph>
-						<Anchor className="content__link" href="#" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="content__link" href="/flowers" hasArrow>Mehr erfahren</Anchor>
 					</Article>
 					<div className="item__progress progress">
 						<figure className="progress__background" />
