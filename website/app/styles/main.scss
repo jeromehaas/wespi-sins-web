@@ -15,6 +15,7 @@
 @import '/components/01-atoms/button/button.scss';
 @import '/components/01-atoms/hamburger/hamburger.scss';
 @import '/components/01-atoms/input-field/input-field.scss';
+@import '/components/01-atoms/text-area/text-area.scss';
 @import '/components/01-atoms/submit-button/submit-button.scss';
 @import '/components/01-atoms/action/action.scss';
 @import '/components/01-atoms/picture/picture.scss';
@@ -25,6 +26,7 @@
 /* MOLECULES */
 @import '/components/02-molecules/slider/slider.scss';
 @import '/components/02-molecules/slider-navigation/slider-navigation.scss';
+@import '/components/02-molecules/contact-form/contact-form.scss';
 
 /* ORGANISMS */
 @import '/components/03-organisms/footer/footer.scss';
@@ -58,6 +60,7 @@
 @import '/components/03-organisms/contact-info/contact-info.scss';
 @import '/components/03-organisms/contact-guide/contact-guide.scss';
 @import '/components/03-organisms/contact-location/contact-location.scss';
+@import '/components/03-organisms/contact-contact-form/contact-contact-form.scss';
 
 /* LAYOUTS */
 @import '/components/04-layouts/section/section.scss';
