@@ -13,6 +13,7 @@
 	}
 
 	&__column {
+		display: none;
 		background-color: transparentize($red-80, 0.9);
 		border-left: 0.5px solid red;
 		border-right: 0.5px solid red;

@@ -116,11 +116,11 @@
 	@media (max-width: 400px) {
 
 		&__inner {
-			grid-column-gap: 24px;
+			grid-column-gap: 16px;
 		}
 
 		&__content, .content {
-			grid-column-gap: 24px;
+			grid-column-gap: 16px;
 		}
 
 	}

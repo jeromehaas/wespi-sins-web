@@ -1,13 +1,13 @@
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import PropTypes from 'prop-types';
 
-const InputField = ({ className = '', id = '', label = '', placeholder = '', type = '', register = null, validation = null, isRequired = false, errorText = '', errors = [] }) => {
+const InputField = ({ className = '', id = '', label = '', placeholder = '', type = 'text', register = null, validation = null, error = null }) => {
 
 	return (
-		<div className={ `${ className } input-field ${ errors && errors[id] ? 'input-field--error' : null }` }>
-			<label className="input-field__label" htmlFor={ id }>{ `${ label }${ isRequired ? '*' : '' }` }</label>
-			<input className="input-field__input" type={ type } placeholder={ placeholder } { ...(register ? register(id, validation) : {}) } />
-			{ errors && errors[id] && errorText ? <Paragraph className="input-field__error paragraph--small">{ errorText }</Paragraph> : null }
+		<div className={ `${ className } input-field ${ error ? 'input-field--error' : null }` }>
+			<label className="input-field__label" htmlFor={ id }>{ `${ label }` }</label>
+			<input className="input-field__input" type={ type } placeholder={ placeholder } { ...register(id, validation) } />
+			{ error && error.message ? <Paragraph className="input-field__error paragraph--small">{ error.message }</Paragraph> : null }
 		</div>
 	);
 
