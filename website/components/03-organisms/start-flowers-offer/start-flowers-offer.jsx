@@ -22,13 +22,13 @@ const StartFlowersOffer = () => {
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hauskreationen</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/flowers#flowers-teaser-house-creations" hasArrow>Mehr erfahren</Anchor>
 					</div>
 				</div>
 				<div className="impressions__item item">
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Saisonales</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/flowers#flowers-teaser-seasonal" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
 						<Picture className="item__image" src="/images/placeholders/placeholder-portrait.png" />
@@ -40,13 +40,13 @@ const StartFlowersOffer = () => {
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hochzeit</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/flowers#flowers-teaser-weddings" hasArrow>Mehr erfahren</Anchor>
 					</div>
 				</div>
 				<div className="impressions__item item">
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Trauer / Beerdigung</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/flowers#flowers-teaser-mourning" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
 						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />

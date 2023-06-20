@@ -39,12 +39,10 @@
 		&__contributor {
 
 			&:nth-child(odd) {
-				border: 10px solid blue;
 				grid-column: 1 / span 6;
 			}
 
 			&:nth-child(even) {
-				border: 10px solid red;
 				grid-column: 7 / span 6;
 			}
 

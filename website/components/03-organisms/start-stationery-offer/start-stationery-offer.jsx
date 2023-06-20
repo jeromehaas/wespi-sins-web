@@ -22,13 +22,13 @@ const StartStationeryOffer = () => {
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Schule</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/stationery#stationery-services" hasArrow>Mehr erfahren</Anchor>
 					</div>
 				</div>
 				<div className="impressions__item item">
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Büro</Heading>
-						<Anchor className="item__link" hasArrow>Mehr erfahren</Anchor>
+						<Anchor className="item__link" href="/stationery#stationery-services" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
 						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />

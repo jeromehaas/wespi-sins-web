@@ -53,6 +53,17 @@ h1, h2, h3, h4, p, a, li, td, label, input {
 
 }
 
+.markdown {
+
+	p, a {
+		font-family: Messina-Sans, Helvetica, sans-serif;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.5;
+	}
+
+}
+
 .list-item {
 	font-family: Messina-Sans, Helvetica, sans-serif;
 	font-size: 18px;

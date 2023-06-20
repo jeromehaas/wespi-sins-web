@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 const Markdown = ({ className, children, modifier, size }) => {
 
 	return (
-		<ReactMarkdown className={ ` ${ className } markdown ${ modifier ? `markdown--${ modifier }` : '' } ${ size ? `markdown--${ size }` : '' } ` }>
+		<ReactMarkdown className={ ` ${ className } markdown ${ modifier ? `markdown--${ modifier }` : '' } ${ size ? `markdown--${ size }` : '' }` }>
 			{ children }
 		</ReactMarkdown>
 	);
