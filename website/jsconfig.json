@@ -4,6 +4,7 @@
       "components/*": ["./components/*"],
       "styles/*": ["./app/styles/*"],
       "hooks/*": ["./hooks/*"],
+      "contexts/*": ["./contexts/*"],
     }
   }
 }

@@ -1,3 +1,5 @@
+'use client';
+
 import Section from 'components/04-layouts/section/section';
 import Image from 'next/image';
 import Heading from 'components/01-atoms/heading/heading';
@@ -5,8 +7,18 @@ import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import Link from 'next/link';
 import Button from 'components/01-atoms/button/button';
 import Anchor from 'components/01-atoms/anchor/anchor';
+import { OrderContext } from 'contexts/order-context';
+import { useContext } from 'react';
 
 const Footer = () => {
+
+	// BRING IN CONTEXT
+	const orderContext = useContext(OrderContext);
+
+	// HANDLE OPEN ORDER MENU
+	const handleOpenOrderMenu = () => {
+		orderContext.setMenuIsOpen(true);
+	};
 
 	return (
 		<Section className="footer">
@@ -19,7 +31,7 @@ const Footer = () => {
 				<Link className="contact-details__item paragraph" href="tel:0417870887">041 787 08 87</Link>
 			</address>
 			<div className="footer__links links">
-				<Button className="links__button">Bestellung Papeterieartikel</Button>
+				<Button className="links__button" onClick={ handleOpenOrderMenu }>Bestellung Papeterieartikel</Button>
 				<div className="links__navigation">
 					<Anchor className="navigation__item" href="/data-privacy">Datenschutz</Anchor>
 					<Anchor className="navigation__item" href="/imprint">Impressum</Anchor>

@@ -28,7 +28,7 @@ const StartNews = () => {
 		event.preventDefault();
 		gsap.context(() => {
 			announcementTimelineRef.current = gsap.timeline();
-			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"]`, { bottom: '0%' }, 0);
+			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"]`, { bottom: '0%', duration: 0.5 }, 0);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__navigator`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__navigator`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 0.75);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__image`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__image`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__heading `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__heading`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1.25);
@@ -45,7 +45,7 @@ const StartNews = () => {
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__heading', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.25);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__image', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.5);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__navigator', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.75);
-			announcementTimelineRef.current.to('.start-news .announcements .announcements__item', { bottom: '100%' });
+			announcementTimelineRef.current.to('.start-news .announcements .announcements__item', { bottom: '100%', duration: 0.5 });
 		}, startNewsRef);
 	};
 

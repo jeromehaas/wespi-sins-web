@@ -4,7 +4,7 @@ import Paragraph from 'components/01-atoms/paragraph/paragraph';
 const Action = ({ className = '', children = null, symbol = null, onClick = null }) => {
 
 	return (
-		<div className={ ` ${ className } action` } onClick={ onClick }>
+		<div className={ `${ className } action` } onClick={ onClick }>
 			{ symbol === 'close' ? (
 				<svg className="action__icon" width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M17 1L1 17M1 1L17 17" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -25,7 +25,12 @@ const Action = ({ className = '', children = null, symbol = null, onClick = null
 					<path d="M6 1L1.5 5.625L6 10.25" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 				</svg>
 			) : null }
-			<Paragraph className=" action__label">{ children }</Paragraph>
+			{ symbol === 'arrow-left' ? (
+				<svg className="action__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15 8H1M1 8L8 15M1 8L8 1" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+				</svg>
+			) : null }
+			<Paragraph className="action__label">{ children }</Paragraph>
 		</div>
 	);
 

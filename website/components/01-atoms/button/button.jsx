@@ -1,12 +1,11 @@
-import Link from 'next/link';
 import PropTypes from 'prop-types';
 
-const Button = ({ className = '', children = null, href = '#', onClick = null }) => {
+const Button = ({ className = '', children = null, onClick = null }) => {
 
 	return (
-		<Link className={ ` ${ className } button` } href={ href } onClick={ onClick }>
+		<button className={ ` ${ className } button` } type="button" onClick={ onClick }>
 			{ children }
-		</Link>
+		</button>
 	);
 
 };
@@ -14,7 +13,6 @@ const Button = ({ className = '', children = null, href = '#', onClick = null })
 Button.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
-	href: PropTypes.string,
 	onClick: PropTypes.func,
 };
 

@@ -3,19 +3,24 @@ import Footer from 'components/03-organisms/footer/footer';
 import OpeningTimes from 'components/03-organisms/opening-times/opening-times';
 import DesktopNavigation from 'components/03-organisms/desktop-navigation/desktop-navigation';
 import MobileNavigation from 'components/03-organisms/mobile-navigation/mobile-navigation';
-import Grid from '../grid/grid';
+import Order from 'components/03-organisms/order/order';
+import Grid from 'components/04-layouts/grid/grid';
+import { OrderProvider } from 'contexts/order-context';
 
 const Website = ({ className = '', children = null }) => {
 
 	return (
-		<div className={ `${ className } website` }>
-			<DesktopNavigation />
-			<MobileNavigation />
-			{ children }
-			<OpeningTimes />
-			<Footer />
-			<Grid />
-		</div>
+		<OrderProvider>
+			<div className={ `${ className } website` }>
+				<DesktopNavigation />
+				<MobileNavigation />
+				{ children }
+				<OpeningTimes />
+				<Footer />
+				<Order />
+				<Grid />
+			</div>
+		</OrderProvider>
 	);
 
 };
