@@ -1,7 +1,7 @@
 import StationeryIntro from 'components/03-organisms/stationery-intro/stationery-intro';
 import StationeryImpression from 'components/03-organisms/stationery-impression/stationery-impression';
 import StationeryServices from 'components/03-organisms/stationery-services/stationery-services';
-import Bee from 'components/03-organisms/bee/bee';
+import StationeryBeeAction from 'components/03-organisms/stationery-bee-action/stationery-bee-action';
 import StationeryTeaser from 'components/03-organisms/stationery-teaser/stationery-teaser';
 
 const Page = () => {
@@ -11,7 +11,7 @@ const Page = () => {
 			<StationeryIntro />
 			<StationeryImpression />
 			<StationeryServices />
-			<Bee />
+			<StationeryBeeAction />
 			<StationeryTeaser />
 		</>
 	);

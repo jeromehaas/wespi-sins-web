@@ -1,6 +1,6 @@
 import AboutUsIntro from 'components/03-organisms/about-us-intro/about-us-intro';
 import AboutUsSpeciality from 'components/03-organisms/about-us-speciality/about-us-speciality';
-import Bee from 'components/03-organisms/bee/bee';
+import AboutUsBeeAction from 'components/03-organisms/about-us-bee-action/about-us-bee-action';
 import AboutUsOwner from 'components/03-organisms/about-us-owner/about-us-owner';
 import AboutUsQuote from 'components/03-organisms/about-us-quote/about-us-quote';
 import AboutUsCta from 'components/03-organisms/about-us-cta/about-us-cta';
@@ -12,7 +12,7 @@ const Page = () => {
 		<>
 			<AboutUsIntro />
 			<AboutUsSpeciality />
-			<Bee />
+			<AboutUsBeeAction />
 			<AboutUsOwner />
 			<AboutUsQuote />
 			<AboutUsCta />

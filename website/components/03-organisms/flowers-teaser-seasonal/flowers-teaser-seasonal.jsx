@@ -1,9 +1,9 @@
 'use client';
 
+import { useRef } from 'react';
 import Section from 'components/04-layouts/section/section';
 import Heading from 'components/01-atoms/heading/heading';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
-import { useRef } from 'react';
 import useSlider from 'hooks/use-slider';
 import Slider from 'components/02-molecules/slider/slider';
 import SliderNavigation from 'components/02-molecules/slider-navigation/slider-navigation';

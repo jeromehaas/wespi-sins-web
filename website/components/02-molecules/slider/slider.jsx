@@ -34,6 +34,7 @@ const Slider = ({ className = '', sliderController = null }) => {
 		}, sliderRef);
 	}, [sliderController.counter]);
 
+	// RENDER
 	return (
 		<div className={ `${ className } slider slider--${ sliderController.direction }` } onTouchStart={ sliderController.handleTouchStart } onTouchMove={ sliderController.handleTouchMove } onTouchEnd={ sliderController.handleTouchEnd } ref={ sliderRef }>
 			{ sliderController.images.map((image) => {

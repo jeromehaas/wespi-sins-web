@@ -3,7 +3,7 @@ import StartNews from 'components/03-organisms/start-news/start-news';
 import StartHero from 'components/03-organisms/start-hero/start-hero';
 import StartFlowersOffer from 'components/03-organisms/start-flowers-offer/start-flowers-offer';
 import StartStationeryOffer from 'components/03-organisms/start-stationery-offer/start-stationery-offer';
-import Bee from 'components/03-organisms/bee/bee';
+import StartBeeAction from 'components/03-organisms/start-bee-action/start-bee-action';
 
 const Page = () => {
 
@@ -12,7 +12,7 @@ const Page = () => {
 			<StartHero />
 			<StartNews />
 			<StartIntro />
-			<Bee />
+			<StartBeeAction />
 			<StartFlowersOffer />
 			<StartStationeryOffer />
 		</>
