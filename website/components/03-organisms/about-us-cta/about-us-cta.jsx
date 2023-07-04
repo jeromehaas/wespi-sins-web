@@ -19,7 +19,7 @@ const AboutUsCta = () => {
 					<ListItem className="content__list-item">– Debbi, Floristin EFZ</ListItem>
 					<Anchor className="content__link" hasArrow>Jetzt bestellen</Anchor>
 				</Article>
-				<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
+				<Picture className="item__image" src="/images/general/wespi-geschenk.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 			</div>
 		</Section>
 	);

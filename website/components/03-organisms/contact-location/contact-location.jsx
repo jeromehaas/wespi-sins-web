@@ -9,7 +9,7 @@ const ContactLocation = () => {
 	return (
 		<Section className="contact-location">
 			<div className="contact-location__item item">
-				<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
+				<Picture className="item__image" src="/images/general/wespi-geschaeft.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 				<Article className="item__content content">
 					<Heading className="content__heading" level="h2">UNSER Kreatives Paradies In den alten Sinser Bahnhofsmauern </Heading>
 					<Paragraph className="content__text">Besuchen Sie uns und lassen Sie sich von unserem Blumen- und Papeteriesortiment inspirieren.</Paragraph>

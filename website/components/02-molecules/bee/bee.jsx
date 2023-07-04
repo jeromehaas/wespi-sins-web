@@ -9,7 +9,7 @@ import Image from 'next/image';
 const Bee = ({ className = '' }) => {
 
 	// SETUP STATE
-	const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+	const [viewportWidth, setViewportWidth] = useState();
 
 	// REGISTER SCROLLTRIGGER PLUGIN
 	useEffect(() => {
@@ -47,7 +47,7 @@ const Bee = ({ className = '' }) => {
 			};
 		}, beeRef);
 		return () => { return context.revert(); };
-	}, []);
+	}, [viewportWidth]);
 
 	// RENDER
 	return (

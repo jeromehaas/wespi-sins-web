@@ -18,7 +18,7 @@ const StartStationeryOffer = () => {
 			<div className="start-stationery⁻offer__impressions impressions">
 				<div className="impressions__item item">
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-portrait.png" />
+						<Picture className="item__image" src="/images/general/wespi-stifte-gross.webp" />
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Schule</Heading>
@@ -31,7 +31,7 @@ const StartStationeryOffer = () => {
 						<Anchor className="item__link" href="/stationery#stationery-services" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />
+						<Picture className="item__image" src="/images/general/wespi-papeterie-artikel.webp" />
 					</div>
 				</div>
 			</div>

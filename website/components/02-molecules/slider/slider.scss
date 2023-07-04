@@ -9,9 +9,9 @@
 		transform: translateY(-50%);
 		height: auto;
 		max-height: 640px;
-		width: 100%;
+		width: auto;
 		display: block;
-		object-fit: contain;;
+		object-fit: cover;;
 
 		&:nth-child(4n + 1) {
 			margin-top: 0;
@@ -43,7 +43,7 @@
 	&--rtl {
 
 		& .slider__item {
-		left: calc(-200% - (120px * 2));
+			left: calc(-200% - (120px * 2));
 
 			&:nth-child(1) {
 				left: calc(-0% - (120px * 0));
@@ -78,9 +78,9 @@
 				right: calc(-200% - (120px * 2));
 			}
 
-	}
+		}
 
-}
+	}
 
 	@media (max-width: 1350px) {
 

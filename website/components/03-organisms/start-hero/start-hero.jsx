@@ -44,12 +44,12 @@ const StartHero = () => {
 		const context = gsap.context(() => {
 			themeTimelineRef.current = gsap.timeline({ onComplete: updateTheme });
 			themeTimelineRef.current.call(() => { return playVideo(); }, null, 0);
-			themeTimelineRef.current.to('.start-hero .background-video__video', { autoAlpha: '0', duration: 0.3 }, 0);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { right: '100%', duration: 0 }, 0);
 			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { left: '0%', duration: 0 }, 0);
 			themeTimelineRef.current.to(`.start-hero .background-video__video[data-theme="${ theme }"]`, { autoAlpha: 1, duration: 0.3 }, 0);
-			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { right: '0%', duration: 4 }, 0.5);
-			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { left: '100%', duration: 1 }, 4.5);
+			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { right: '0%', duration: 7.5 }, 0.5);
+			themeTimelineRef.current.to(`.start-hero .boxes__item[data-theme="${ theme }"] .progress__status`, { left: '100%', duration: 1 }, 7.5);
+			themeTimelineRef.current.to('.start-hero .background-video__video', { autoAlpha: '0', duration: 0.3 }, 8.5);
 		}, startHeroRef);
 		return () => { return context.revert; };
 	}, [theme]);
@@ -57,11 +57,11 @@ const StartHero = () => {
 	return (
 		<Section className="start-hero" ref={ startHeroRef }>
 			<div className="start-hero__background-video">
-				<video className="background-video__video" muted data-theme="flowers" playsInline ref={ flowersVideoRef }>
-					<source src="/videos/flowers.mp4" type="video/mp4" />
+				<video className="background-video__video" muted data-theme="flowers" playsInline ref={ flowersVideoRef } poster="/images/covers/wespi-blumen-standbild.webp">
+					<source src="/videos/hero/video-blumen.mp4" type="video/mp4" />
 				</video>
-				<video className="background-video__video" data-theme="stationery" muted playsInline ref={ stationeryVideoRef }>
-					<source src="/videos/stationery.mp4" type="video/mp4" />
+				<video className="background-video__video" data-theme="stationery" muted playsInline ref={ stationeryVideoRef } poster="/images/covers/wespi-papeterie-standbild.webp">
+					<source src="/videos/hero/video-papeterie.mp4" type="video/mp4" />
 				</video>
 			</div>
 			<div className="start-hero__boxes boxes">

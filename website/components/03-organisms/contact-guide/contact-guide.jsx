@@ -10,7 +10,7 @@ const ContactGuide = () => {
 	return (
 		<Section className="contact-guide">
 			<div className="contact-guide__box">
-				<Picture className="box__image" src="/images/placeholders/placeholder-landscape.png" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
+				<Picture className="box__image" src="/images/general/wespi-stiften-regal.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 				<Article className="box__content content">
 					<Heading className="content__heading" level="h2">Papeterie anfragen</Heading>
 					<Paragraph className="content__text">Sie suchen nach dem passenden Schreibmaterial oder einer Geburtstagskarte? Egal ob Büro- oder Schulmaterial, eine passende Karte oder ein Füller, welcher Sie wieder zum Schreiben von Hand motiviert, in unserem Sortiment finden Sie eine breite Auswahl an Papeterieprodukten.</Paragraph>
@@ -19,7 +19,7 @@ const ContactGuide = () => {
 				</Article>
 			</div>
 			<div className="contact-guide__box box">
-				<Picture className="box__image" src="/images/placeholders/placeholder-landscape.png" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
+				<Picture className="box__image" src="/images/general/wespi-floristik.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 				<Article className="box__content content">
 					<Heading className="content__heading" level="h2">Blumige Anfragen</Heading>
 					<Paragraph className="content__text">Sie möchten jemandem oder Ihnen selbst Blumen schenken und benötigen eine Beratung? Es ist uns eine Ehre, Ihnen zu ganz verschiedenen Anlässen ein Lächeln oder Anteilnahme ins Herz zu zaubern. </Paragraph>

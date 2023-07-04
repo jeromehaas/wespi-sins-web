@@ -5,7 +5,7 @@ const FlowersImpression = () => {
 
 	return (
 		<Section className="flowers-impression">
-			<Picture className="flowers-impression__image" src="/images/placeholders/placeholder-landscape.png" width={ 1920 } height={ 1600 } />
+			<Picture className="flowers-impression__image" src="/images/general/wespi-blumen-angebot.webp" width={ 1920 } height={ 1600 } />
 		</Section>
 	);
 
