@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const HyperLink = ({ className = '', children = null, onClick = null }) => {
+const HyperLink = ({ className = '', children = null, onClick = null, href = '/' }) => {
 
 	return (
-		<a className={ ` ${ className } hyperlink` } href="/" onClick={ onClick }>{ children }</a>
+		<a className={ ` ${ className } hyperlink` } href={ href } onClick={ onClick }>{ children }</a>
 	);
 
 };

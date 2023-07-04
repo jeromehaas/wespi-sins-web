@@ -35,7 +35,7 @@ const AboutUsTeaserStore = () => {
 			<div className="about-us-teaser-store__content content">
 				<Heading className="content__heading" level="h3">Hier finden Sie uns</Heading>
 				<Paragraph className="content__text">Besuchen Sie uns in den geschichtsträchtigen Räumen an der Bahnhofstrasse 15 in Sins.</Paragraph>
-				<Button className="content__button">Anreise</Button>
+				<Button className="content__button" href="https://www.google.com/maps/dir//Bluemeparadies+Wespi,+Bahnhofstrasse+15,+5643+Sins/@47.1882579,8.3977903,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x4790017b0cadfe5d:0xf01cc2646870bc95!2m2!1d8.3977903!2d47.1882579!3e1?entry=ttu" target="_blank">Anreise</Button>
 				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 			</div>
 		</Section>

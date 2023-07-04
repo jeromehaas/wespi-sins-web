@@ -1,3 +1,5 @@
+'use client';
+
 import Section from 'components/04-layouts/section/section';
 import Heading from 'components/01-atoms/heading/heading';
 import Anchor from 'components/01-atoms/anchor/anchor';
@@ -5,8 +7,18 @@ import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import Article from 'components/04-layouts/article/article';
 import Picture from 'components/01-atoms/picture/picture';
 import ListItem from 'components/01-atoms/list-item/list-item';
+import { OrderContext } from 'contexts/order-context';
+import { useContext } from 'react';
 
 const AboutUsCta = () => {
+
+	// BRING IN CONTEXT
+	const orderContext = useContext(OrderContext);
+
+	// HANDLE OPEN ORDER MENU
+	const handleOpenOrderMenu = () => {
+		orderContext.setMenuIsOpen(true);
+	};
 
 	return (
 		<Section className="about-us-cta">
@@ -17,7 +29,7 @@ const AboutUsCta = () => {
 					<ListItem className="content__list-item">– Claudia, Inhaberin, Floristin EFZ</ListItem>
 					<ListItem className="content__list-item">– Daniela, Floristin EFZ</ListItem>
 					<ListItem className="content__list-item">– Debbi, Floristin EFZ</ListItem>
-					<Anchor className="content__link" hasArrow>Jetzt bestellen</Anchor>
+					<Anchor className="content__link" onClick={ handleOpenOrderMenu } hasArrow>Jetzt bestellen</Anchor>
 				</Article>
 				<Picture className="item__image" src="/images/general/wespi-geschenk.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 			</div>

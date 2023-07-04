@@ -11,11 +11,6 @@ const Bee = ({ className = '' }) => {
 	// SETUP STATE
 	const [viewportWidth, setViewportWidth] = useState();
 
-	// REGISTER SCROLLTRIGGER PLUGIN
-	useEffect(() => {
-		gsap.registerPlugin(ScrollTrigger);
-	}, []);
-
 	// SETUP REFS
 	const beeRef = useRef();
 	const beeTimelineRef = useRef();
@@ -24,6 +19,11 @@ const Bee = ({ className = '' }) => {
 	const handleResize = () => {
 		setViewportWidth(window.innerWidth);
 	};
+
+	// REGISTER SCROLLTRIGGER PLUGIN
+	useEffect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+	}, []);
 
 	// GET VIEWPORT WIDTH
 	useEffect(() => {

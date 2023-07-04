@@ -73,7 +73,7 @@ const useSlider = ({ images, direction }) => {
 	useEffect(() => {
 		sliderIntervalRef.current = setInterval(() => {
 			autoplay();
-		}, 3000);
+		}, 8000);
 		return () => { return clearInterval(sliderIntervalRef.current); };
 	}, []);
 
@@ -91,6 +91,7 @@ const useSlider = ({ images, direction }) => {
 		};
 	}, [userHasInteracted]);
 
+	// RETURN
 	return {
 		autoplay,
 		handleTouchMove,

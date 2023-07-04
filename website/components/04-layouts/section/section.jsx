@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
-import { forwardRef } from 'react';
+import { Fragment, forwardRef } from 'react';
 
 const Section = forwardRef(({ className = '', children = null }, ref) => {
 
 	return (
-		<section className={ `${ className } section` } id={ className } ref={ ref }>
-			<div className={ `${ className }__inner section__inner` }>{ children }</div>
-		</section>
+		<Fragment>
+			<div className={ `${ className }__target target` } id={ className } />
+			<section className={ `${ className } section` } ref={ ref }>
+				<div className={ `${ className }__inner section__inner` }>{ children }</div>
+			</section>
+		</Fragment>
 	);
 
 });

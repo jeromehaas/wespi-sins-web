@@ -39,6 +39,12 @@ const MobileNavigation = () => {
 		isOpen ? closeMenu() : openMenu();
 	};
 
+	// HANDLE LOGO CLICK
+	const handleLogoClick = (event) => {
+		event.preventDefault();
+		if (pathname !== '/') router.push('/');
+	};
+
 	// HANDLE LINK CLICK
 	const handleLinkClick = (event, targetPath) => {
 		event.preventDefault();
@@ -68,7 +74,7 @@ const MobileNavigation = () => {
 			<div className="mobile-navigation__background" />
 			<div className="mobile-navigation__placeholder" />
 			<div className="mobile-navigation__bar bar">
-				<Link className="bar__logo-link" href="/" onClick={ (event) => { return handleLinkClick(event, '/'); } }>
+				<Link className="bar__logo-link" href="/" onClick={ (event) => { return handleLogoClick(event, '/'); } }>
 					<Image className="bar__logo" src="/logos/logo-wespi-sins-bw-minimal.svg" alt="Wespi Sins" width="140" height="40" priority />
 				</Link>
 				<Hamburger className="bar__hamburger" isOpen={ isOpen } onClick={ toggleMenu } />

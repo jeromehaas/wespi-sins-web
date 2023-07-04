@@ -14,6 +14,8 @@
 		height: 12px;
 		margin-left: 12px;
 		transition: all 0.2s ease;
+		position: relative;
+		right: 0;
 
 		& path {
 			stroke: $brown-80;
@@ -27,9 +29,9 @@
 		& .anchor__label {
 			color: $brown-60;
 		}
-
+		
 		& .anchor__icon {
-			margin-left: 20px;
+			right: -16px;
 
 			& path {
 				stroke: $brown-60;

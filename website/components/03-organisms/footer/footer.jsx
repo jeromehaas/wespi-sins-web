@@ -20,6 +20,7 @@ const Footer = () => {
 		orderContext.setMenuIsOpen(true);
 	};
 
+	// RENDER
 	return (
 		<Section className="footer">
 			<Image className="footer__logo" src="/logos/logo-wespi-sins-bw-full.png" width="300" height="300" alt="WESPI SINS Papeterie- und Bluemeparadies" />
