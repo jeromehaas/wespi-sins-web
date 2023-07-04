@@ -2,7 +2,7 @@
   "compilerOptions": {
     "paths": {
       "components/*": ["./components/*"],
-      "styles/*": ["./app/styles/*"],
+      "styles/*": ["./styles/*"],
       "hooks/*": ["./hooks/*"],
       "contexts/*": ["./contexts/*"],
     }
