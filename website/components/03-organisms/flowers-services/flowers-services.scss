@@ -18,6 +18,9 @@
 		&__image {
 			grid-column: span 6;	
 			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit:cover;
 		}
 
 		&__content, .content {

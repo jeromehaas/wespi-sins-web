@@ -9,14 +9,17 @@
 		padding-bottom: 64px;
 	}
 
-	&__heading {
-		margin-bottom: 16px;
+	&__content, .content {
 		grid-column: 4 / span 6;
-	}
 
-	&__text {
-		margin-bottom: 32px;
-		grid-column: 4 / span 6;
+		&__heading {
+			margin-bottom: 16px;
+		}
+
+		&__text {
+			margin-bottom: 32px;
+		}
+
 	}
 
 	&__contact-form {
@@ -25,13 +28,13 @@
 
 	@media (max-width: 1150px) {
 
-		&__heading {
+		&__content, .content {
 			grid-column: 3 / span 8;
-		}
 
-		&__text {
-			margin-bottom: 32px;
-			grid-column: 3 / span 8;
+			&__text {
+				margin-bottom: 32px;
+			}
+
 		}
 
 		&__contact-form {
@@ -42,13 +45,14 @@
 
 	@media (max-width: 850px) {
 
-		&__heading {
-			grid-column: 1 / span 12;
-		}
 
-		&__text {
-			margin-bottom: 32px;
+		&__content, .content {
 			grid-column: 1 / span 12;
+
+			&__text {
+				margin-bottom: 32px;
+			}
+
 		}
 
 		&__contact-form {

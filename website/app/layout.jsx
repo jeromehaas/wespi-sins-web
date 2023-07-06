@@ -1,17 +1,19 @@
 // IMPORTS
 import 'styles/main.scss';
-import { Fragment } from 'react';
 
 // LAYOUT
 const RootLayout = ({ children }) => {
 
+	// RENDER
 	return (
-		<Fragment>
-			{ children }
-		</Fragment>
+		<html lang="de">
+			<body>
+				{children}
+			</body>
+		</html>
 	);
 
 };
 
-// EXPORT
+// EXPORTS
 export default RootLayout;

@@ -7,4 +7,9 @@
 		top: 16px;
 	}
 
+	&--appear {
+		visibility: hidden;
+		opacity: 0;
+	}
+
 }

@@ -1,18 +1,20 @@
-import 'styles/main.scss';
+// IMPORTS
 import Website from 'components/04-layouts/website/website';
+import { Fragment } from 'react';
 
+// LAYOUT
 const RootLayout = ({ children }) => {
 
+	// RENDER
 	return (
-		<html lang="de">
-			<body>
-				<Website>
-					{children}
-				</Website>
-			</body>
-		</html>
+		<Fragment>
+			<Website>
+				{children}
+			</Website>
+		</Fragment>
 	);
 
 };
 
+// EXPORT
 export default RootLayout;

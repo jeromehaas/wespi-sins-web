@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
@@ -9,19 +10,32 @@ import Picture from 'components/01-atoms/picture/picture';
 import Section from 'components/04-layouts/section/section';
 import Action from 'components/01-atoms/action/action';
 
+// COMPONENT
 const StartNews = () => {
 
 	// SETUP REFS
-	const startNewsRef = useRef();
+	const sectionRef = useRef();
+	const sectionTimelineRef = useRef();
 	const announcementTimelineRef = useRef();
 
+	// FADE-IN ANIMATION
 	useEffect(() => {
 		const context = gsap.context(() => {
 			announcementTimelineRef.current = gsap.timeline({ paused: true });
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item', { bottom: '50%' });
-		}, startNewsRef);
+		}, sectionRef);
 		return () => { return context.revert(); };
 	});
+
+	// FADE-IN ANIMATION
+	useEffect(() => {
+		const context = gsap.context(() => {
+			sectionTimelineRef.current = gsap.timeline({ scrollTrigger: { trigger: sectionRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false }, delay: 0.3 });
+			sectionTimelineRef.current.to('.start-news .banner__heading', { autoAlpha: 1, top: 0, duration: 0.3 }, 0);
+			sectionTimelineRef.current.to('.start-news .banner__list', { autoAlpha: 1, top: 0, duration: 0.3 }, 0);
+		}, sectionRef);
+		return () => context.revert();
+	}, []);
 
 	// SHOW ANNOUNCEMENT
 	const showAnnouncement = (event, id) => {
@@ -33,7 +47,7 @@ const StartNews = () => {
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__image`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__image`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__heading `) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__heading`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1.25);
 			document.querySelector(`.start-news .announcements__item[data-id="${ id }"] .content__text`) && announcementTimelineRef.current.to(`.start-news .announcements .announcements__item[data-id="${ id }"] .content__text`, { autoAlpha: 1, top: '0', duration: 0.5, ease: '' }, 1.5);
-		}, startNewsRef);
+		}, sectionRef);
 	};
 
 	// CLOSE ANNOUNCEMENT
@@ -46,15 +60,15 @@ const StartNews = () => {
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__image', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.5);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item .content__navigator', { autoAlpha: 0, top: '16px', duration: 0.5, ease: '' }, 0.75);
 			announcementTimelineRef.current.to('.start-news .announcements .announcements__item', { bottom: '100%', duration: 0.5 });
-		}, startNewsRef);
+		}, sectionRef);
 	};
 
 	// RENDER
 	return (
-		<Section className="start-news" ref={ startNewsRef }>
+		<Section className="start-news" ref={ sectionRef }>
 			<div className="start-news__banner banner">
-				<Heading className="banner__heading" level="h2">Aktuell</Heading>
-				<div className="banner__list list">
+				<Heading className="banner__heading animation--fade-in" level="h2">Aktuell</Heading>
+				<div className="banner__list list animation--fade-in">
 					<div className="list__item item">
 						<Heading className="item__heading" level="h4">Adventsausstellung vom 15. bis 19. November 2023</Heading>
 						<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, '1'); } }>Mehr erfahren</Anchor>
@@ -102,4 +116,5 @@ const StartNews = () => {
 
 };
 
+// EXPORT
 export default StartNews;

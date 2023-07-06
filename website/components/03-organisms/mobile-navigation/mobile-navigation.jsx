@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import { useEffect, useRef, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
@@ -10,11 +11,12 @@ import Hamburger from 'components/01-atoms/hamburger/hamburger';
 import Heading from 'components/01-atoms/heading/heading';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 
+// COMPONENT
 const MobileNavigation = () => {
 
 	// SETUP REFS
-	const mobileNavigationRef = useRef();
-	const menuTimelineRef = useRef();
+	const sectionRef = useRef();
+	const sectionTimelineRef = useRef();
 
 	// SETUP STATE
 	const [isOpen, setIsOpen] = useState(false);
@@ -25,12 +27,12 @@ const MobileNavigation = () => {
 
 	// OPEN MENU
 	const openMenu = () => {
-		menuTimelineRef.current.play();
+		sectionTimelineRef.current.play();
 	};
 
 	// CLOSE MENU
 	const closeMenu = () => {
-		menuTimelineRef.current.reverse();
+		sectionTimelineRef.current.reverse();
 	};
 
 	// TOGGLE MENU
@@ -59,18 +61,18 @@ const MobileNavigation = () => {
 	// SETUP MENU ANIMATION
 	useEffect(() => {
 		const context = gsap.context(() => {
-			menuTimelineRef.current = gsap.timeline({ paused: true });
-			menuTimelineRef.current.to('.mobile-navigation .navigation__menu', { right: '0%', duration: 0.5 }, 0);
-			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__links', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.5);
-			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__contact-details', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.75);
-			menuTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__business-hours', { autoAlpha: 1, top: '0', duration: 0.5 }, 1);
-		}, mobileNavigationRef);
+			sectionTimelineRef.current = gsap.timeline({ paused: true });
+			sectionTimelineRef.current.to('.mobile-navigation .navigation__menu', { right: '0%', duration: 0.5 }, 0);
+			sectionTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__links', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.5);
+			sectionTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__contact-details', { autoAlpha: 1, top: '0', duration: 0.5 }, 0.75);
+			sectionTimelineRef.current.to('.mobile-navigation .navigation__menu .menu__business-hours', { autoAlpha: 1, top: '0', duration: 0.5 }, 1);
+		}, sectionRef);
 		return () => { return context.revert(); };
 	}, []);
 
 	// RENDER
 	return (
-		<Section className="mobile-navigation" ref={ mobileNavigationRef }>
+		<Section className="mobile-navigation" ref={ sectionRef }>
 			<div className="mobile-navigation__background" />
 			<div className="mobile-navigation__placeholder" />
 			<div className="mobile-navigation__bar bar">
@@ -107,4 +109,5 @@ const MobileNavigation = () => {
 
 };
 
+// EXPORT
 export default MobileNavigation;

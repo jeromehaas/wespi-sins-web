@@ -1,12 +1,21 @@
+'use client';
+
+// IMPORTS
+import { useRef } from 'react';
 import Anchor from 'components/01-atoms/anchor/anchor';
 import Section from 'components/04-layouts/section/section';
 import Image from 'next/image';
 import Link from 'next/link';
 
+// COMPONENT
 const DesktopNavigation = () => {
 
+	// SETUP REFS
+	const sectionRef = useRef();
+
+	// RENDER
 	return (
-		<Section className="desktop-navigation">
+		<Section className="desktop-navigation" ref={ sectionRef }>
 			<div className="desktop-navigation__bar bar">
 				<div className="bar__inner">
 					<Link className="bar__logo-link" href="/">
@@ -26,4 +35,5 @@ const DesktopNavigation = () => {
 
 };
 
+// EXPORT
 export default DesktopNavigation;
