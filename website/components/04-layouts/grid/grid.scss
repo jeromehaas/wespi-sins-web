@@ -13,10 +13,10 @@
 	}
 
 	&__column {
-		display: none;
+		display: block;
 		background-color: transparentize($red-80, 0.9);
-		border-left: 0.5px solid red;
-		border-right: 0.5px solid red;
+		border-left: 0.5px solid $red-80;
+		border-right: 0.5px solid $red-80;
 	}
 
 	@media (max-width: 600px) {

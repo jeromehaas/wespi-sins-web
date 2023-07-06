@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import InputField from 'components/01-atoms/input-field/input-field';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import SubmitButton from 'components/01-atoms/submit-button/submit-button';
@@ -8,6 +9,7 @@ import { useForm } from 'react-hook-form';
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
+// COMPONENT
 const ContactForm = ({ className }) => {
 
 	// SETUP REFS
@@ -43,10 +45,11 @@ const ContactForm = ({ className }) => {
 			// SHOW TOAST
 			setToast({ status: 'error', message: 'Die Nachricht konnte nicht übermittelt werden.' });
 
-		}
+		};
 
 	};
 
+	// UPDATE TOAST
 	useEffect(() => {
 		if (toast.status === 'hidden') return;
 		const context = gsap.context(() => {
@@ -59,16 +62,17 @@ const ContactForm = ({ className }) => {
 		return () => { return context.revert(); };
 	}, [toast]);
 
+	// RENDER
 	return (
 		<div className={ `${ className } contact-form ` } onSubmit={ handleSubmit(handleDispatch) } ref={ contactFormRef }>
 			<form className="contact-form__form form">
-				<InputField className="form__input-field" id="company" label="Firma" placeholder="Firmenname" category="contact-form" type="text" register={ register } error={ formState.errors['company'] } validation={ { 	required: { value: false } } } />
-				<InputField className="form__input-field" id="firstname" label="Vorname*" placeholder="Ihr Vorname" category="contact-form" type="text" register={ register } error={ formState.errors['firstname'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } } } />
-				<InputField className="form__input-field" id="lastname" label="Nachname*" placeholder="Ihr Nachname" category="contact-form" type="text" register={ register } error={ formState.errors['lastname'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Nachnamen an' } } } />
-				<InputField className="form__input-field" id="phone" label="Telefonnummer*" placeholder="Ihre Telefonnummer" category="contact-form" type="text" register={ register } error={ formState.errors['phone'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihre Telefonnummer an' }, 	pattern: { value: /^(0041|\+41)?\s?[0-9]\s?(\d{2})[\s.-]?(\d{2,4})[\s.-]?(\d{0,2})[\s.-]?(\d{0,2})$/i, message: 'Bitte geben Sie eine gültige E-Mail-Adresse an' } } } />
-				<InputField className="form__input-field" id="email" label="E-Mail-Adresse*" placeholder="Ihre E-Mail-Adresse" category="contact-form" type="text" register={ register } error={ formState.errors['email'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihre E-Mail-Adresse an' }, 	pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: 'Bitte geben Sie eine gültige E-Mail-Adresse an' } } } />
-				<InputField className="form__input-field" id="subject" label="Betreff" placeholder="Betreff" category="contact-form" type="text" register={ register } error={ formState.errors['subject'] } validation={ { 	required: { value: false } } } />
-				<TextArea className="form__input-field" id="message" label="Nachricht*" placeholder="Ihre Nachricht" category="contact-form" type="text" register={ register } error={ formState.errors['message'] } validation={ { 	required: { value: true, message: 'Bitte verfassen Sie eine Nachricht' } } } />
+				<InputField className="form__input-field" id="company" label="Firma" placeholder="Firmenname" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: false } } } />
+				<InputField className="form__input-field" id="firstname" label="Vorname*" placeholder="Ihr Vorname" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } } } />
+				<InputField className="form__input-field" id="lastname" label="Nachname*" placeholder="Ihr Nachname" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Nachnamen an' } } } />
+				<InputField className="form__input-field" id="phone" label="Telefonnummer*" placeholder="Ihre Telefonnummer" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihre Telefonnummer an' }, 	pattern: { value: /^(0041|\+41)?\s?[0-9]\s?(\d{2})[\s.-]?(\d{2,4})[\s.-]?(\d{0,2})[\s.-]?(\d{0,2})$/i, message: 'Bitte geben Sie eine gültige Telefonnummer an' } } } />
+				<InputField className="form__input-field" id="email" label="E-Mail-Adresse*" placeholder="Ihre E-Mail-Adresse" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihre E-Mail-Adresse an' }, 	pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, message: 'Bitte geben Sie eine gültige E-Mail-Adresse an' } } } />
+				<InputField className="form__input-field" id="subject" label="Betreff" placeholder="Betreff" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: false } } } />
+				<TextArea className="form__input-field" id="message" label="Nachricht*" placeholder="Ihre Nachricht" category="contact-form" type="text" register={ register } error={ formState.errors['contact-form'] } validation={ { 	required: { value: true, message: 'Bitte verfassen Sie eine Nachricht' } } } />
 				<SubmitButton className="form__submit-button" onClick={ handleSubmit(handleDispatch) }>Nachricht senden</SubmitButton>
 			</form>
 			<div className="contact-form__toast toast">
@@ -96,4 +100,5 @@ const ContactForm = ({ className }) => {
 
 };
 
+// EXPORT
 export default ContactForm;

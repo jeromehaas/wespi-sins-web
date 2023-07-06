@@ -1,9 +1,12 @@
+// IMPORTS
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { Fragment } from 'react';
 
+// COMPONENT
 const Button = ({ className = '', children = null, onClick = null, href = null, target = '_self' }) => {
 
+	// RENDER
 	return (
 		<Fragment>
 			{ href !== null ? (
@@ -20,6 +23,7 @@ const Button = ({ className = '', children = null, onClick = null, href = null, 
 
 };
 
+// PROP-TYPES
 Button.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
@@ -27,4 +31,5 @@ Button.propTypes = {
 	target: PropTypes.string,
 };
 
+// EXPORT
 export default Button;

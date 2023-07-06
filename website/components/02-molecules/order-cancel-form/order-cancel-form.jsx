@@ -1,3 +1,4 @@
+// IMPORTS
 import Heading from 'components/01-atoms/heading/heading';
 import Button from 'components/01-atoms/button/button';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
@@ -5,7 +6,8 @@ import Action from 'components/01-atoms/action/action';
 import { OrderContext } from 'contexts/order-context';
 import { useContext } from 'react';
 
-const OrderCancelForm = () => {
+// COMPONENT
+const OrderCancelForm = ({ className }) => {
 
 	// SETUP CONTEXT
 	const orderContext = useContext(OrderContext);
@@ -13,7 +15,6 @@ const OrderCancelForm = () => {
 	// HANDLE CANCEL
 	const handleCancel = () => {
 		orderContext.setMenuIsOpen(false);
-		orderContext.setStep(1);
 	};
 
 	// HANDLE PREVIOUS STEP
@@ -21,8 +22,9 @@ const OrderCancelForm = () => {
 		orderContext.setStep(1);
 	};
 
+	// RENDER
 	return (
-		<div className="cancel-form">
+		<div className={ `${ className } cancel-form` }>
 			<div className="cancel-form__form form">
 				<Heading className="form__heading" level="h2">Bestellung abbrechen</Heading>
 				<Paragraph className="form__text">Sind Sie sicher, dass Sie Ihre Bestellung abbrechen möchten?</Paragraph>
@@ -36,4 +38,5 @@ const OrderCancelForm = () => {
 
 };
 
+// EXPORT
 export default OrderCancelForm;

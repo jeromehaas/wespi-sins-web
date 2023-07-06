@@ -1,7 +1,9 @@
+// IMPORTS
 import Action from 'components/01-atoms/action/action';
 import PropTypes from 'prop-types';
 import { useFieldArray } from 'react-hook-form';
 
+// COMPONENT
 const InputTable = ({ className, category, options, control, register, formState, labels }) => {
 
 	// BRING IN FIELD ARRAY
@@ -43,6 +45,7 @@ const InputTable = ({ className, category, options, control, register, formState
 
 };
 
+// PROP-TYPES
 InputTable.propTypes = {
 	className: PropTypes.string,
 	category: PropTypes.string.isRequired,
@@ -63,4 +66,6 @@ InputTable.propTypes = {
 		}),
 	})),
 };
+
+// EXPORT
 export default InputTable;

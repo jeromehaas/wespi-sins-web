@@ -1,9 +1,10 @@
 'use client';
 
 // IMPORTS
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useContext } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import { gsap } from 'gsap';
+import { OrderContext } from 'contexts/order-context';
 import Link from 'next/link';
 import Section from 'components/04-layouts/section/section';
 import Image from 'next/image';
@@ -20,6 +21,9 @@ const MobileNavigation = () => {
 
 	// SETUP STATE
 	const [isOpen, setIsOpen] = useState(false);
+
+	// SETUP ORDER-CONTEXT
+	const orderContext = useContext(OrderContext);
 
 	// GET ROUTER AND PATHNAME
 	const pathname = usePathname();
@@ -44,7 +48,8 @@ const MobileNavigation = () => {
 	// HANDLE LOGO CLICK
 	const handleLogoClick = (event) => {
 		event.preventDefault();
-		if (pathname !== '/') router.push('/');
+		if (orderContext.menuIsOpen === true) return orderContext.setMenuIsOpen(false);
+		if (pathname !== '/') return router.push('/');
 	};
 
 	// HANDLE LINK CLICK
@@ -76,18 +81,18 @@ const MobileNavigation = () => {
 			<div className="mobile-navigation__background" />
 			<div className="mobile-navigation__placeholder" />
 			<div className="mobile-navigation__bar bar">
-				<Link className="bar__logo-link" href="/" onClick={ (event) => { return handleLogoClick(event, '/'); } }>
+				<Link className="bar__logo-link" href="/" onClick={ (event) => handleLogoClick(event, '/') }>
 					<Image className="bar__logo" src="/logos/logo-wespi-sins-bw-minimal.svg" alt="Wespi Sins" width="140" height="40" priority />
 				</Link>
 				<Hamburger className="bar__hamburger" isOpen={ isOpen } onClick={ toggleMenu } />
 			</div>
 			<div className="navigation__menu menu">
 				<div className="menu__links links animation--fade-in">
-					<Link className="links__item" href="/" onClick={ (event) => { return handleLinkClick(event, '/'); } }>Startseite</Link>
-					<Link className="links__item" href="/stationery" onClick={ (event) => { return handleLinkClick(event, '/stationery'); } }>Papeterie</Link>
-					<Link className="links__item" href="/flowers" onClick={ (event) => { return handleLinkClick(event, '/flowers'); } }>Blumen</Link>
-					<Link className="links__item" href="/about-us" onClick={ (event) => { return handleLinkClick(event, '/about-us'); } }>Über uns</Link>
-					<Link className="links__item" href="/contact" onClick={ (event) => { return handleLinkClick(event, '/contact'); } }>Kontakt</Link>
+					<Link className="links__item" href="/" onClick={ (event) => handleLinkClick(event, '/') }>Startseite</Link>
+					<Link className="links__item" href="/stationery" onClick={ (event) => handleLinkClick(event, '/stationery') }>Papeterie</Link>
+					<Link className="links__item" href="/flowers" onClick={ (event) => handleLinkClick(event, '/flowers') }>Blumen</Link>
+					<Link className="links__item" href="/about-us" onClick={ (event) => handleLinkClick(event, '/about-us') }>Über uns</Link>
+					<Link className="links__item" href="/contact" onClick={ (event) => handleLinkClick(event, '/contact') }>Kontakt</Link>
 				</div>
 				<div className="menu__contact-details contact-details animation--fade-in">
 					<Heading className="contact-details__heading" level="h4">WESPI SINS <br />Papeterie- und Bluemeparadies</Heading>

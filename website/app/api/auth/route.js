@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import jwt from 'jsonwebtoken';
 
 // GET NEXTRESPONSE MEHTODS
 const { json } = NextResponse;

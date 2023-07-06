@@ -23,6 +23,7 @@ const StationeryTeaser = () => {
 
 	// HANDLE OPEN ORDER MENU
 	const handleOpenOrderMenu = () => {
+		orderContext.setStep(1);
 		orderContext.setMenuIsOpen(true);
 	};
 

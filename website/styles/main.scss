@@ -1,12 +1,11 @@
 /* CONFIGS */
-@import './configs/reset.scss';
-@import './configs/fonts.scss';
-@import './configs/variables.scss';
-@import './configs/typography.scss';
-@import './configs/global.scss';
-@import './configs/inputs.scss';
-@import './configs/scrollbar.scss';
-@import './configs/animations.scss';
+@import '/styles/configs/reset.scss';
+@import '/styles/configs/fonts.scss';
+@import '/styles/configs/variables.scss';
+@import '/styles/configs/typography.scss';
+@import '/styles/configs/global.scss';
+@import '/styles/configs/scrollbar.scss';
+@import '/styles/configs/animations.scss';
 
 /* ATOMS */
 @import '/components/01-atoms/heading/heading.scss';

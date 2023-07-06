@@ -1,3 +1,4 @@
+// IMPORTS
 import Heading from 'components/01-atoms/heading/heading';
 import InputTable from 'components/01-atoms/input-table/input-table';
 import Button from 'components/01-atoms/button/button';
@@ -6,7 +7,8 @@ import { OrderContext } from 'contexts/order-context';
 import { useContext, useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-const OrderPositionsForm = () => {
+// COMPONENT
+const OrderPositionsForm = ({ className }) => {
 
 	// BRING IN ORDER-CONTEXT
 	const orderContext = useContext(OrderContext);
@@ -35,8 +37,9 @@ const OrderPositionsForm = () => {
 		setValue('positions', defaultPositions);
 	}, [orderContext.menuIsOpen, orderContext.step]);
 
+	// RENDER
 	return (
-		<div className="order-positions-form">
+		<div className={ `${ className }order-positions-form` }>
 			<Action className="order-positions-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
 			<div className="order-positions-form__form form">
 				<Heading className="form__heading" level="h2">Bestellung</Heading>
@@ -65,4 +68,5 @@ const OrderPositionsForm = () => {
 
 };
 
+// EXPORT
 export default OrderPositionsForm;

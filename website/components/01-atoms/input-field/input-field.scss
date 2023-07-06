@@ -16,6 +16,11 @@
 			color: $brown-80;
 		}
 
+		&:focus {
+			color: $black-100;
+			border-bottom: 2px solid $brown-60;
+		}
+
 	}
 
 	&__error {

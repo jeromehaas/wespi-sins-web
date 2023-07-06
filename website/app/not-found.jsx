@@ -12,7 +12,6 @@ const Page = () => {
 			<PageNotFoundIntro />
 			<PageNotFoundCta />
 		</Fragment>
-
 	);
 
 };

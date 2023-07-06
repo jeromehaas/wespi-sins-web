@@ -62,4 +62,5 @@ const FlowersTeaserWeddings = () => {
 
 };
 
+// EXPORT
 export default FlowersTeaserWeddings;

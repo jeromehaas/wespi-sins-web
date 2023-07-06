@@ -1,7 +1,9 @@
 'use client';
 
+// IMPORTS
 import { useRef, useEffect, useState } from 'react';
 
+// HOOK
 const useSlider = ({ images, direction }) => {
 
 	// SETUP STATE
@@ -106,4 +108,5 @@ const useSlider = ({ images, direction }) => {
 
 };
 
+// EXPORT
 export default useSlider;

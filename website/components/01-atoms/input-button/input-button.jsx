@@ -1,6 +1,8 @@
+// IMPORTS
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import PropTypes from 'prop-types';
 
+// COMPONENT
 const InputButton = ({ className = '', onClick = null, digit = '', letters = '' }) => {
 
 	// RENDER
@@ -25,7 +27,7 @@ const InputButton = ({ className = '', onClick = null, digit = '', letters = '' 
 
 };
 
-// DEFINE PROP-TYPES
+// PROP-TYPES
 InputButton.propTypes = {
 	className: PropTypes.string,
 	onClick: PropTypes.func,
@@ -33,4 +35,5 @@ InputButton.propTypes = {
 	digit: PropTypes.string,
 };
 
+// EXPORT
 export default InputButton;

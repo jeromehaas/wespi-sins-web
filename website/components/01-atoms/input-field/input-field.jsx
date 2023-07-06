@@ -1,6 +1,8 @@
+// IMPORTS
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import PropTypes from 'prop-types';
 
+// COMPONENT
 const InputField = ({ className = '', category = '', id = '', label = '', placeholder = '', type = 'text', register = null, validation = null, error = null, defaultValue = null }) => {
 
 	// RENDER
@@ -14,7 +16,7 @@ const InputField = ({ className = '', category = '', id = '', label = '', placeh
 
 };
 
-// DEFINE PROP-TYPES
+// PROP-TYPES
 InputField.propTypes = {
 	className: PropTypes.string,
 	id: PropTypes.string.isRequired,
@@ -33,4 +35,5 @@ InputField.propTypes = {
 	}),
 };
 
+// EXPORT
 export default InputField;

@@ -1,9 +1,12 @@
+// IMPORTS
 import Link from 'next/link';
 import PropTypes from 'prop-types';
 import { Fragment } from 'react';
 
+// COMPONENT
 const Anchor = ({ className = '', children = null, href = null, onClick = null, hasArrow = false }) => {
 
+	// RENDER
 	return (
 		<Fragment>
 			{ href !== null ? (
@@ -30,6 +33,7 @@ const Anchor = ({ className = '', children = null, href = null, onClick = null, 
 
 };
 
+// PROP-TYPES
 Anchor.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
@@ -38,4 +42,5 @@ Anchor.propTypes = {
 	hasArrow: PropTypes.bool,
 };
 
+// EXPORT
 export default Anchor;

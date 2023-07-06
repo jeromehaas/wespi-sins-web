@@ -1,9 +1,11 @@
 'use client';
 
+// IMPORTS
 import Section from 'components/04-layouts/section/section';
 import { gsap } from 'gsap';
 import { useRef, useEffect } from 'react';
 
+// COMPONENT
 const Grid = () => {
 
 	// SETUP REFS
@@ -59,4 +61,5 @@ const Grid = () => {
 
 };
 
+// EXPORT
 export default Grid;

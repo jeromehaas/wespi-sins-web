@@ -1,8 +1,11 @@
+// IMPORTS
 import PropTypes from 'prop-types';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 
+// COMPONENT
 const Action = ({ className = '', children = null, symbol = null, onClick = null }) => {
 
+	// RENDER
 	return (
 		<div className={ `${ className } action` } onClick={ onClick }>
 			{ symbol === 'close' ? (
@@ -36,6 +39,7 @@ const Action = ({ className = '', children = null, symbol = null, onClick = null
 
 };
 
+// PROP-TYPES
 Action.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.string.isRequired,
@@ -43,4 +47,5 @@ Action.propTypes = {
 	onClick: PropTypes.func,
 };
 
+// EXPORT
 export default Action;

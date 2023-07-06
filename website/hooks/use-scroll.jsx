@@ -1,7 +1,9 @@
+// IMPORTS
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import { useEffect } from 'react';
 
+// HOOK
 const useScroll = () => {
 
 	// SCROLL-TO
@@ -21,4 +23,5 @@ const useScroll = () => {
 
 };
 
+// EXPORT
 export default useScroll;

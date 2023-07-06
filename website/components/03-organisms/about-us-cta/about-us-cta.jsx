@@ -25,6 +25,7 @@ const AboutUsCta = () => {
 
 	// HANDLE OPEN ORDER MENU
 	const handleOpenOrderMenu = () => {
+		orderContext.setStep(1);
 		orderContext.setMenuIsOpen(true);
 	};
 
@@ -61,4 +62,5 @@ const AboutUsCta = () => {
 	);
 };
 
+// EXPORT
 export default AboutUsCta;

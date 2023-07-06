@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import { createContext, useState, useMemo } from 'react';
 
 // CREATE CONTEXT
@@ -18,6 +19,7 @@ const OrderProvider = ({ children }) => {
 		'town': '',
 	};
 
+	// INITIAL POSITION VALUES
 	const initialPositionsValues = [
 		{ 'article-description': '', 	'article-manufacturer': '', 'order-number': '', 'quantity': '' },
 	];
@@ -70,7 +72,6 @@ const OrderProvider = ({ children }) => {
 
 	// RENDER
 	return (
-
 		<OrderContext.Provider value={ value }>
 			{ children }
 		</OrderContext.Provider>
@@ -78,6 +79,7 @@ const OrderProvider = ({ children }) => {
 
 };
 
+// EXPORT
 export {
 	OrderContext,
 	OrderProvider,

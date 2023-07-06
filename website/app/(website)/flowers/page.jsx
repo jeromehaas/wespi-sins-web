@@ -1,3 +1,5 @@
+// IMPORTS
+import { Fragment } from 'react';
 import FlowersImpression from 'components/03-organisms/flowers-impression/flowers-impression';
 import FlowersIntro from 'components/03-organisms/flowers-intro/flowers-intro';
 import FlowersServices from 'components/03-organisms/flowers-services/flowers-services';
@@ -6,10 +8,12 @@ import FlowersTeaserSeasonal from 'components/03-organisms/flowers-teaser-season
 import FlowersTeaserWeddings from 'components/03-organisms/flowers-teaser-weddings/flowers-teaser-weddings';
 import FlowersTeaserMourning from 'components/03-organisms/flowers-teaser-mourning/flowers-teaser-mourning';
 
+// PAGE
 const Page = () => {
 
+	// RENDER
 	return (
-		<>
+		<Fragment>
 			<FlowersIntro />
 			<FlowersImpression />
 			<FlowersTeaserSeasonal />
@@ -17,9 +21,10 @@ const Page = () => {
 			<FlowersTeaserWeddings />
 			<FlowersTeaserMourning />
 			<FlowersServices />
-		</>
+		</Fragment>
 	);
 
 };
 
+// EXPORT
 export default Page;

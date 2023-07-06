@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import Section from 'components/04-layouts/section/section';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import OrderPositionsForm from 'components/02-molecules/order-positions-form/order-positions-form';
@@ -12,6 +13,7 @@ import { useEffect, useRef, useContext } from 'react';
 import { gsap } from 'gsap';
 import { OrderContext } from 'contexts/order-context';
 
+// COMPONENT
 const Order = () => {
 
 	// BRING IN ORDER-CONTEXT
@@ -61,11 +63,11 @@ const Order = () => {
 					</div>
 					<div className="menu__forms forms">
 						<FormProvider { ...formMethods }>
-							{ orderContext.step === 0 && <OrderCancelForm /> }
-							{ orderContext.step === 1 && <OrderPositionsForm /> }
-							{ orderContext.step === 2 && <OrderAddressForm /> }
-							{ orderContext.step === 3 && <OrderConfirmationForm /> }
-							{ orderContext.step === 4 && <OrderSuccessForm /> }
+							{ orderContext.step === 0 && <OrderCancelForm className="forms__form" /> }
+							{ orderContext.step === 1 && <OrderPositionsForm className="forms__form" /> }
+							{ orderContext.step === 2 && <OrderAddressForm className="forms__form" /> }
+							{ orderContext.step === 3 && <OrderConfirmationForm className="forms__form" /> }
+							{ orderContext.step === 4 && <OrderSuccessForm className="forms__form" /> }
 						</FormProvider>
 					</div>
 				</div>
@@ -75,4 +77,5 @@ const Order = () => {
 
 };
 
+// EXPORT
 export default Order;

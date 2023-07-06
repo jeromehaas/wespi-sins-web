@@ -1,5 +1,6 @@
 'use client';
 
+// IMPORTS
 import InputButton from 'components/01-atoms/input-button/input-button';
 import Image from 'next/image';
 import axios from 'axios';
@@ -8,6 +9,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { setCookie } from 'cookies-next';
 
+// COMPONENT
 const LoginForm = ({ className }) => {
 
 	// SETUP REFS
@@ -141,4 +143,5 @@ const LoginForm = ({ className }) => {
 
 };
 
+// EXPORT
 export default LoginForm;

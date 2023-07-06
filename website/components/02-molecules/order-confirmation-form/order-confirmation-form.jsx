@@ -1,12 +1,14 @@
+// IMPORTS
+import { OrderContext } from 'contexts/order-context';
+import { useContext } from 'react';
+import { useFormContext } from 'react-hook-form';
 import Heading from 'components/01-atoms/heading/heading';
 import Button from 'components/01-atoms/button/button';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import Action from 'components/01-atoms/action/action';
-import { OrderContext } from 'contexts/order-context';
-import { useContext } from 'react';
-import { useFormContext } from 'react-hook-form';
 
-const OrderConfirmationForm = () => {
+// COMPONENT
+const OrderConfirmationForm = ({ className }) => {
 
 	// SETUP CONTEXT
 	const orderContext = useContext(OrderContext);
@@ -39,12 +41,12 @@ const OrderConfirmationForm = () => {
 		orderContext.setStep(0);
 	};
 
+	// RENDER
 	return (
-		<div className="order-confirmation-form">
+		<div className={ `${ className } order-confirmation-form` }>
 			<Action className="order-confirmation-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
 			<div className="order-confirmation-form__form form">
 				<Heading className="form__heading" level="h2">Bestellbestätigung</Heading>
-
 				<div className="form__block block">
 					<Heading className="block__heading" level="h4">Bestellübersicht</Heading>
 					<div className="block__content content">
@@ -61,7 +63,6 @@ const OrderConfirmationForm = () => {
 						<Action className="content__action" onClick={ () => handleJumpStep(1) }>Bestellung ändern</Action>
 					</div>
 				</div>
-
 				<div className="form__block block">
 					<Heading className="block__heading" level="h4">Rechnungsadresse</Heading>
 					<div className="block__content content">
@@ -74,7 +75,6 @@ const OrderConfirmationForm = () => {
 						<Action className="content__action" onClick={ () => handleJumpStep(2) }>Rechnungsadresse ändern</Action>
 					</div>
 				</div>
-
 				<div className="form__block block">
 					<Heading className="block__heading" level="h4">Bestellung abholen</Heading>
 					<div className="block__content content">
@@ -83,7 +83,6 @@ const OrderConfirmationForm = () => {
 						</div>
 					</div>
 				</div>
-
 			</div>
 			<div className="order-confirmation-form__actions actions">
 				<Action className="actions__back-button" symbol="chevron-left" onClick={ handlePreviousStep }>zurück</Action>
@@ -94,4 +93,5 @@ const OrderConfirmationForm = () => {
 
 };
 
+// EXPORT
 export default OrderConfirmationForm;

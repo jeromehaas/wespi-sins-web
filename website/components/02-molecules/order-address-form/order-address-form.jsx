@@ -1,3 +1,4 @@
+// IMPORTS
 import Heading from 'components/01-atoms/heading/heading';
 import Button from 'components/01-atoms/button/button';
 import InputField from 'components/01-atoms/input-field/input-field';
@@ -6,7 +7,8 @@ import { OrderContext } from 'contexts/order-context';
 import { useContext, useEffect } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-const OrderAddressForm = () => {
+// COMPONENT
+const OrderAddressForm = ({ className }) => {
 
 	// SETUP CONTEXT
 	const orderContext = useContext(OrderContext);
@@ -44,7 +46,7 @@ const OrderAddressForm = () => {
 
 	// RENDER
 	return (
-		<div className="order-address-form">
+		<div className={ `${ className } order-address-form` }>
 			<Action className="order-address-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
 			<div className="order-address-form__form form">
 				<Heading className="form__heading" level="h2">Rechnungsadresse</Heading>
@@ -65,4 +67,5 @@ const OrderAddressForm = () => {
 
 };
 
+// EXPORTS
 export default OrderAddressForm;

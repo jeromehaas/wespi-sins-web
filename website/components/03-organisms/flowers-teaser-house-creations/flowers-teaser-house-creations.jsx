@@ -1,7 +1,7 @@
 'use client';
 
 // IMPORTS
-import { useRef, useEffect, useContext } from 'react';
+import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Section from 'components/04-layouts/section/section';
@@ -62,4 +62,5 @@ const FlowersTeaserHouseCreations = () => {
 
 };
 
+// EXPORT
 export default FlowersTeaserHouseCreations;

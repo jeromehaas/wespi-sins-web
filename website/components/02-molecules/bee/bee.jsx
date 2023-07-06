@@ -1,11 +1,12 @@
 'use client';
 
+// IMPORTS
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef, useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
 import Image from 'next/image';
 
+// COMPONENT
 const Bee = ({ className = '' }) => {
 
 	// SETUP STATE
@@ -58,8 +59,5 @@ const Bee = ({ className = '' }) => {
 
 };
 
-Bee.propTypes = {
-	className: PropTypes.string,
-};
-
+// EXPORT
 export default Bee;

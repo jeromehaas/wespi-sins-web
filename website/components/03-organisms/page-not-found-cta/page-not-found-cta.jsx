@@ -1,9 +1,12 @@
+// IMPORTS
 import Section from 'components/04-layouts/section/section';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import Button from 'components/01-atoms/button/button';
 
+// COMPONENT
 const PageNotFoundCta = () => {
 
+	// RENDER
 	return (
 		<Section className="page-not-found-cta">
 			<div className="page-not-found-cta__content content">
@@ -15,4 +18,5 @@ const PageNotFoundCta = () => {
 
 };
 
+// EXPORT
 export default PageNotFoundCta;

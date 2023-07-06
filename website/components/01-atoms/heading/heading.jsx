@@ -1,5 +1,7 @@
+// IMPORTS
 import PropTypes from 'prop-types';
 
+// COMPONENT
 const Heading = ({ className = '', children, level = 'h1', lookLike }) => {
 
 	switch (level) {
@@ -13,10 +15,13 @@ const Heading = ({ className = '', children, level = 'h1', lookLike }) => {
 
 };
 
+// PROP-TYPES
 Heading.propTypes = {
 	className: PropTypes.string,
 	children: PropTypes.node.isRequired,
 	level: PropTypes.string,
+	lookLike: PropTypes.string,
 };
 
+// EXPORT
 export default Heading;
