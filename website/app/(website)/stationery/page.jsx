@@ -6,6 +6,12 @@ import StationeryServices from 'components/03-organisms/stationery-services/stat
 import StationeryBeeAction from 'components/03-organisms/stationery-bee-action/stationery-bee-action';
 import StationeryTeaser from 'components/03-organisms/stationery-teaser/stationery-teaser';
 
+// META DESCRIPTION
+const metadata = {
+	title: 'Papeterie | Papeterie- und Bluemeparadies Wespi',
+	description: 'Bei uns finden Sie eine grosse Auswahl an Büro- und Schulmaterial. In Sins oder Online.',
+};
+
 // PAGE
 const Page = () => {
 
@@ -23,4 +29,5 @@ const Page = () => {
 };
 
 // EXPORT
+export { metadata };
 export default Page;

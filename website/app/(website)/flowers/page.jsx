@@ -8,6 +8,12 @@ import FlowersTeaserSeasonal from 'components/03-organisms/flowers-teaser-season
 import FlowersTeaserWeddings from 'components/03-organisms/flowers-teaser-weddings/flowers-teaser-weddings';
 import FlowersTeaserMourning from 'components/03-organisms/flowers-teaser-mourning/flowers-teaser-mourning';
 
+// META DESCRIPTION
+const metadata = {
+	title: 'Blueme | Papeterie- und Bluemeparadies Wespi',
+	description: 'Bei uns finden Sie Geschenke der Natur; saisonale Blumen, originelle Hauskreationen, Blumiges zu Hochzeiten oder Trauerfeiern.',
+};
+
 // PAGE
 const Page = () => {
 
@@ -27,4 +33,5 @@ const Page = () => {
 };
 
 // EXPORT
+export { metadata };
 export default Page;

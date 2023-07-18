@@ -4,6 +4,7 @@
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { usePathname } from 'next/navigation';
 import Section from 'components/04-layouts/section/section';
 import Heading from 'components/01-atoms/heading/heading';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
@@ -14,6 +15,9 @@ const OpeningTimes = () => {
 	// SETUP REFS
 	const sectionRef = useRef();
 	const sectionTimelineRef = useRef();
+
+	// GET PATHNAME
+	const pathname = usePathname();
 
 	// REGISTER SCROLL-TRIGGER PLUGIN
 	useEffect(() => {
@@ -28,7 +32,7 @@ const OpeningTimes = () => {
 			sectionTimelineRef.current.to('.opening-times .content', { autoAlpha: 1, top: 0, duration: 0.6 }, 0);
 		}, sectionRef);
 		return () => context.revert();
-	}, []);
+	}, [pathname]);
 
 	// RENDER
 	return (

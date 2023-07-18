@@ -8,6 +8,12 @@ import AboutUsQuote from 'components/03-organisms/about-us-quote/about-us-quote'
 import AboutUsCta from 'components/03-organisms/about-us-cta/about-us-cta';
 import AboutUsTeaserStore from 'components/03-organisms/about-us-teaser-store/about-us-teaser-store';
 
+// META DESCRIPTION
+const metadata = {
+	title: 'Über Uns | Papeterie- und Bluemeparadies Wespi',
+	description: 'Im kleinen Team überzeugen wir gross. Wir sind ein eingespieltes Team und freuen uns über berührende Begegnungen mit verschiedensten Menschen. Ihr Wunsch oder Anliegen trifft auf unsere Kreativität – gemeinsam finden wir für Sie das passende Produkt.',
+};
+
 // PAGE
 const Page = () => {
 
@@ -27,4 +33,5 @@ const Page = () => {
 };
 
 // EXPORT
+export { metadata };
 export default Page;

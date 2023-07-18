@@ -7,6 +7,12 @@ import StartFlowersOffer from 'components/03-organisms/start-flowers-offer/start
 import StartStationeryOffer from 'components/03-organisms/start-stationery-offer/start-stationery-offer';
 import StartBeeAction from 'components/03-organisms/start-bee-action/start-bee-action';
 
+// META DESCRIPTION
+const metadata = {
+	title: 'Papeterie- und Bluemeparadies Wespi',
+	metadata: 'Seit Jahren mit viel Herzblut und Leidenschaft für Sie da. Ob im Alltag, an Hochzeiten, zu Trauer- oder Geburtstagsfesten – wir erfüllen saisonale Blumenwünsche. Zu Blumen gehört oft eine Karte und dazu braucht es natürlich einen toller Stift.',
+};
+
 // PAGE
 const Page = () => {
 
@@ -25,4 +31,5 @@ const Page = () => {
 };
 
 // EXPORT
+export { metadata };
 export default Page;
