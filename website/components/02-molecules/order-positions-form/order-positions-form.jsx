@@ -39,7 +39,7 @@ const OrderPositionsForm = ({ className }) => {
 
 	// RENDER
 	return (
-		<div className={ `${ className }order-positions-form` }>
+		<div className={ `${ className } order-positions-form` }>
 			<Action className="order-positions-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
 			<div className="order-positions-form__form form">
 				<Heading className="form__heading" level="h2">Bestellung</Heading>
