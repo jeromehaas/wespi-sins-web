@@ -4,17 +4,20 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.11.5",
-    "@strapi/plugin-users-permissions": "4.11.5",
     "@strapi/plugin-i18n": "4.11.5",
-    "better-sqlite3": "8.0.1"
+    "@strapi/plugin-users-permissions": "4.11.5",
+    "@strapi/strapi": "4.11.5",
+    "better-sqlite3": "8.0.1",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5"
   },
   "author": {
     "name": "A Strapi developer"
