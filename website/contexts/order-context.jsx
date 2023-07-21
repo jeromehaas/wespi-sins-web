@@ -21,7 +21,7 @@ const OrderProvider = ({ children }) => {
 
 	// INITIAL POSITION VALUES
 	const initialPositionsValues = [
-		{ 'article-description': '', 	'article-manufacturer': '', 'order-number': '', 'quantity': '' },
+		{ 'description': '', 	'manufacturer': '', 'serial': '', 'quantity': '' },
 	];
 
 	// DEFINE STATE

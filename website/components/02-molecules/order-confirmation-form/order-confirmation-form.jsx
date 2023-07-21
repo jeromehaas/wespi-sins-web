@@ -2,6 +2,7 @@
 import { OrderContext } from 'contexts/order-context';
 import { useContext } from 'react';
 import { useFormContext } from 'react-hook-form';
+import axios from 'axios';
 import Heading from 'components/01-atoms/heading/heading';
 import Button from 'components/01-atoms/button/button';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
@@ -17,13 +18,45 @@ const OrderConfirmationForm = ({ className }) => {
 	const { getValues, reset } = useFormContext();
 
 	// GET VALUES
-	const { positions, address } = getValues();
+	const values = getValues();
 
-	// HANDLE NEXT STEP
-	const handleNextStep = () => {
-		orderContext.setStep(4);
-		orderContext.resetPositions();
-		reset();
+	// HANDLE SUBMIT
+	const handleDispatch = async () => {
+
+		try {
+
+			// GET VALUES
+			const { positions, address } = getValues();
+
+			// CREATE ORDER
+			const response = await axios({
+				method: 'POST',
+				url: `${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/order`,
+				data: {
+					order: {
+						address: address,
+						positions: positions,
+					},
+				},
+			});
+
+			// // CHECK IF REQUEST WAS SUCCESSFULL
+			if (response.status >= 200 && response.status < 300) {
+
+				// NEXT STEP
+				orderContext.setStep(4);
+
+				// RESET POSITIONS AND FORM
+				orderContext.resetPositions();
+				reset();
+
+			};
+
+			// HANDLE ERRORS
+		} catch (error) {
+			console.log(error);
+		};
+
 	};
 
 	// HANDLE PREVIOUSS STEP
@@ -51,11 +84,11 @@ const OrderConfirmationForm = ({ className }) => {
 					<Heading className="block__heading" level="h4">Bestellübersicht</Heading>
 					<div className="block__content content">
 						<div className="content__order-list order-list">
-							{ positions.map((position, index) => (
+							{ values.positions.map((position, index) => (
 								<div className="order-list__row" key={ index }>
-									<Paragraph className="order-list__item">{position['article-description']}</Paragraph>
-									<Paragraph className="order-list__item">{position['article-manufacturer']}</Paragraph>
-									<Paragraph className="order-list__item">{position['order-number']}</Paragraph>
+									<Paragraph className="order-list__item">{position['description']}</Paragraph>
+									<Paragraph className="order-list__item">{position['manufacturer']}</Paragraph>
+									<Paragraph className="order-list__item">{position['serial']}</Paragraph>
 									<Paragraph className="order-list__item">{position['quantity'] } Ex. </Paragraph>
 								</div>
 							))}
@@ -67,10 +100,10 @@ const OrderConfirmationForm = ({ className }) => {
 					<Heading className="block__heading" level="h4">Rechnungsadresse</Heading>
 					<div className="block__content content">
 						<div className="content__address">
-							<Paragraph className="address__item">{address['company']}</Paragraph>
-							<Paragraph className="address__item">{address['firstname']} {address['lastname']}</Paragraph>
-							<Paragraph className="address__item">{address['street']}</Paragraph>
-							<Paragraph className="address__item">{address['town']}</Paragraph>
+							<Paragraph className="address__item">{values.address['company']}</Paragraph>
+							<Paragraph className="address__item">{values.address['firstname']} {values.address['lastname']}</Paragraph>
+							<Paragraph className="address__item">{values.address['street']}</Paragraph>
+							<Paragraph className="address__item">{values.address['town']}</Paragraph>
 						</div>
 						<Action className="content__action" onClick={ () => handleJumpStep(2) }>Rechnungsadresse ändern</Action>
 					</div>
@@ -86,7 +119,7 @@ const OrderConfirmationForm = ({ className }) => {
 			</div>
 			<div className="order-confirmation-form__actions actions">
 				<Action className="actions__back-button" symbol="chevron-left" onClick={ handlePreviousStep }>zurück</Action>
-				<Button className="actions__next-button" onClick={ handleNextStep }>Bestellung abschliessen</Button>
+				<Button className="actions__next-button" onClick={ handleDispatch }>Bestellung abschliessen</Button>
 			</div>
 		</div>
 	);

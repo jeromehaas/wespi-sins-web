@@ -50,13 +50,13 @@ const OrderPositionsForm = ({ className }) => {
 					error={ formState.errors['positions'] }
 					control={ control }
 					formState={ formState }
-					defaultValues={ { 'firstname': '', 'lastname': '', 'birthdate': '', 'ahv-wage': '' } }
+					defaultValues={ { 'description': '', 'manufacturer': '', 'serial': '', 'quantity': '' } }
 					labels={ { add: 'Weitere Artikel hinzufügen', remove: 'Artikel entfernen' } }
 					options={ [
-						{ id: 'article-description', label: 'Artikelbezeichnung', placeholder: 'Artikelbezeichnung', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } }, type: 'text' },
-						{ id: 'article-manufacturer', label: 'Artikelhersteller', placeholder: 'Artikelhersteller', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } }, type: 'text' },
-						{ id: 'order-number', label: 'Bestellnummer', placeholder: 'Bestellnummer', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } }, type: 'text' },
-						{ id: 'quantity', label: 'Anzahl', placeholder: '1', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie Ihren Vornamen an' } }, type: 'text' },
+						{ id: 'description', label: 'Artikelbezeichnung', placeholder: 'Artikelbezeichnung', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Artikelbezeichnung an' } }, type: 'text' },
+						{ id: 'manufacturer', label: 'Artikelhersteller', placeholder: 'Artikelhersteller', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie den Artikelhersteller an' } }, type: 'text' },
+						{ id: 'serial', label: 'Bestellnummer', placeholder: 'Bestellnummer', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie die Bestellnummer an' } }, type: 'text' },
+						{ id: 'quantity', label: 'Anzahl', placeholder: '1', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Anzahl an' } }, type: 'text' },
 					] }
 				/>
 			</div>

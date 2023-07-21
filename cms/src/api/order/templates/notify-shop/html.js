@@ -147,39 +147,31 @@ module.exports = `
                                                 </tr>
                                                 <tr>
                                                    <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
-                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Soeben wurde eine neue Nachricht über das Kontakt-Formular der Website verfasst.<br><br>Diese Angaben wurden übermittelt:</div>
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Soeben wurde eine neue Bestellung über das Bestell-Formular der Website ausgelöst.</div>
                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                   <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="cellspacing:0;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;">
+                                                   <td style="font-size:0px;word-break:break-word;">
+                                                      <!--[if mso | IE]>
+                                                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Firma</td>
-                                                            <td style="padding: 0;"><%= data.message.company %></td>
+                                                            <td height="16" style="vertical-align:top;height:16px;">
+                                                               <![endif]-->
+                                                               <div style="height:16px;">&nbsp;</div>
+                                                               <!--[if mso | IE]>
+                                                            </td>
                                                          </tr>
+                                                      </table>
+                                                      <![endif]-->
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td align="left" vertical-align="middle" style="font-size:0px;padding:10px 25px;word-break:break-word;">
+                                                      <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Vorname</td>
-                                                            <td style="padding: 0;"><%= data.message.firstname %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachname</td>
-                                                            <td style="padding: 0;"><%= data.message.lastname %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">E-Mail-Adresse</td>
-                                                            <td style="padding: 0;"><%= data.message.email %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Telefonnummer</td>
-                                                            <td style="padding: 0;"><%= data.message.phone %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Betreff</td>
-                                                            <td style="padding: 0;"><%= data.message.subject %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachricht</td>
-                                                            <td style="padding: 0;"><%= data.message.content %></td>
+                                                            <td align="center" bgcolor="#000000" role="presentation" style="border:none;border-radius:0;cursor:auto;padding:10px 25px;background:#000000;" valign="middle">
+                                                               <p style="background:#000000;color:#FFFFFF;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">zur Bestellung</p>
+                                                            </td>
                                                          </tr>
                                                       </table>
                                                    </td>

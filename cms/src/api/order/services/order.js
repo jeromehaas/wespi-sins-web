@@ -2,7 +2,7 @@ const { notifyCustomerTemplate, notifyShopTemplate } = require('../templates/ind
 
 module.exports = () => {
 
-	const notifyCustomer = async (message) => {
+	const notifyCustomer = async (order) => {
 
 		// TRY-CATCH 
 		try {
@@ -16,15 +16,15 @@ module.exports = () => {
 
 			// EMAIL CONFIGS
 			const emailConfigs = {
-				to: message.email,
+				to: order.address.email,
 				from: 'info@prototype-area.com',
 			};
 
 			// EMAIL VARIABLES
 			const emailVariables = {
 				data: {
-					firstname: message.firstname,
-					lastname: message.lastname,
+					address: order.address,
+					positions: order.positions,
 				},
 			};
 
@@ -45,7 +45,7 @@ module.exports = () => {
 
 	};
 
-	const notifyShop = async (message) => {
+	const notifyShop = async (order) => {
 	
 		// TRY-CATCH 
 		try {
@@ -65,17 +65,16 @@ module.exports = () => {
 
 			// EMAIL VARIABLES
 			const emailVariables = {
-				data: {
-					message: message,
-				},
+					address: order.address,
+					id: order.id,
 			};
 
 			// SEND EMAIL
-				await strapi.plugins.email.services.email.sendTemplatedEmail(
-					emailConfigs,
-					emailTemplate,
-					emailVariables,
-				);
+			await strapi.plugins.email.services.email.sendTemplatedEmail(
+				emailConfigs,
+				emailTemplate,
+				emailVariables,
+			);
 
 		// HANDLE ERRORS
 		} catch (error) {

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useFieldArray } from 'react-hook-form';
 
 // COMPONENT
-const InputTable = ({ className, category, options, control, register, formState, labels }) => {
+const InputTable = ({ className, category, options, control, defaultValue, register, formState, labels }) => {
 
 	// BRING IN FIELD ARRAY
 	const { fields, append, remove } = useFieldArray({
@@ -15,7 +15,8 @@ const InputTable = ({ className, category, options, control, register, formState
 
 	// HANDLE ADD ARTICLE
 	const handleAddArticle = () => {
-		append({ item: { 'article-description': '', 'article-manufacturer': '', 'order-number': '', 'quantity': '' } });
+		console.log(options);
+		append({ item: defaultValue });
 	};
 
 	// HANDLE REMOVE ARTICLE

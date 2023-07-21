@@ -34,10 +34,7 @@ module.exports = `
       <style type="text/css">
          .outlook-group-fix { width:100% !important; }
       </style>
-      <![endif]--><!--[if !mso]><!-->
-      <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700" rel="stylesheet" type="text/css">
-      <style type="text/css">@import url(https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700);</style>
-      <!--<![endif]-->
+      <![endif]-->
       <style type="text/css">@media only screen and (min-width:480px) {
          .mj-column-per-100 { width:100% !important; max-width: 100%; }
          }
@@ -127,7 +124,7 @@ module.exports = `
                                                 </tr>
                                                 <tr>
                                                    <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
-                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Hallo Wespi Sins Team.</div>
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Guten Tag<%= user.firstname %> <%= user.lastname %>.</div>
                                                    </td>
                                                 </tr>
                                                 <tr>
@@ -147,41 +144,27 @@ module.exports = `
                                                 </tr>
                                                 <tr>
                                                    <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
-                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Soeben wurde eine neue Nachricht über das Kontakt-Formular der Website verfasst.<br><br>Diese Angaben wurden übermittelt:</div>
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Vielen Dank für Ihre Bestellung!<br>Wir werden ihre Bestellung gerne innerhalb den nächsten fünf Arbeitstagen bearbeiten. Sie werden von uns benachrichtigt, sobald Sie die Bestellung bei uns in Sins abholen können. </div>
                                                    </td>
                                                 </tr>
                                                 <tr>
-                                                   <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                                                      <table cellpadding="0" cellspacing="0" width="100%" border="0" style="cellspacing:0;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;">
+                                                   <td style="font-size:0px;word-break:break-word;">
+                                                      <!--[if mso | IE]>
+                                                      <table role="presentation" border="0" cellpadding="0" cellspacing="0">
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Firma</td>
-                                                            <td style="padding: 0;"><%= data.message.company %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Vorname</td>
-                                                            <td style="padding: 0;"><%= data.message.firstname %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachname</td>
-                                                            <td style="padding: 0;"><%= data.message.lastname %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">E-Mail-Adresse</td>
-                                                            <td style="padding: 0;"><%= data.message.email %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Telefonnummer</td>
-                                                            <td style="padding: 0;"><%= data.message.phone %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Betreff</td>
-                                                            <td style="padding: 0;"><%= data.message.subject %></td>
-                                                         </tr>
-                                                         <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachricht</td>
-                                                            <td style="padding: 0;"><%= data.message.content %></td>
+                                                            <td height="16" style="vertical-align:top;height:16px;">
+                                                               <![endif]-->
+                                                               <div style="height:16px;">&nbsp;</div>
+                                                               <!--[if mso | IE]>
+                                                            </td>
                                                          </tr>
                                                       </table>
+                                                      <![endif]-->
+                                                   </td>
+                                                </tr>
+                                                <tr>
+                                                   <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Mit freundlichen Grüssen,<br>Wespi Sins Team.</div>
                                                    </td>
                                                 </tr>
                                                 <tr>
