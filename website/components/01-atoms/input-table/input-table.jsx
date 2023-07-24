@@ -15,7 +15,6 @@ const InputTable = ({ className, category, options, control, defaultValue, regis
 
 	// HANDLE ADD ARTICLE
 	const handleAddArticle = () => {
-		console.log(options);
 		append({ item: defaultValue });
 	};
 

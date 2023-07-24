@@ -6,7 +6,7 @@
 		grid-column-gap: 32px;
 		margin-bottom: 32px;
 
-		&__input-field {
+		&__input-field, .input-field {
 
 			&:nth-child(1) {
 				grid-column: span 3;
@@ -24,6 +24,10 @@
 				grid-column: span 1;
 			}
 
+			&__input {
+				border-radius: 0;
+			}
+
 		}
 
 		&__remove-item-link {
@@ -31,6 +35,7 @@
 			align-self: center;
 			justify-self: start;
 		}
+
 
 	}
 
