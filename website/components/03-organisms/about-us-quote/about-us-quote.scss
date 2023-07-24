@@ -22,6 +22,10 @@
 			grid-column-gap: 24px;
 		}
 
+		&__content, .content {
+			grid-column: 1 / span 12;
+		}
+
 	}
 
 	@media (max-width: 400px) {
