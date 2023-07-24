@@ -212,7 +212,21 @@
 		&__form, .form {
 
 			&__block, .block {
-				grid-column-gap: 24px;
+				grid-column-gap: 24px; 
+
+				&__content, .content {
+
+					&__order-list, .order-list {
+
+
+						&__row {
+							grid-column-gap: 24px; 
+						}
+
+					}
+
+				}
+
 			}
 
 		}
@@ -230,6 +244,20 @@
 
 			&__block, .block {
 				grid-column-gap: 16px;
+
+				&__content, .content {
+
+					&__order-list, .order-list {
+
+
+						&__row {
+							grid-column-gap: 16px; 
+						}
+
+					}
+
+				}
+
 			}
 
 		}
