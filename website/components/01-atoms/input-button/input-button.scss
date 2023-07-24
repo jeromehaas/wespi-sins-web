@@ -14,6 +14,11 @@
 		background-color: $beige-20;
 	}
 
+	&__digit, 
+	&__letters {
+		color: $black-100;
+	}
+
 	@media (max-width: 400px), (max-height: 800px) { 
 		width: 56px;
 		height: 56px;
