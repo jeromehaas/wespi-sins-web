@@ -9,7 +9,7 @@
 	&__inner {
 		display: grid; 
 		grid-template-columns: repeat(12, 1fr);
-		height: auto;
+		height: auto !important;
 	}
 
 	&__background-video, .background-video {
