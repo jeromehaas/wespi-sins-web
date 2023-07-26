@@ -3,7 +3,7 @@
 // IMPORTS
 import Section from 'components/04-layouts/section/section';
 import { gsap } from 'gsap';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 // COMPONENT
 const Grid = () => {
@@ -11,34 +11,25 @@ const Grid = () => {
 	// SETUP REFS
 	const gridRef = useRef();
 
-	// SHOW GRID
-	const showGrid = (event) => {
-		if (event && event.key === 'g' && event.altKey) {
-			gsap.context(() => {
-				gsap.to('.grid__column', { display: 'block' });
-			}, gridRef);
-		}
+	// SETUP STATE
+	const [isVisible, setIsVisible] = useState(false);
+
+	// TOGGLE GRID
+	const toggleGrid = (event) => {
+		if (event && event.key === 'g' && event.altKey) setIsVisible((value) => !value);
 	};
 
-	// HIDE GRID
-	const hideGrid = (event) => {
-		if (event && event.key === 'g') {
-			gsap.context(() => {
-				gsap.to('.grid__column', { display: 'none' });
-			}, gridRef);
-		}
-	};
+	// CHANGE STYLE OF GRID
+	useEffect(() => {
+		isVisible
+			?	gsap.context(() => gsap.to('.grid__column', { display: 'block' }), gridRef)
+			:	gsap.context(() => gsap.to('.grid__column', { display: 'none' }), gridRef);
+	}, [isVisible]);
 
 	// LISTEN ON KEY "G" TO TOGGLE GRID
 	useEffect(() => {
-		document.addEventListener('keydown', (event) => { return showGrid(event); });
-		return () => { return document.removeEventListener('keydown', showGrid); };
-	}, []);
-
-	// LISTEN ON KEY "G" TO TOGGLE GRID
-	useEffect(() => {
-		document.addEventListener('keyup', (event) => { return hideGrid(event); });
-		return () => { return document.removeEventListener('keyup', hideGrid); };
+		document.addEventListener('keyup', (event) => { return toggleGrid(event); });
+		return () => { return document.removeEventListener('keyup', toggleGrid); };
 	}, []);
 
 	// RENDER

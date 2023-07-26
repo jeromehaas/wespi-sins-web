@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 
 // META DESCRIPTION
 const metadata = {
+	metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_BASE_URL),
 	title: 'Papeterie- und Bluemeparadies Wespi',
 	description: 'Seit Jahren mit viel Herzblut und Leidenschaft für Sie da. Ob im Alltag, an Hochzeiten, zu Trauer- oder Geburtstagsfesten – wir erfüllen saisonale Blumenwünsche. Zu Blumen gehört oft eine Karte und dazu braucht es natürlich einen toller Stift.',
 	openGraph: {

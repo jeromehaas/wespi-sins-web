@@ -48,7 +48,7 @@ const MobileNavigation = () => {
 	// HANDLE LOGO CLICK
 	const handleLogoClick = (event) => {
 		event.preventDefault();
-		if (orderContext.menuIsOpen === true) return orderContext.setMenuIsOpen(false);
+		if (orderContext && orderContext.menuIsOpen === true) return orderContext.setMenuIsOpen(false);
 		if (pathname !== '/') return router.push('/');
 	};
 
