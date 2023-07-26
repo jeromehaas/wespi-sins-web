@@ -69,7 +69,7 @@ module.exports = `
                                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                                          <tbody>
                                                             <tr>
-                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="../../assets/logos/logo-wespi-sins.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
+                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-development.fra1.digitaloceanspaces.com/logo_wespi_sins_ab3302c8aa.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
