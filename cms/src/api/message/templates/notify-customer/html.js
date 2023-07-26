@@ -164,7 +164,7 @@ module.exports = `
                                                 </tr>
                                                 <tr>
                                                    <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
-                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Mit freundlichen Grüssen,<br>Wespi Sins Team.</div>
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Mit freundlichen Grüssen,<br>Wespi Sins Team</div>
                                                    </td>
                                                 </tr>
                                                 <tr>
