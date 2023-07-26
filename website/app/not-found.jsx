@@ -5,6 +5,7 @@ import PageNotFoundCta from 'components/03-organisms/page-not-found-cta/page-not
 import MobileNavigation from 'components/03-organisms/mobile-navigation/mobile-navigation';
 import DesktopNavigation from 'components/03-organisms/desktop-navigation/desktop-navigation';
 import Footer from 'components/03-organisms/footer/footer';
+import OpeningTimes from 'components/03-organisms/opening-times/opening-times';
 
 // META DESCRIPTION
 const metadata = {
@@ -21,6 +22,7 @@ const Page = () => {
 			<DesktopNavigation />
 			<PageNotFoundIntro />
 			<PageNotFoundCta />
+			<OpeningTimes />
 			<Footer />
 		</Fragment>
 	);
