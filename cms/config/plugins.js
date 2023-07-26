@@ -26,8 +26,8 @@ module.exports = ({ env }) => ({
 				},
 			},
 			settings: {
-				defaultFrom: 'info@prototype-area.com',
-				defaultReplyTo: 'info@prototype-area.com',
+				defaultFrom: process.env.SMTP_SENDER,
+				defaultReplyTo: process.env.SMTP_SENDER,
 			},
 		},
 	},
