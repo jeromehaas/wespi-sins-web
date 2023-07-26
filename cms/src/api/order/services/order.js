@@ -17,7 +17,7 @@ module.exports = () => {
 			// EMAIL CONFIGS
 			const emailConfigs = {
 				to: order.address.email,
-				from: 'info@prototype-area.com',
+				from: process.env.SMTP_SENDER,
 			};
 
 			// EMAIL VARIABLES
@@ -59,8 +59,8 @@ module.exports = () => {
 
 			// EMAIL CONFIGS
 			const emailConfigs = {
-				to: 'info@prototype-area.com',
-				from: 'info@prototype-area.com',
+				to: process.env.SMTP_RECEIVER,
+				from: process.env.SMTP_SENDER,
 			};
 
 			// EMAIL VARIABLES
