@@ -13,14 +13,24 @@ const metadata = {
 	metadata: 'Seit Jahren mit viel Herzblut und Leidenschaft für Sie da. Ob im Alltag, an Hochzeiten, zu Trauer- oder Geburtstagsfesten – wir erfüllen saisonale Blumenwünsche. Zu Blumen gehört oft eine Karte und dazu braucht es natürlich einen toller Stift.',
 };
 
+// FETCH NEWS
+const fetchNews = async () => {
+	const res = await fetch('http://localhost:1337/api/news?populate=image');
+	const data = await res.json();
+	return data;
+};
+
 // PAGE
-const Page = () => {
+const Page = async () => {
+
+	// FETCH NEWS
+	const news = await fetchNews();
 
 	// RENDER
 	return (
 		<Fragment>
 			<StartHero />
-			<StartNews />
+			<StartNews news={ news } />
 			<StartIntro />
 			<StartBeeAction />
 			<StartFlowersOffer />

@@ -11,7 +11,7 @@ import Section from 'components/04-layouts/section/section';
 import Action from 'components/01-atoms/action/action';
 
 // COMPONENT
-const StartNews = () => {
+const StartNews = ({ news }) => {
 
 	// SETUP REFS
 	const sectionRef = useRef();
@@ -69,47 +69,31 @@ const StartNews = () => {
 			<div className="start-news__banner banner">
 				<Heading className="banner__heading animation--fade-in" level="h2">Aktuell</Heading>
 				<div className="banner__list list animation--fade-in">
-					<div className="list__item item">
-						<Heading className="item__heading" level="h4">Adventsausstellung vom 15. bis 19. November 2023</Heading>
-						<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, '1'); } }>Mehr erfahren</Anchor>
-					</div>
-					<div className="list__item item">
-						<Heading className="item__heading" level="h4">Sins im Advent am 3. Dezember 2023</Heading>
-						<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, '2'); } }>Mehr erfahren</Anchor>
-					</div>
+					{ news.data.map((item) => (
+						<div className="list__item item" key={ item.id }>
+							<Heading className="item__heading" level="h4">{ item.attributes.heading}</Heading>
+							<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, item.id); } }>Mehr erfahren</Anchor>
+						</div>
+					))}
 				</div>
 			</div>
 			<div className="start-news__announcements announcements">
-				<div className="announcements__item item" data-id="1">
-					<div className="item__inner">
-						<div className="item__content content">
+				{ news.data ? news.data.map((item) => (
+					<div className="announcements__item item" data-id={ item.id } key={ item.id }>
+						<div className="item__inner">
 							<div className="item__content content">
-								<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
-								<Picture className="content__image animation--fade-in" src="/images/general/wespi-geschaeft.webp" alt="Adventausstellung" width={ 640 } height={ 400 } />
-								<Heading className="content__heading animation--fade-in" level="h2">Adventsausstellung vom 15. bis 19. November 2023</Heading>
-								<Markdown className="content__text animation--fade-in">
-									An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.
-									Lassen Sie sich inspirieren!
-									Neben Blumen finden Sie bei uns weitere Geschenkideen für Weihnachten oder andere Gelegenheiten. Lassen Sie sich bei uns inspirieren und besuchen Sie uns an der Bahnhofstrasse 15. Wir freuen uns sehr.
-								</Markdown>
+								<div className="item__content content">
+									<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
+									<Picture className="content__image animation--fade-in" src={ item.attributes.image.data.attributes.url } alt={ item.attributes.heading } width={ item.attributes.image.data.attributes.width } height={ item.attributes.image.data.attributes.height } />
+									<Heading className="content__heading animation--fade-in" level="h2">{ item.attributes.heading }</Heading>
+									<Markdown className="content__text animation--fade-in">
+										{ item.attributes.text }
+									</Markdown>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="announcements__item item" data-id="2">
-					<div className="item__inner">
-						<div className="item__content content">
-							<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
-							<Picture className="content__image animation--fade-in" src="/images/general/wespi-blumen-sortiment.webp" alt="Adventausstellung" width={ 640 } height={ 400 } />
-							<Heading className="content__heading animation--fade-in" level="h2">Sins im Advent</Heading>
-							<Markdown className="content__text animation--fade-in">
-								An den Feiertagen unterstreichen Blumen mit ihrer Schönheit die Bedeutung des Festes. Wir laden Sie herzlichst ein, mit uns die Weihnachtszeit einzuläuten. Blumen schaffen es, in der stillen aber auch hektischen Jahreszeit für einen Moment innezuhalten und zu sein. Geniessen Sie bei uns einen Moment der Inspiration, Freude und Farbe.
-								Lassen Sie sich inspirieren!
-								Neben Blumen finden Sie bei uns weitere Geschenkideen für Weihnachten oder andere Gelegenheiten. Lassen Sie sich bei uns inspirieren und besuchen Sie uns an der Bahnhofstrasse 15. Wir freuen uns sehr.
-							</Markdown>
-						</div>
-					</div>
-				</div>
+				)) : null }
 			</div>
 		</Section>
 	);
