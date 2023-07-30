@@ -12,7 +12,7 @@ import Anchor from 'components/01-atoms/anchor/anchor';
 import Article from 'components/04-layouts/article/article';
 
 // COMPONENT
-const StartFlowersOffer = () => {
+const StartFlowersOffer = ({ data }) => {
 
 	// SETUP REFS
 	const startFlowersOfferRef = useRef();
@@ -45,7 +45,7 @@ const StartFlowersOffer = () => {
 			<div className="start-flowers⁻offer__impressions impressions">
 				<div className="impressions__item item animation--fade-in">
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />
+						<Picture className="item__image" src={ data.flowers.data.attributes.houseCreations.cover.data.attributes.url } />
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hauskreationen</Heading>
@@ -58,12 +58,12 @@ const StartFlowersOffer = () => {
 						<Anchor className="item__link" href="/flowers#flowers-teaser-seasonal" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-portrait.png" />
+						<Picture className="item__image" src={ data.flowers.data.attributes.seasonal.cover.data.attributes.url } />
 					</div>
 				</div>
 				<div className="impressions__item item animation--fade-in">
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-portrait.png" />
+						<Picture className="item__image" src={ data.flowers.data.attributes.weddings.cover.data.attributes.url } />
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hochzeit</Heading>
@@ -76,7 +76,7 @@ const StartFlowersOffer = () => {
 						<Anchor className="item__link" href="/flowers#flowers-teaser-mourning" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/placeholders/placeholder-landscape.png" />
+						<Picture className="item__image" src={ data.flowers.data.attributes.mourning.cover.data.attributes.url } />
 					</div>
 				</div>
 			</div>

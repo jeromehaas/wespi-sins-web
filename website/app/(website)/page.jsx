@@ -20,20 +20,30 @@ const fetchNews = async () => {
 	return data;
 };
 
+// FETCH FLOWERS
+const fetchFlowers = async () => {
+	const res = await fetch('http://localhost:1337/api/flower?populate=deep');
+	const data = await res.json();
+	return data;
+};
+
 // PAGE
 const Page = async () => {
 
 	// FETCH NEWS
 	const news = await fetchNews();
 
+	// FETCH FLOWERS
+	const flowers = await fetchFlowers();
+
 	// RENDER
 	return (
 		<Fragment>
 			<StartHero />
-			<StartNews news={ news } />
+			<StartNews data={ { news } } />
 			<StartIntro />
 			<StartBeeAction />
-			<StartFlowersOffer />
+			<StartFlowersOffer data={ { flowers } } />
 			<StartStationeryOffer />
 		</Fragment>
 	);

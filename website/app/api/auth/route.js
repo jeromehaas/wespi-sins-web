@@ -1,11 +1,13 @@
+// IMPORTS
 import { NextResponse } from 'next/server';
 
 // GET NEXTRESPONSE MEHTODS
 const { json } = NextResponse;
 
 // LOGIN
-export async function POST(request) {
+const POST = async (request) => {
 
+	// TRY-CATCH BLOCK
 	try {
 
 		// GET BODY
@@ -13,19 +15,21 @@ export async function POST(request) {
 		if (!pin) throw new Error('no pin provided');
 
 		// GET ENV VARIABLES
-		const { APP_USER_SECRET: userSecret } = process.env;
-		if (!userSecret) throw new Error('user-secret is not defined');
+		const { USER_LOGIN_PIN: userLoginPin } = process.env;
+		const { USER_LOGIN_TOKEN: userLoginToken } = process.env;
+		if (!userLoginPin) throw new Error('user-login-pin is not defined');
+		if (!userLoginToken) throw new Error('user-login-token is not defined');
 
 		// CHECK PIN
-		if (pin !== userSecret) throw new Error('pin not valid');
+		if (pin !== userLoginPin) throw new Error('user-login-pin is not valid');
 
 		// GENERATE TOKEN
 		const token = {
 			expiry: Math.floor(Date.now() / 1000) + (60 * 60 * 24),
-			data: { pin: pin },
+			data: userLoginToken,
 		};
 
-		// RETURN
+		// RETURN SUCCESS RESPONSE
 		return json(
 			{ message: 'login was successfull', token: token },
 			{ status: 200 },
@@ -33,10 +37,18 @@ export async function POST(request) {
 
 	// HANDLE ERRORS
 	} catch (error) {
+
+		// RETURN ERROR RESPONSE
 		return json(
 			{ message: error.message },
 			{ status: 401 },
 		);
+
 	};
 
+};
+
+// EXPORTS
+export {
+	POST,
 };

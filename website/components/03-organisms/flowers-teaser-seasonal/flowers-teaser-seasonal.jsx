@@ -12,24 +12,15 @@ import Slider from 'components/02-molecules/slider/slider';
 import SliderNavigation from 'components/02-molecules/slider-navigation/slider-navigation';
 
 // COMPONENT
-const FlowersTeaserSeasonal = () => {
+const FlowersTeaserSeasonal = ({ data }) => {
 
 	// SETUP REFS
 	const sectionRef = useRef();
 	const sectionTimelineRef = useRef();
 
-	// DEFINE IMAGES
-	const images = [
-		{ id: 1, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
-		{ id: 2, src: '/images/placeholders/placeholder-portrait.png', width: 1080, height: 1350, alt: 'Placeholder' },
-		{ id: 3, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
-		{ id: 4, src: '/images/placeholders/placeholder-portrait.png', width: 1080, height: 1350, alt: 'Placeholder' },
-		{ id: 5, src: '/images/placeholders/placeholder-landscape.png', width: 1920, height: 1080, alt: 'Placeholder' },
-	];
-
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: images,
+		images: data.flowers.data.attributes.seasonal.images.data,
 		direction: 'ltr',
 	});
 

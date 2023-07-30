@@ -49,6 +49,7 @@ const LoginForm = ({ className }) => {
 	// VALIDATE INPUT
 	const validateInput = async () => {
 
+		// TRY-CATCH BLOCK
 		try {
 
 			// SEND REQUEST
@@ -63,21 +64,32 @@ const LoginForm = ({ className }) => {
 
 			// ON SUCCESS
 			if (token) {
+
+				// SET STATUS
 				setStatus('success');
+
+				// SET COOKIE
 				setCookie('wespi-user-token', token);
+
+				// RESET INPUT AND REDIRECT USER AFTER DELAY
 				setTimeout(() => {
-					setInput('');
 					router.push('/');
-				}, 2000);
+				}, 1000);
+
 			} ;
 
 		// HANDLE ERRORS
 		} catch (error) {
+
+			// SET STATUS
 			setStatus('error');
+
+			// RESET FIELDS AFTER DELAY
 			setTimeout(() => {
 				setStatus('');
 				setInput('');
 			}, 2000);
+
 		};
 
 	};

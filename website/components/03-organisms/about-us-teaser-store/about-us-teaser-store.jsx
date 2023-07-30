@@ -21,10 +21,10 @@ const AboutUsTeaserStore = () => {
 
 	// DEFINE IMAGES
 	const images = [
-		{ id: 1, src: '/images/general/wespi-blumen-sortiment.webp', width: 2001, height: 1334, alt: 'Placeholder' },
-		{ id: 2, src: '/images/general/wespi-dekorationen.webp', width: 1334, height: 2001, alt: 'Placeholder' },
-		{ id: 4, src: '/images/general/wespi-papeterie-theke.webp', width: 1334, height: 2001, alt: 'Placeholder' },
-		{ id: 3, src: '/images/general/wespi-karten-auswahl.webp', width: 2001, height: 1334, alt: 'Placeholder' },
+		{ id: 1, attributes: { url: '/images/general/wespi-blumen-sortiment.webp', width: 2001, height: 1334, alt: 'Placeholder' } },
+		{ id: 2, attributes: { url: '/images/general/wespi-dekorationen.webp', width: 1334, height: 2001, alt: 'Placeholder' } },
+		{ id: 4, attributes: { url: '/images/general/wespi-papeterie-theke.webp', width: 1334, height: 2001, alt: 'Placeholder' } },
+		{ id: 3, attributes: { url: '/images/general/wespi-karten-auswahl.webp', width: 2001, height: 1334, alt: 'Placeholder' } },
 	];
 
 	// BRING IN SLIDER

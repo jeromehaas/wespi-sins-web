@@ -46,10 +46,10 @@ const ContactForm = ({ className }) => {
 			// // CHECK IF REQUEST WAS SUCCESSFULL
 			if (response.status >= 200 && response.status < 300) {
 
-				// 	// SHOW TOAST
+				// SHOW TOAST
 				setToast({ status: 'success', message: 'Die Nachricht wurde erfolgreich übermittelt.' });
 
-				// 	// RESET FORM
+				// RESET FORM
 				reset();
 
 			};
@@ -100,7 +100,7 @@ const ContactForm = ({ className }) => {
 					) : null }
 					{ toast && toast.status === 'error' ? (
 						<svg className="content__icon" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M14.7991 9.14208L9.14228 14.7989M9.14228 9.14208L14.7991 14.7989M19.0418 19.0416C15.1365 22.9468 8.80488 22.9468 4.89964 19.0416C0.994392 15.1363 0.994392 8.80468 4.89964 4.89944C8.80488 0.994194 15.1365 0.994194 19.0418 4.89944C22.947 8.80468 22.947 15.1363 19.0418 19.0416Z" stroke="#9E453E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+							<path d="M14.7991 9.14208L9.14228 14.7989M9.14228 9.14208L14.7991 14.7989M19.0418 19.0416C15.1365 22.9468 8.80488 22.9468 4.89964 19.0416C0.994392 15.1363 0.994392 8.80468 4.89964 4.89944C8.80488 0.994194 15.1365 0.994194 19.0418 4.89944C22.947 8.80468 22.947 15.1363 19.0418 19.0416Z" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
 						</svg>
 					) : null }
 					<Paragraph className="content__message">{ toast.message }</Paragraph>

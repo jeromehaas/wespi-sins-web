@@ -39,7 +39,7 @@ const Slider = ({ className = '', sliderController = null }) => {
 		<div className={ `${ className } slider slider--${ sliderController.direction }` } onTouchStart={ sliderController.handleTouchStart } onTouchMove={ sliderController.handleTouchMove } onTouchEnd={ sliderController.handleTouchEnd } ref={ sliderRef }>
 			{ sliderController.images.map((image) => {
 				return (
-					<Picture className="slider__item" src={ image.src } key={ image.id } alt={ image.alt } width={ image.width } height={ image.height } priority />
+					<Picture className="slider__item" src={ image.attributes.url } key={ image.id } alt="Blumen" width={ image.attributes.width } height={ image.attributes.height } priority />
 				);
 			})}
 		</div>

@@ -19,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.0-next.1",
     "react-markdown": "^8.0.7",
-    "sass": "^1.62.1"
+    "sass": "^1.62.1",
+    "strapi-plugin-populate-deep": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^8.42.0",

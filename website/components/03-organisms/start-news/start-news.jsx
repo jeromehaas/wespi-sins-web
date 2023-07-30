@@ -11,7 +11,7 @@ import Section from 'components/04-layouts/section/section';
 import Action from 'components/01-atoms/action/action';
 
 // COMPONENT
-const StartNews = ({ news }) => {
+const StartNews = ({ data }) => {
 
 	// SETUP REFS
 	const sectionRef = useRef();
@@ -69,16 +69,16 @@ const StartNews = ({ news }) => {
 			<div className="start-news__banner banner">
 				<Heading className="banner__heading animation--fade-in" level="h2">Aktuell</Heading>
 				<div className="banner__list list animation--fade-in">
-					{ news.data.map((item) => (
+					{ data.news ? data.news.data.map((item) => (
 						<div className="list__item item" key={ item.id }>
 							<Heading className="item__heading" level="h4">{ item.attributes.heading}</Heading>
 							<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, item.id); } }>Mehr erfahren</Anchor>
 						</div>
-					))}
+					)) : null}
 				</div>
 			</div>
 			<div className="start-news__announcements announcements">
-				{ news.data ? news.data.map((item) => (
+				{ data.news ? data.news.data.map((item) => (
 					<div className="announcements__item item" data-id={ item.id } key={ item.id }>
 						<div className="item__inner">
 							<div className="item__content content">

@@ -14,18 +14,28 @@ const metadata = {
 	description: 'Bei uns finden Sie Geschenke der Natur; saisonale Blumen, originelle Hauskreationen, Blumiges zu Hochzeiten oder Trauerfeiern.',
 };
 
+// FETCH FLOWERS
+const fetchFlowers = async () => {
+	const res = await fetch('http://localhost:1337/api/flower?populate=deep');
+	const data = await res.json();
+	return data;
+};
+
 // PAGE
-const Page = () => {
+const Page = async () => {
+
+	// FETCH FLOWERS
+	const flowers = await fetchFlowers();
 
 	// RENDER
 	return (
 		<Fragment>
 			<FlowersIntro />
 			<FlowersImpression />
-			<FlowersTeaserSeasonal />
-			<FlowersTeaserHouseCreations />
-			<FlowersTeaserWeddings />
-			<FlowersTeaserMourning />
+			<FlowersTeaserSeasonal data={ { flowers: flowers } } />
+			<FlowersTeaserHouseCreations data={ { flowers: flowers } } />
+			<FlowersTeaserWeddings data={ { flowers: flowers } } />
+			<FlowersTeaserMourning data={ { flowers: flowers } } />
 			<FlowersServices />
 		</Fragment>
 	);
