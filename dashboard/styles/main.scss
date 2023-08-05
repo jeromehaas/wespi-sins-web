@@ -1,4 +1,22 @@
+/* CONFIGS */
 @import '/styles/configs/reset.scss';
 @import '/styles/configs/fonts.scss';
 @import '/styles/configs/variables.scss';
 @import '/styles/configs/scrollbar.scss';
+
+/* ATOMS */
+@import '/components/01-atoms/heading/heading.scss';
+@import '/components/01-atoms/paragraph/paragraph.scss';
+@import '/components/01-atoms/anchor/anchor.scss';
+@import '/components/01-atoms/button/button.scss';
+@import '/components/01-atoms/hamburger/hamburger.scss';
+@import '/components/01-atoms/input-field/input-field.scss';
+@import '/components/01-atoms/input-button/input-button.scss';
+@import '/components/01-atoms/input-table/input-table.scss';
+@import '/components/01-atoms/text-area/text-area.scss';
+@import '/components/01-atoms/submit-button/submit-button.scss';
+@import '/components/01-atoms/action/action.scss';
+@import '/components/01-atoms/picture/picture.scss';
+@import '/components/01-atoms/markdown/markdown.scss';
+@import '/components/01-atoms/hyperlink/hyperlink.scss';
+@import '/components/01-atoms/list-item/list-item.scss';
