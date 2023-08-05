@@ -41,7 +41,7 @@ const AdminLoginForm = ({ className }) => {
 			// SEND REQUEST
 			const response = await axios({
 				method: 'POST',
-				url: '/api/admin-auth',
+				url: '/api/auth',
 				data: { username: login.username, password: login.password },
 			});
 

@@ -1,6 +1,6 @@
 // IMPORTS
 import { Fragment } from "react"
-import AdminLoginForm from "components/02-molecules/admin-login-form/admin-login-form";
+import AdminLogin from "components/03-organisms/admin-login/admin-login";
 
 // PAGE
 const Page = async () => {
@@ -8,7 +8,7 @@ const Page = async () => {
 	// RENDER
   return (
     <Fragment>
-			<AdminLoginForm />
+			<AdminLogin />
 		</Fragment>
   );
 
