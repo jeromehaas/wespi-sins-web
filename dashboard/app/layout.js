@@ -1,3 +1,6 @@
+// IMPORTS
+import 'styles/main.scss';
+
 // LAYOUT
 const RootLayout = ({ children }) => {
 
