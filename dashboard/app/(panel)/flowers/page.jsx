@@ -1,18 +1,17 @@
 // IMPORTS
+import NewsForm from 'components/03-organisms/news-form/news-form';
 import { Fragment } from 'react';
-import Menu from 'components/03-organisms/menu/menu';
 
-// PAGE
-const Page = async () => {
+// COMPONENT
+const Page = () => {
 
 	// RENDER
 	return (
 		<Fragment>
-			<Menu />
+			<NewsForm />
 		</Fragment>
 	);
 
 };
 
-// EXPORTS
 export default Page;

@@ -2,6 +2,7 @@
 @import '/styles/configs/reset.scss';
 @import '/styles/configs/fonts.scss';
 @import '/styles/configs/variables.scss';
+@import '/styles/configs/typography.scss';
 @import '/styles/configs/scrollbar.scss';
 
 /* ATOMS */
@@ -23,10 +24,15 @@
 
 // MOLECULES
 @import '/components/02-molecules/admin-login-form/admin-login-form.scss';
-@import '/components/03-organisms/admin-login/admin-login.scss';
-@import '/components/03-organisms/header/header.scss';
+@import '/components/02-molecules/header/header.scss';
+@import '/components/02-molecules/navigation/navigation.scss';
+@import '/components/02-molecules/content/content.scss';
 
+// ORGANISMS
+@import '/components/03-organisms/admin-login/admin-login.scss';
+@import '/components/03-organisms/menu/menu.scss';
 
 // LAYOUTS
 @import '/components/04-layouts/section/section.scss';
 @import '/components/04-layouts/panel/panel.scss';
+@import '/components/04-layouts/blank/blank.scss';
