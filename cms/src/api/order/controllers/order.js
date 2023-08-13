@@ -1,9 +1,9 @@
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::message.message', ({ strapi }) => {
+module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 
 	// SEND
-	const create = async (ctx) => {
+	async create(ctx) {
 
 		// TRY-CATCH BLOCK
 		try {
@@ -20,41 +20,30 @@ module.exports = createCoreController('api::message.message', ({ strapi }) => {
 				populate: ['address', 'positions'],
 			});
 
-			// NOTIFY CUSTOMER
-			await strapi.service('api::order.order').notifyCustomer(order);
+			// // NOTIFY CUSTOMER
+			// await strapi.service('api::order.order').notifyCustomer(order);
 
-			// NOTIFY SHOP
-			await strapi.service('api::order.order').notifyShop(order);
+			// // NOTIFY SHOP
+			// await strapi.service('api::order.order').notifyShop(order);
 
-			// SEND RESPONSE
-			ctx.status = 201;
-			ctx.body = {
-				success: true,
-				data: {
-					order: order
-				},
-			};
+			// // SEND RESPONSE
+			return order
 
 		// HANDLE ERRORS
 		} catch (error) {
 
 			// PRINT ERROR
-			console.error(`Error: ${ error.message }`)
+			console.error(`Error: ${ error }`)
 
 			// SEND RESPONSE
 			ctx.status = 500;
 			ctx.body = {
 				success: false,
-				error: error.message
+				error: error
 			};
 
 		};
 
-	};
+	},
 
-	// RETURN
-	return {
-		create,
-	};
-
- });
+ }));

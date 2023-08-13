@@ -23,7 +23,7 @@ TextArea.propTypes = {
 	type: PropTypes.string.isRequired,
 	label: PropTypes.string.isRequired,
 	isRequired: PropTypes.bool,
-	placeholder: PropTypes.string.isRequired,
+	placeholder: PropTypes.string,
 	register: PropTypes.func.isRequired,
 	errorText: PropTypes.string,
 	errors: PropTypes.shape({

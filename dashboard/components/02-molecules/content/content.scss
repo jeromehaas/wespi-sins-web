@@ -1,6 +1,10 @@
 .content {
 	grid-area: 2 / 2 / 3 / 3;
 	background-color: $beige-40;
+	height: 100%;
+	max-height: calc(100vh - 80px);
+	overflow-y: scroll;
+
 
 	@media (max-width: 1000px) {
 		padding: 40px;

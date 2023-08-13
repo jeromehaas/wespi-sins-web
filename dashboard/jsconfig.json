@@ -5,6 +5,7 @@
       "styles/*": ["./styles/*"],
       "hooks/*": ["./hooks/*"],
       "contexts/*": ["./contexts/*"],
+      "queries/*": ["./queries/*"],
     }
   }
 }

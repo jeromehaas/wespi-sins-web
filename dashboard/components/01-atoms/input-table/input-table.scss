@@ -9,11 +9,11 @@
 		&__input-field, .input-field {
 
 			&:nth-child(1) {
-				grid-column: span 3;
+				grid-column: span 4;
 			}
 
 			&:nth-child(2) {
-				grid-column: span 3;
+				grid-column: span 4;
 			}
 
 			&:nth-child(3) {
@@ -46,15 +46,15 @@
 			&__input-field {
 
 				&:nth-child(1) {
-					grid-column: span 3;
+					grid-column: span 4;
 				}
 
 				&:nth-child(2) {
-					grid-column: span 3;
+					grid-column: span 4;
 				}
 
 				&:nth-child(3) {
-					grid-column: span 2;
+					grid-column: span 3;
 				}
 
 				&:nth-child(4) {
@@ -90,7 +90,7 @@
 				}
 
 				&:nth-child(4) {
-					grid-column: span 1;
+					grid-column: span 2;
 				}
 
 			}

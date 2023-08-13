@@ -13,7 +13,6 @@ const Panel = ({ className = '', children = null }) => {
 
 	// CONTST GET PATH
 	const pathname = usePathname();
-	console.log(pathname);
 
 	// RENDER
 	return (
@@ -22,7 +21,7 @@ const Panel = ({ className = '', children = null }) => {
 				<Header className="panel__header" />
 				{ pathname.startsWith('/news') || pathname.startsWith('/order') || pathname.startsWith('/flowers') || pathname.startsWith('/messages')
 					? <Navigation className="panel__navigation" />
-					: null}
+					: null }
 				<Content className="panel__content">{ children }</Content>
 			</div>
 		</PanelProvider>

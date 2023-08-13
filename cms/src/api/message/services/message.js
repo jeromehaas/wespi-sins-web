@@ -1,8 +1,12 @@
+// IMPORTS
 const { notifyCustomerTemplate, notifyShopTemplate } = require('../templates/index.js');
+const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = () => {
+// EXPORTS
+module.exports = createCoreService('api::message.message', ({ strapi }) => ({
 
-	const notifyCustomer = async (message) => {
+	// NOTIFY CUSTOMER
+	async notifyCustomer(message) {
 
 		// TRY-CATCH 
 		try {
@@ -43,9 +47,10 @@ module.exports = () => {
 
 		};
 
-	};
+	},
 
-	const notifyShop = async (message) => {
+	// NOTIFY SHOP
+	async notifyShop(message) {
 	
 		// TRY-CATCH 
 		try {
@@ -85,11 +90,6 @@ module.exports = () => {
 
 		};
 
-	};
+	},
 
-	return {
-		notifyCustomer,
-		notifyShop,
-	};
-
-};
+}));

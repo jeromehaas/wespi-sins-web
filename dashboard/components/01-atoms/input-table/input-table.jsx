@@ -34,12 +34,8 @@ const InputTable = ({ className, category, options, control, defaultValue, regis
 							<input className="input-field__input" id={ `${ category }-${ index }-${ option.id }` } type={ option.type } placeholder={ option.placeholder } { ...register(`${category}.${index}.${option.id}`, option.validation) } defaultValue={ option.defaultValue } />
 						</div>
 					))}
-					{ fields.length >= 2 ? (
-						<Action className="row__remove-item-link" symbol="close-circle" onClick={ () => { return handleRemoveArticle(index); } }>{ labels.remove }</Action>
-					) : null }
 				</div>
 			))}
-			<Action className="input-table__add-item-link" symbol="add-circle" onClick={ handleAddArticle }>{ labels.add }</Action>
 		</div>
 	);
 

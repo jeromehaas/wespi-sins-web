@@ -1,13 +1,9 @@
-    module.exports = {
-      routes: [
-        {
-          method: "POST",
-          path: "/message",
-          handler: "message.send",
-          config: {
-            policies: [],
-            middlewares: [],
-          },
-        },
-      ],
-    };
+'use strict';
+
+/**
+ * new router
+ */
+
+const { createCoreRouter } = require('@strapi/strapi').factories;
+
+module.exports = createCoreRouter('api::message.message');

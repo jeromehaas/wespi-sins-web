@@ -1,9 +1,15 @@
+// const { createCoreController } = require('@strapi/strapi').factories;
+
+// module.exports = createCoreController('api::message.message', ({ strapi }) => ({
+
+
+
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::message.message', ({ strapi }) => {
+module.exports = createCoreController('api::message.message', ({ strapi }) => ({
 
 	// SEND
-	const send = async (ctx) => {
+	async create (ctx) {
 
 		// TRY-CATCH BLOCK
 		try {
@@ -22,14 +28,8 @@ module.exports = createCoreController('api::message.message', ({ strapi }) => {
 			// NOTIDY SHOP
 			await strapi.service('api::message.message').notifyShop(message);
 
-			// SEND RESPONSE
-			ctx.status = 201;
-			ctx.body = {
-				success: true,
-				data: {
-					message: message
-				},
-			};
+			// RETURN RESPONSE
+			return message;
 
 		// HANDLE ERRORS
 		} catch (error) {
@@ -46,11 +46,6 @@ module.exports = createCoreController('api::message.message', ({ strapi }) => {
 
 		};
 
-	};
+	},
 
-	// RETURN
-	return {
-		send,
-	};
-
- });
+ }));

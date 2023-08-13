@@ -1,8 +1,9 @@
+const { createCoreService } = require('@strapi/strapi').factories;
 const { notifyCustomerTemplate, notifyShopTemplate } = require('../templates/index.js');
 
-module.exports = () => {
+module.exports = createCoreService('api::order.order', ({ strapi }) => ({
 
-	const notifyCustomer = async (order) => {
+	async notifyCustomer(order) {
 
 		// TRY-CATCH 
 		try {
@@ -43,9 +44,9 @@ module.exports = () => {
 
 		};
 
-	};
+	},
 
-	const notifyShop = async (order) => {
+	async notifyShop(order) {
 	
 		// TRY-CATCH 
 		try {
@@ -84,11 +85,6 @@ module.exports = () => {
 
 		};
 
-	};
+	},
 
-	return {
-		notifyCustomer,
-		notifyShop,
-	};
-
-};
+}));
