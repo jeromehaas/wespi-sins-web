@@ -1,3 +1,4 @@
+// EXPORTS
 module.exports = `
 
 Guten Tag <%= user.firstname %> <%= user.lastname %>.

@@ -1,3 +1,4 @@
+// EXPORTS
 module.exports = ({ env }) => ({
 	connection: {
 		client: 'postgres',

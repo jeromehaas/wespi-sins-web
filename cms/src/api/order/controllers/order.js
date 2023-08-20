@@ -1,5 +1,7 @@
+// IMPORTS
 const { createCoreController } = require('@strapi/strapi').factories;
 
+// EXPORTS
 module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 
 	// SEND
@@ -21,10 +23,10 @@ module.exports = createCoreController('api::order.order', ({ strapi }) => ({
 			});
 
 			// // NOTIFY CUSTOMER
-			// await strapi.service('api::order.order').notifyCustomer(order);
+			await strapi.service('api::order.order').notifyCustomer(order);
 
 			// // NOTIFY SHOP
-			// await strapi.service('api::order.order').notifyShop(order);
+			await strapi.service('api::order.order').notifyShop(order);
 
 			// // SEND RESPONSE
 			return order

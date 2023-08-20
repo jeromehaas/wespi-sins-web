@@ -1,9 +1,5 @@
-'use strict';
-
-/**
- * flower controller
- */
-
+// IMPORTS
 const { createCoreController } = require('@strapi/strapi').factories;
 
+// EXPORTS
 module.exports = createCoreController('api::flower.flower');
