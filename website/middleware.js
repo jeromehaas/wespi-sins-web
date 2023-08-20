@@ -6,7 +6,6 @@ const { next, redirect } = NextResponse;
 // DEFINE PATH CATEGORIES
 const websitePaths = ['/', '/flowers', '/stationery', '/about-us', '/contact', '/imprint', '/data-privacy'];
 const authPaths = ['/login', '/admin-login'];
-const adminPaths = ['/admin'];
 
 // MIDDLEWARE
 export const middleware = async (request) => {
@@ -19,7 +18,6 @@ export const middleware = async (request) => {
 		// GET ENV VARIABLES
 		const { APP_ENVIRONMENT: environment } = process.env;
 		const { USER_LOGIN_TOKEN: userLoginToken } = process.env;
-		const { ADMIN_LOGIN_TOKEN: adminLoginToken } = process.env;
 
 		// HANDLE AUTH PATHS
 		if (authPaths.includes(pathname)) {
@@ -82,47 +80,6 @@ export const middleware = async (request) => {
 
 				// RETURN TO LOGIN PAGE
 				return redirect(new URL('/login', request.url));
-
-			};
-
-		};
-
-		if (adminPaths.includes(pathname)) {
-
-			// TRY-CATCH BLOCK
-			try {
-
-				// GET TOKEN OF COOKIE
-				const cookie = request.cookies.get('wespi-admin-token');
-
-				// CHECK IF COOKIE IS AVAILABLE
-				if (!cookie) throw new Error('no cookie found');
-
-				// GET VALUE AND EXPIRY FROM COOKIE
-				const value = JSON.parse(cookie.value);
-				const expiry = value.expiry;
-				const token = value.data;
-
-				// CHECK IF COOKIE IS VALID
-				const now = Math.floor(Date.now() / 1000);
-				if (expiry < now) throw new Error('cookie is expired');
-
-				// CHECK IF TOKEN IS AVAILABLE
-				if (!token) throw new Error('token is not available');
-
-				// IF TOKEN IS VALID LET USER PASS
-				if (token !== adminLoginToken) throw new Error('token is not valid');
-
-				// IF TOKEN IS VALID LET ADMIN PASS
-				if (token === adminLoginToken) {
-					return next();
-				};
-
-				// HANDLE ERROS
-			} catch (error) {
-
-				// RETURN TO LOGIN PAGE
-				return redirect(new URL('/admin-login', request.url));
 
 			};
 
