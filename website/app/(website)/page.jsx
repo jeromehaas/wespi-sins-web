@@ -15,14 +15,14 @@ const metadata = {
 
 // FETCH NEWS
 const fetchNews = async () => {
-	const res = await fetch('http://localhost:1337/api/news?populate=deep');
+	const res = await fetch(`${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/news?populate=deep`);
 	const data = await res.json();
 	return data;
 };
 
 // FETCH FLOWERS
 const fetchFlowers = async () => {
-	const res = await fetch('http://localhost:1337/api/flowers?populate=deep');
+	const res = await fetch(`${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/flowers?populate=deep`);
 	const { data } = await res.json();
 	return data;
 };
