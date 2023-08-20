@@ -14,8 +14,6 @@ import Article from 'components/04-layouts/article/article';
 // COMPONENT
 const StartFlowersOffer = ({ data }) => {
 
-	console.log(data.flowers);
-
 	// SETUP REFS
 	const startFlowersOfferRef = useRef();
 	const sectionTimelineRef = useRef();

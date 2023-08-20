@@ -14,8 +14,6 @@ import SliderNavigation from 'components/02-molecules/slider-navigation/slider-n
 // COMPONENT
 const FlowersTeaserHouseCreations = ({ data }) => {
 
-	console.log(data);
-
 	// SETUP REFS
 	const sectionRef = useRef();
 	const sectionTimelineRef = useRef();

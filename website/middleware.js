@@ -15,7 +15,6 @@ export const middleware = async (request) => {
 
 		// GET REQUESTED PATHNAME
 		const { pathname } = request.nextUrl;
-		// console.log(pathname);
 
 		// GET ENV VARIABLES
 		const { APP_ENVIRONMENT: environment } = process.env;
