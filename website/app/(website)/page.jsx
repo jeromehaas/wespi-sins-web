@@ -15,15 +15,15 @@ const metadata = {
 
 // FETCH NEWS
 const fetchNews = async () => {
-	const res = await fetch('http://localhost:1337/api/news?populate=image');
+	const res = await fetch('http://localhost:1337/api/news?populate=deep');
 	const data = await res.json();
 	return data;
 };
 
 // FETCH FLOWERS
 const fetchFlowers = async () => {
-	const res = await fetch('http://localhost:1337/api/flower?populate=deep');
-	const data = await res.json();
+	const res = await fetch('http://localhost:1337/api/flowers?populate=deep');
+	const { data } = await res.json();
 	return data;
 };
 
@@ -40,10 +40,10 @@ const Page = async () => {
 	return (
 		<Fragment>
 			<StartHero />
-			<StartNews data={ { news } } />
+			<StartNews data={ { news: news } } />
 			<StartIntro />
 			<StartBeeAction />
-			<StartFlowersOffer data={ { flowers } } />
+			<StartFlowersOffer data={ { flowers: flowers } } />
 			<StartStationeryOffer />
 		</Fragment>
 	);

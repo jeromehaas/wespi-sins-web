@@ -20,7 +20,7 @@ const FlowersTeaserMourning = ({ data }) => {
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data.attributes.mourning.images.data,
+		images: data.flowers.data[3].attributes.images.data,
 		direction: 'rtl',
 	});
 
@@ -44,8 +44,8 @@ const FlowersTeaserMourning = ({ data }) => {
 		<Section className="flowers-teaser-mourning" ref={ sectionRef }>
 			<Slider className="flowers-teaser-mourning__slider slider animation--fade-in" sliderController={ sliderController } />
 			<div className="flowers-teaser-mourning__content content animation--fade-in">
-				<Heading className="content__heading" level="h3">Trauer / Beerdigung</Heading>
-				<Paragraph className="content__text">In solch schwierigen Zeiten sprechen Blumen für uns. Es ist uns eine Ehre, für Sie mit unserem Handwerk eine passende Kreation zusammenzustellen und dem Leben Dank auzusprechen.</Paragraph>
+				<Heading className="content__heading" level="h3">{ data.flowers.data[3].attributes.heading }</Heading>
+				<Paragraph className="content__text">{ data.flowers.data[3].attributes.text }</Paragraph>
 				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 			</div>
 		</Section>

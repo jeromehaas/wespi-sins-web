@@ -20,7 +20,7 @@ const FlowersTeaserWeddings = ({ data }) => {
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data.attributes.weddings.images.data,
+		images: data.flowers.data[2].attributes.images.data,
 		direction: 'ltr',
 	});
 
@@ -43,8 +43,8 @@ const FlowersTeaserWeddings = ({ data }) => {
 	return (
 		<Section className="flowers-teaser-weddings" ref={ sectionRef }>
 			<div className="flowers-teaser-weddings__content content animation--fade-in">
-				<Heading className="content__heading" level="h3">Hochzeiten</Heading>
-				<Paragraph className="content__text">Wir unterstreichen Ihren ganz besonderen Tag mit dem Schönsten, das wir haben. Damit Sie Ihren Tag ein Leben lang voller Schönheit und Freude in Erinnerung behalten.</Paragraph>
+				<Heading className="content__heading" level="h3">{ data.flowers.data[2].attributes.heading }</Heading>
+				<Paragraph className="content__text">{ data.flowers.data[2].attributes.text }</Paragraph>
 				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 			</div>
 			<Slider className="flowers-teaser-weddings__slider slider animation--fade-in" sliderController={ sliderController } />

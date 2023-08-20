@@ -84,7 +84,9 @@ const StartNews = ({ data }) => {
 							<div className="item__content content">
 								<div className="item__content content">
 									<Action className="content__navigator animation--fade-in" symbol="chevron-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
-									<Picture className="content__image animation--fade-in" src={ item.attributes.image.data.attributes.url } alt={ item.attributes.heading } width={ item.attributes.image.data.attributes.width } height={ item.attributes.image.data.attributes.height } />
+									{ item.attributes.image.data ? (
+										<Picture className="content__image animation--fade-in" src={ item.attributes.image.data.attributes.url } alt={ item.attributes.heading } width={ item.attributes.image.data.attributes.width } height={ item.attributes.image.data.attributes.height } />
+									) : null }
 									<Heading className="content__heading animation--fade-in" level="h2">{ item.attributes.heading }</Heading>
 									<Markdown className="content__text animation--fade-in">
 										{ item.attributes.text }

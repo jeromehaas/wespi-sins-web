@@ -1,10 +1,10 @@
 {
-  "kind": "singleType",
+  "kind": "collectionType",
   "collectionName": "flowers",
   "info": {
     "singularName": "flower",
     "pluralName": "flowers",
-    "displayName": "Flowers",
+    "displayName": "Flower",
     "description": ""
   },
   "options": {
@@ -12,28 +12,28 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "weddings": {
-      "type": "component",
-      "repeatable": false,
-      "component": "flowers.impression",
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heading": {
+      "type": "string",
       "required": true
     },
-    "seasonal": {
-      "type": "component",
-      "repeatable": false,
-      "component": "flowers.impression",
-      "required": true
-    },
-    "mourning": {
-      "type": "component",
-      "repeatable": false,
-      "component": "flowers.impression",
-      "required": true
-    },
-    "houseCreations": {
-      "type": "component",
-      "repeatable": false,
-      "component": "flowers.impression",
+    "text": {
+      "type": "text",
       "required": true
     }
   }

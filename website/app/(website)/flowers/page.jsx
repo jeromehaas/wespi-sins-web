@@ -16,7 +16,7 @@ const metadata = {
 
 // FETCH FLOWERS
 const fetchFlowers = async () => {
-	const res = await fetch('http://localhost:1337/api/flower?populate=deep');
+	const res = await fetch('http://localhost:1337/api/flowers?populate=deep');
 	const data = await res.json();
 	return data;
 };

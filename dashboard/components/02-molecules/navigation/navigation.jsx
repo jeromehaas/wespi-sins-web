@@ -9,6 +9,7 @@ import { usePathname, useParams, useRouter } from 'next/navigation';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import { getMessagesQuery } from 'queries/messages/index.js';
 import { getNewsQuery } from 'queries/news/index.js';
+import { getFlowersQuery } from 'queries/flowers/index.js';
 import getOrdersQuery from 'queries/orders/get-orders-query';
 import moment from 'moment';
 import Action from 'components/01-atoms/action/action';
@@ -45,9 +46,17 @@ const Navigation = ({ className }) => {
 		initialData: [],
 	});
 
+	// GET ORDERS
 	const orders = useQuery({
 		queryKey: ['orders'],
 		queryFn: () => getOrdersQuery(),
+		initialData: [],
+	});
+
+	// GET FLOWERS
+	const flowers = useQuery({
+		queryKey: ['flowers'],
+		queryFn: () => getFlowersQuery(),
 		initialData: [],
 	});
 
@@ -92,10 +101,9 @@ const Navigation = ({ className }) => {
 			) : null }
 			{ pathname.startsWith('/flowers') ? (
 				<div className="navigation__links links">
-					<Anchor className="links__item" href="/flowers?id='saisonal'" onClick={ (event) => handleClick(event, '/flowers?id="saisonal"') }>Saisonal</Anchor>
-					<Anchor className="links__item" href="/flowers?id='house-creations'" onClick={ (event) => handleClick(event, '/flowers?id="house-creations"') }>Haus-Kreationen</Anchor>
-					<Anchor className="links__item" href="/flowers?id='weddings'" onClick={ (event) => handleClick(event, '/flowers?id="weddings"') }>Hochzeiten</Anchor>
-					<Anchor className="links__item" href="/flowers?id='mourning'" onClick={ (event) => handleClick(event, '/flowers?id="mourning"') }>Trauer</Anchor>
+					{ flowers.data?.map((item) => (
+						<Anchor className="links__item" href={ `/flowers/${ item.id }` } key={ item.id } onClick={ (event) => handleClick(event, `/flowers/${ item.id }`) }>{ item.attributes.heading }</Anchor>
+					))}
 				</div>
 			) : null }
 			{ pathname.startsWith('/messages') ? (

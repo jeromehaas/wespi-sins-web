@@ -14,13 +14,15 @@ import SliderNavigation from 'components/02-molecules/slider-navigation/slider-n
 // COMPONENT
 const FlowersTeaserSeasonal = ({ data }) => {
 
+	console.log(data);
+
 	// SETUP REFS
 	const sectionRef = useRef();
 	const sectionTimelineRef = useRef();
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data.attributes.seasonal.images.data,
+		images: data.flowers.data[0].attributes.images.data,
 		direction: 'ltr',
 	});
 
@@ -43,8 +45,8 @@ const FlowersTeaserSeasonal = ({ data }) => {
 	return (
 		<Section className="flowers-teaser-seasonal" ref={ sectionRef }>
 			<div className="flowers-teaser-seasonal__content content animation--fade-in">
-				<Heading className="content__heading" level="h3">Saisonales</Heading>
-				<Paragraph className="content__text">Die Natur beschenkt uns in jeder Jahreszeit mit besonderen Formen und Farben. Wir sind immer wieder aufs Neue fasziniert, wie vielseitig unsere Natur ist und haben eine grosse Freude mit saisonalen Blumen zu arbeiten und deren Vielfalt aufzuzeigen.</Paragraph>
+				<Heading className="content__heading" level="h3">{ data.flowers.data[0].attributes.heading }</Heading>
+				<Paragraph className="content__text">{ data.flowers.data[0].attributes.text }</Paragraph>
 				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 			</div>
 			<Slider className="flowers-teaser-seasonal__slider slider animation--fade-in" sliderController={ sliderController } />

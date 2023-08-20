@@ -14,13 +14,15 @@ import SliderNavigation from 'components/02-molecules/slider-navigation/slider-n
 // COMPONENT
 const FlowersTeaserHouseCreations = ({ data }) => {
 
+	console.log(data);
+
 	// SETUP REFS
 	const sectionRef = useRef();
 	const sectionTimelineRef = useRef();
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data.attributes.houseCreations.images.data,
+		images: data.flowers.data[1].attributes.images.data,
 		direction: 'rtl',
 	});
 
@@ -44,8 +46,8 @@ const FlowersTeaserHouseCreations = ({ data }) => {
 		<Section className="flowers-teaser-house-creations" ref={ sectionRef }>
 			<Slider className="flowers-teaser-house-creations__slider slider animation--fade-in" sliderController={ sliderController } />
 			<div className="flowers-teaser-house-creations__content content animation--fade-in">
-				<Heading className="content__heading" level="h3">Haus-Kreationen</Heading>
-				<Paragraph className="content__text">Besondere Momente verlangen nach etwas Besonderem. Wir denken unkonventionell und überraschend, damit ihr Moment mit unseren Blumen unvergesslich wird.</Paragraph>
+				<Heading className="content__heading" level="h3">{ data.flowers.data[1].attributes.heading }</Heading>
+				<Paragraph className="content__text">{ data.flowers.data[1].attributes.text }</Paragraph>
 				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 			</div>
 		</Section>
