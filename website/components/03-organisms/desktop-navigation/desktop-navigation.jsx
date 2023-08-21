@@ -40,7 +40,7 @@ const DesktopNavigation = () => {
 					<div className="bar__links links">
 						<Anchor className="links__item" href="/stationery">Papeterie</Anchor>
 						<Anchor className="links__item" href="/flowers">Blueme</Anchor>
-						<Anchor className="links__item" href="/about-us">Über Uns</Anchor>
+					<Anchor className="links__item" href="/about-us">Über uns</Anchor>
 						<Anchor className="links__item" href="/contact">Kontakt</Anchor>
 					</div>
 				</div>
