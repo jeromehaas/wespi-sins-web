@@ -36,7 +36,7 @@ const Bee = ({ className = '' }) => {
 	// SETUP ANIMATION
 	useEffect(() => {
 		const context = gsap.context(() => {
-			beeTimelineRef.current = gsap.timeline({ delay: 0.25, scrollTrigger: { trigger: beeRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
+			beeTimelineRef.current = gsap.timeline({ delay: 2, scrollTrigger: { trigger: beeRef.current, start: 'top bottom-=160px', end: 'bottom top+=160px', markers: false } });
 			if (viewportWidth >= 1200) {
 				beeTimelineRef.current.to('.bee .bee__image', { right: '120px', duration: 2 });
 			} else if (viewportWidth < 1200 && viewportWidth >= 850) {
