@@ -1,5 +1,9 @@
 .stationery-services {
 
+	&__inner {
+		padding-top: 80px;
+	}
+
 	&__item, .item {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -43,6 +47,10 @@
 	}
 
 	@media (max-width: 1050px) {
+
+		&__inner {
+			padding-top: 24px;
+		}
 
 		&__item, .item {
 			margin-bottom: 80px;

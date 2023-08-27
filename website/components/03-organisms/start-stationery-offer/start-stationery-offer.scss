@@ -1,7 +1,7 @@
 .start-stationery-offer {
 
 	&__inner {
-		padding: 64px 0;
+		padding: 96px 0;
 	}
 	
 	&__intro, .intro {
@@ -120,6 +120,10 @@
 	}
 
 	@media (max-width: 950px) {
+
+		&__inner {
+			padding: 80px 0;
+		}
 
 		&__impressions, .impressions {
 			grid-template-rows: repeat(8, 48px);
