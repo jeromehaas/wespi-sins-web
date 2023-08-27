@@ -31,7 +31,7 @@ const OrderConfirmationForm = ({ className }) => {
 			// CREATE ORDER
 			const response = await axios({
 				method: 'POST',
-				url: `${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/order`,
+				url: `${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/orders`,
 				data: {
 					order: {
 						address: address,
