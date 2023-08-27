@@ -31,13 +31,21 @@
 
 		&__links, .links {
 
-			&__item {
+			&__item, .item {
 				margin-right: 24px;
 				z-index: 30;
 				position: relative;
 
 				&:last-child {
 					margin-right: 0;
+				}
+
+				&--active {
+
+					.anchor__label {
+						color: $black-100;
+					}
+
 				}
 
 			}
