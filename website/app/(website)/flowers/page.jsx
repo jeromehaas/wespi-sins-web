@@ -10,7 +10,7 @@ import FlowersTeaserMourning from 'components/03-organisms/flowers-teaser-mourni
 
 // META DESCRIPTION
 const metadata = {
-	title: 'Blueme | Papeterie- und Bluemeparadies Wespi',
+	title: 'Blumen | Papeterie- und Bluemeparadies Wespi',
 	description: 'Bei uns finden Sie Geschenke der Natur; saisonale Blumen, originelle Hauskreationen, Blumiges zu Hochzeiten oder Trauerfeiern.',
 };
 

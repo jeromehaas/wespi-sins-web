@@ -40,7 +40,7 @@ const DesktopNavigation = () => {
 					</Link>
 					<div className="bar__links links">
 						<Anchor className={ `links__item ${ pathname === '/stationery' ? 'links__item--active' : null }` } href="/stationery">Papeterie</Anchor>
-						<Anchor className={ `links__item ${ pathname === '/flowers' ? 'links__item--active' : null }` } href="/flowers">Blueme</Anchor>
+						<Anchor className={ `links__item ${ pathname === '/flowers' ? 'links__item--active' : null }` } href="/flowers">Blumen</Anchor>
 						<Anchor className={ `links__item ${ pathname === '/about-us' ? 'links__item--active' : null }` } href="/about-us">Über uns</Anchor>
 						<Anchor className={ `links__item ${ pathname === '/contact' ? 'links__item--active' : null }` } href="/contact">Kontakt</Anchor>
 					</div>
