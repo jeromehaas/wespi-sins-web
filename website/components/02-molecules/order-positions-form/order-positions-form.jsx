@@ -40,7 +40,9 @@ const OrderPositionsForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } order-positions-form` }>
-			<Action className="order-positions-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>zurück</Action>
+			<div className="order-positions-form__controller controller">
+				<Action className="controller__cancel-button" symbol="close" reversed onClick={ handleCancel }>abbrechen</Action>
+			</div>
 			<div className="order-positions-form__form form">
 				<Heading className="form__heading" level="h2">Bestellung</Heading>
 				<InputTable
@@ -61,7 +63,7 @@ const OrderPositionsForm = ({ className }) => {
 				/>
 			</div>
 			<div className="order-positions-form__actions actions">
-				<Button className="actions__next-button" onClick={ handleNextStep }>Speichern und weiter</Button>
+				<Button className="actions__next-button" onClick={ handleNextStep }>Weiter zur Rechnungsadresse</Button>
 			</div>
 		</div>
 	);

@@ -33,7 +33,7 @@ const OrderAddressForm = ({ className }) => {
 		orderContext.setStep(1);
 	};
 
-	// HANDLE CANCEL
+	// HANDLE BACK
 	const handleCancel = () => {
 		orderContext.setStep(0);
 	};
@@ -47,7 +47,10 @@ const OrderAddressForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } order-address-form` }>
-			<Action className="order-address-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>zurück</Action>
+			<div className="order-address-form__controller controller">
+				<Action className="controller__back-button" symbol="arrow-left" onClick={ handlePreviousStep }>zurück</Action>
+				<Action className="controller__cancel-button" symbol="close" onClick={ handleCancel } reversed>abbrechen</Action>
+			</div>
 			<div className="order-address-form__form form">
 				<Heading className="form__heading" level="h2">Rechnungsadresse</Heading>
 				<InputField className="form__input-field" category="address" id="company" label="Firma*" placeholder="Firmenname" error={ formState.errors['address'] } type="text" register={ register } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Firmennamen an' } } } />
@@ -59,7 +62,6 @@ const OrderAddressForm = ({ className }) => {
 				<InputField className="form__input-field" category="address" id="town" label="PLZ, Ort" placeholder="PLZ, Ort" error={ formState.errors['address'] } type="text" register={ register } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihre PLZ und Ihren Ort an' } } } />
 			</div>
 			<div className="order-address-form__actions actions">
-				<Action className="actions__back-button" symbol="chevron-left" onClick={ handlePreviousStep }>zurück</Action>
 				<Button className="actions__next-button" onClick={ (event) => handleNextStep(event) }>Speichern und weiter</Button>
 			</div>
 		</div>

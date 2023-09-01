@@ -8,6 +8,7 @@ import OrderAddressForm from 'components/02-molecules/order-address-form/order-a
 import OrderConfirmationForm from 'components/02-molecules/order-confirmation-form/order-confirmation-form';
 import OrderSuccessForm from 'components/02-molecules/order-success-form/order-success-form';
 import OrderCancelForm from 'components/02-molecules/order-cancel-form/order-cancel-form';
+import OrderErrorForm from 'components/02-molecules/order-error-form/order-error-form';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useEffect, useRef, useContext } from 'react';
 import { gsap } from 'gsap';
@@ -68,6 +69,7 @@ const Order = () => {
 							{ orderContext.step === 2 && <OrderAddressForm className="forms__form" /> }
 							{ orderContext.step === 3 && <OrderConfirmationForm className="forms__form" /> }
 							{ orderContext.step === 4 && <OrderSuccessForm className="forms__form" /> }
+							{ orderContext.step === 5 && <OrderErrorForm className="forms__form" /> }
 						</FormProvider>
 					</div>
 				</div>

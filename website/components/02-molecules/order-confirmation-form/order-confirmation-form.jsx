@@ -54,7 +54,10 @@ const OrderConfirmationForm = ({ className }) => {
 
 			// HANDLE ERRORS
 		} catch (error) {
-			console.log(error);
+
+			// SHOW ERROR PAGE
+			orderContext.setStep(5);
+
 		};
 
 	};
@@ -77,7 +80,11 @@ const OrderConfirmationForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } order-confirmation-form` }>
-			<Action className="order-confirmation-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>zurück</Action>
+			<div className="order-confirmation-form__controller controller">
+				<Action className="controller__back-button" symbol="arrow-left" onClick={ handlePreviousStep }>zurück</Action>
+				<Action className="controller__cancel-button" symbol="close" onClick={ handleCancel } reversed>abbrechen</Action>
+			</div>
+			{/* <Action className="order-confirmation-form__cancel-button" symbol="arrow-left" onClick={ handlePreviousStep }>zurück</Action> */}
 			<div className="order-confirmation-form__form form">
 				<Heading className="form__heading" level="h2">Bestellbestätigung</Heading>
 				<div className="form__block block">
@@ -118,8 +125,7 @@ const OrderConfirmationForm = ({ className }) => {
 				</div>
 			</div>
 			<div className="order-confirmation-form__actions actions">
-				<Action className="actions__back-button" symbol="chevron-left" onClick={ handlePreviousStep }>zurück</Action>
-				<Button className="actions__next-button" onClick={ handleDispatch }>Bestellung abschliessen</Button>
+				<Button className="actions__next-button" onClick={ handleDispatch }>Bestellung abschicken</Button>
 			</div>
 		</div>
 	);

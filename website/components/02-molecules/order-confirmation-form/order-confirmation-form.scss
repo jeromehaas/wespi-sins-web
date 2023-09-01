@@ -4,9 +4,19 @@
 	grid-column-gap: 32px;
 	align-items: end;
 
-	&__cancel-button {
+	&__controller, .controller {
 		grid-column: 1 / span 12;
-		margin-bottom: 24px;
+		display: flex;
+		margin-bottom: 32px;
+
+		&__back-button {
+			margin-left: unset;
+		}
+
+		&__cancel-button {
+			margin-left: auto;
+		}
+	
 	}
 
 	&__form, .form {

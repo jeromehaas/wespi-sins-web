@@ -25,13 +25,13 @@ const OrderCancelForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } cancel-form` }>
+			<Action className="actions__cancel-button" symbol="arrow-left" onClick={ handlePreviousStep }>zurück</Action>
 			<div className="cancel-form__form form">
-				<Heading className="form__heading" level="h2">zurück</Heading>
+				<Heading className="form__heading" level="h2">Bestellung abbrechen</Heading>
 				<Paragraph className="form__text">Sind Sie sicher, dass Sie Ihre Bestellung abbrechen möchten?</Paragraph>
 			</div>
 			<div className="cancel-form__actions actions">
 				<Button className="actions__cancel-button" onClick={ handleCancel }>Abbrechen und schliessen</Button>
-				<Action className="actions__back-button" symbol="chevron-left" onClick={ handlePreviousStep }>zurück</Action>
 			</div>
 		</div>
 	);

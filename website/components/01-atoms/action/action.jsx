@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 
 // COMPONENT
-const Action = ({ className = '', children = null, symbol = null, onClick = null }) => {
+const Action = ({ className = '', children = null, symbol = null, onClick = null, reversed = false }) => {
 
 	// RENDER
 	return (
-		<div className={ `${ className } action` } onClick={ onClick }>
+		<div className={ `${ className } action ${ reversed ? 'action--reversed' : null }` } onClick={ onClick }>
 			{ symbol === 'close' ? (
 				<svg className="action__icon" width="20" height="20" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M17 1L1 17M1 1L17 17" stroke="#9E453E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
