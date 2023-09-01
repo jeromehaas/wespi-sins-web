@@ -35,7 +35,7 @@ const ImprintResponsiibilities = () => {
 	return (
 		<Section className="imprint-responsibilities" ref={ sectionRef }>
 			<div className="imprint-responsibilities__contributor contributor animation--fade-in">
-				<Heading className="contributor__heading" level="h4">Inhaberin</Heading>
+				<Paragraph className="contributor__heading paragraph--bold">Inhaberin</Paragraph>
 				<Paragraph className="contributor__item">WESPI SINS</Paragraph>
 				<Paragraph className="contributor__item">Papeterie- und Bluemeparadies</Paragraph>
 				<Paragraph className="contributor__item">Claudia Wespi</Paragraph>
@@ -43,19 +43,27 @@ const ImprintResponsiibilities = () => {
 				<Paragraph className="contributor__item">5643 Sins</Paragraph>
 			</div>
 			<div className="imprint-responsibilities__contributor contributor animation--fade-in">
-				<Heading className="contributor__heading" level="h4">Fotografie</Heading>
+				<Paragraph className="contributor__heading paragraph--bold">Fotografie</Paragraph>
 				<Paragraph className="contributor__item">Samira Haas</Paragraph>
-				<Link className="contributor__item" href="https://samirahaas.ch">samirahaas.ch</Link>
+				<Link className="contributor__item item" href="https://samirahaas.ch" target="_blank">
+					<Paragraph className="item__label">samirahaas.ch</Paragraph>
+				</Link>
 			</div>
 			<div className="imprint-responsibilities__contributor contributor animation--fade-in">
-				<Heading className="contributor__heading" level="h4">Webkonzeption und Gestaltung</Heading>
+				<Paragraph className="contributor__heading paragraph--bold">Webkonzeption und Gestaltung</Paragraph>
 				<Paragraph className="contributor__item">heller grafik</Paragraph>
-				<Paragraph className="contributor__item" href="https://hellergrafik.ch">Isabel Heller</Paragraph>
+				<Paragraph className="contributor__item">Isabel Heller grafik</Paragraph>
+				<Link className="contributor__item item" href="https://hellergrafik.ch" target="_blank">
+					<Paragraph className="item__label">hellergrafik.ch</Paragraph>
+				</Link>
 			</div>
 			<div className="imprint-responsibilities__contributor contributor animation--fade-in">
-				<Heading className="contributor__heading" level="h4">Programmierung</Heading>
+				<Paragraph className="contributor__heading paragraph--bold">Programmierung</Paragraph>
 				<Paragraph className="contributor__item">haas web solutions</Paragraph>
-				<Link className="contributor__item" href="https://haaswebsolutions.io">haaswebsolutions.io</Link>
+				<Paragraph className="contributor__item">Jérôme Haas</Paragraph>
+				<Link className="contributor__item item" href="https://haaswebsolutions.io" target="_blank">
+					<Paragraph className="item__label">haaswebsolutions.io</Paragraph>
+				</Link>
 			</div>
 			<div className="imprint-responsibilities__disclaimer disclaimer animation--fade-in">
 				<Paragraph>Copyright © 2023 Claudia Wespi. Alle Rechte vorbehalten. Für die Vervielfältigung oder Veränderung jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.</Paragraph>
