@@ -60,6 +60,7 @@ const ContactGuide = () => {
 					<Heading className="content__heading" level="h2">Blumige Anfragen</Heading>
 					<Paragraph className="content__text">Sie möchten jemandem oder Ihnen selbst Blumen schenken und benötigen eine Beratung? Es ist uns eine Ehre, Ihnen zu ganz verschiedenen Anlässen ein Lächeln oder Anteilnahme ins Herz zu zaubern. </Paragraph>
 					<Paragraph className="content__text">Persönlichen Kontakt schätzen wir sehr, daher freuen wir uns auf Ihren Besuch in Sins oder auf Ihren Anruf.</Paragraph>
+					<Anchor className="content__link" href="tel:0417870887" hasArrow>Anrufen</Anchor>
 				</Article>
 			</div>
 		</Section>

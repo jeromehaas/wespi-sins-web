@@ -78,7 +78,7 @@
 
 		&__heading {
 			grid-column: 1 / span 12;
-			margin-bottom: 24px;
+			margin-bottom: 12px;
 		}
 
 		&__content, .content {
@@ -88,7 +88,7 @@
 
 				&:nth-child(1) {
 					grid-column: 1 / span 12;
-					margin-bottom: 16px;
+					margin-bottom: 8px;
 				}
 
 				&:nth-child(2) {

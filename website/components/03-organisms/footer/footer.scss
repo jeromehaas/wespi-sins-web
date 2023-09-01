@@ -107,7 +107,7 @@
 			max-width: 320px;
 			max-height: 320px;
 			grid-column: 1 / span 12;
-			margin: 32px auto 0;
+			margin: 32px auto;
 		}
 
 		&__contact-details, .contact-details {
@@ -160,7 +160,6 @@
 			max-height: unset;
 			height: auto;
 			grid-column: 3 / span 8;
-			margin: 32px auto 0;
 		}
 
 	}
