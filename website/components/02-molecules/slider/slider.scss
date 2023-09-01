@@ -102,11 +102,16 @@
 
 	@media (max-width: 950px) {
 		height: 640px;
+		margin: 80px 0 48px;
 
 		&__item, .item {
 			max-height: 640px;
 			left: unset !important;
 			right: calc(-200% - (80px * 2));
+			transform: unset;
+			top: unset;
+			bottom: 0;
+			margin-top: unset;
 			
 
 			&:nth-child(1) {
@@ -127,25 +132,25 @@
 			}
 
 			&:nth-child(4n + 2) {
-				margin-top: 56px;
+				margin-bottom: 32px;
 				margin-left: unset;
-				margin-right: 40px;
+				margin-right: 48px;
 			}
 
 			&:nth-child(4n + 3) {
-				margin-top: 32px;
+				margin-bottom: -32px;
 				margin-left: unset;
-				margin-right: 32px;
+				margin-right: 24px;
 			}
 
 			&:nth-child(4n + 4) {
-				margin-top: 80px;
+				margin-bottom: 48px;
 				margin-left: unset;
 				margin-right: 16px;
 			}
 
 			&:nth-child(4n + 5) {
-				margin-top: 56px;
+				margin-bottom: 0;
 				margin-left: 0;
 			}
 
