@@ -45,7 +45,7 @@ const StartStationeryOffer = () => {
 			<div className="start-stationery⁻offer__impressions impressions">
 				<div className="impressions__item item animation--fade-in">
 					<div className="item__image-wrapper">
-						<Picture className="item__image" src="/images/general/wespi-stifte-gross.webp" />
+						<Picture className="item__image" src="/images/general/wespi-schulartikel.webp" />
 					</div>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Schule</Heading>

@@ -54,7 +54,7 @@ const StationeryServices = () => {
 				<Picture className="item__image" src="/images/general/wespi-papeterie-artikel.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 			</div>
 			<div className="stationery-services__item item animation--fade-in">
-				<Picture className="item__image" src="/images/general/wespi-stifte-kein.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
+				<Picture className="item__image" src="/images/general/wespi-stifte.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />
 				<Article className="item__content content">
 					<Heading className="content__heading" level="h2">Papeterie Artikel für die Schule</Heading>
 					<Paragraph className="content__text">Stylisches und Praktisches für die Schule finden Sie bei uns direkt kombiniert. Ob Bleistifte, Radierer, Lineal, Kugelschreiber, Couverts, Buntstifte, Füller, Schreibhefter, Agenden, Schulrechner, Papiere, Lernhilfen oder Produkte aus dem Sortiment Lehrplan 21.</Paragraph>
