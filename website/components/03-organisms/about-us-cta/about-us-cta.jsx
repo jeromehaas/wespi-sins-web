@@ -51,9 +51,9 @@ const AboutUsCta = () => {
 				<Article className="item__content content animation--fade-in">
 					<Heading className="content__heading" level="h2">Wir sind für Sie da</Heading>
 					<Paragraph className="content__text">Alle in unserem Team bringen andere Fähigkeiten und Eigenschaften mit. Somit sind wir gemeinsam perfekt und seit über 10 Jahren ein Team, welches sich gegenseitig unterstützt und weiterbringt. Neben dem Team an der Front, unterstützen uns unsere Wichtelhelfer tatkräftig im Hintergrund.</Paragraph>
-					<ListItem className="content__list-item">– Claudia, Inhaberin, Floristin EFZ</ListItem>
-					<ListItem className="content__list-item">– Daniela, Floristin EFZ</ListItem>
-					<ListItem className="content__list-item">– Debbi, Floristin EFZ</ListItem>
+					<ListItem className="content__list-item">Claudia, Inhaberin, Floristin EFZ</ListItem>
+					<ListItem className="content__list-item">Daniela, Floristin EFZ</ListItem>
+					<ListItem className="content__list-item">Debbi, Floristin EFZ</ListItem>
 					<Anchor className="content__link" onClick={ handleOpenOrderMenu } hasArrow>Jetzt bestellen</Anchor>
 				</Article>
 				<Picture className="item__image image animation--fade-in" src="/images/general/wespi-geschenk.webp" width={ 1920 } height={ 1080 } alt="Papeterie Dienstleistung" />

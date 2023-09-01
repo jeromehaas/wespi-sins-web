@@ -98,14 +98,14 @@ const MobileNavigation = () => {
 					<Link className="links__item" href="/contact" onClick={ (event) => handleLinkClick(event, '/contact') }>Kontakt</Link>
 				</div>
 				<div className="menu__contact-details contact-details animation--fade-in">
-					<Heading className="contact-details__heading" level="h4">WESPI SINS <br />Papeterie- und Bluemeparadies</Heading>
+					<Paragraph className="contact-details__heading paragraph--bold" level="h4">WESPI SINS <br />Papeterie- und Bluemeparadies</Paragraph>
 					<Paragraph className="contact-details__item paragraph">Bahnhofstrasse 15</Paragraph>
 					<Paragraph className="contact-details__item paragraph">5643 Sins</Paragraph>
 					<Link className="contact-details__item paragraph" href="mailto:info@wespi-sins.ch">info@wespi-sins.ch</Link>
 					<Link className="contact-details__item paragraph" href="tel:0417870887">041 787 08 87</Link>
 				</div>
 				<div className="menu__business-hours business-hours animation--fade-in">
-					<Heading className="business-hours__heading" level="h4">Öffnungszeiten</Heading>
+					<Paragraph className="business-hours__heading paragraph--bold" level="h4">Öffnungszeiten</Paragraph>
 					<Paragraph className="business-hours__item paragraph">Montag, Dienstag, Donnerstag und Freitag </Paragraph>
 					<Paragraph className="business-hours__item paragraph">08.30 – 12.00, 14.00 – 18.30 Uhr</Paragraph>
 					<Paragraph className="business-hours__item paragraph">Samstag</Paragraph>
