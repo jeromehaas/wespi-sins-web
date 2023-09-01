@@ -55,6 +55,9 @@ const MobileNavigation = () => {
 	// HANDLE LINK CLICK
 	const handleLinkClick = (event, targetPath) => {
 		event.preventDefault();
+		if (orderContext && orderContext.menuIsOpen === true) {
+			orderContext.setMenuIsOpen(false);
+		};
 		if (pathname === targetPath) {
 			toggleMenu();
 		} else {

@@ -77,7 +77,7 @@ const OrderConfirmationForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } order-confirmation-form` }>
-			<Action className="order-confirmation-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
+			<Action className="order-confirmation-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>zurück</Action>
 			<div className="order-confirmation-form__form form">
 				<Heading className="form__heading" level="h2">Bestellbestätigung</Heading>
 				<div className="form__block block">

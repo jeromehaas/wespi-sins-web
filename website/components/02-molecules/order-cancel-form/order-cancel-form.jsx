@@ -26,7 +26,7 @@ const OrderCancelForm = ({ className }) => {
 	return (
 		<div className={ `${ className } cancel-form` }>
 			<div className="cancel-form__form form">
-				<Heading className="form__heading" level="h2">Bestellung abbrechen</Heading>
+				<Heading className="form__heading" level="h2">zurück</Heading>
 				<Paragraph className="form__text">Sind Sie sicher, dass Sie Ihre Bestellung abbrechen möchten?</Paragraph>
 			</div>
 			<div className="cancel-form__actions actions">

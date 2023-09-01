@@ -130,6 +130,14 @@ h1, h2, h3, h4, p, a, li, td, label, input {
 
 }
 
+.action {
+
+	&__label {
+		font-weight: 700;
+	}
+
+}
+
 .mobile-navigation {
 
 	&__menu, .menu {

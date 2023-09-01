@@ -47,7 +47,7 @@ const OrderAddressForm = ({ className }) => {
 	// RENDER
 	return (
 		<div className={ `${ className } order-address-form` }>
-			<Action className="order-address-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>Bestellung abbrechen</Action>
+			<Action className="order-address-form__cancel-button" symbol="arrow-left" onClick={ handleCancel }>zurück</Action>
 			<div className="order-address-form__form form">
 				<Heading className="form__heading" level="h2">Rechnungsadresse</Heading>
 				<InputField className="form__input-field" category="address" id="company" label="Firma*" placeholder="Firmenname" error={ formState.errors['address'] } type="text" register={ register } validation={ { 	required: { value: true, message: 'Bitte geben Sie Ihren Firmennamen an' } } } />
