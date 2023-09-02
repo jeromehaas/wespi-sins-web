@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // COMPONENT
 const Heading = ({ className = '', children, level = 'h1', lookLike }) => {
 
+	// RENDER
 	switch (level) {
 	case 'h1': return <h1 className={ ` ${ className } heading heading--${ lookLike || level }` }>{ children }</h1>;
 	case 'h2': return <h2 className={ ` ${ className } heading heading--${ lookLike || level }` }>{ children }</h2>;

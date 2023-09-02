@@ -28,6 +28,7 @@ const ImprintIntro = () => {
 		return () => context.revert();
 	}, []);
 
+	// RENDER
 	return (
 		<Section className="imprint-intro" ref={ sectionRef }>
 			<Heading className="imprint-intro__heading heading animation--fade-in" level="h1">

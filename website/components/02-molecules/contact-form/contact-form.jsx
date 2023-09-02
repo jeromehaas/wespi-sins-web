@@ -29,6 +29,7 @@ const ContactForm = ({ className }) => {
 	// HANDLE SUBMIT
 	const handleDispatch = async () => {
 
+		// TRY-CATCH BLOCK
 		try {
 
 			// GET MESSAGE

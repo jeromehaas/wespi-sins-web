@@ -1,3 +1,4 @@
+// IMPORTS
 import { NextResponse } from 'next/server';
 
 // GET RESPONSE METHODS

@@ -5,7 +5,6 @@ import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Section from 'components/04-layouts/section/section';
-import Heading from 'components/01-atoms/heading/heading';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import Link from 'next/link';
 

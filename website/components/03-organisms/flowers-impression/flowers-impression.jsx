@@ -28,6 +28,7 @@ const FlowersImpression = () => {
 		return () => context.revert();
 	}, []);
 
+	// RENDER
 	return (
 		<Section className="flowers-impression" ref={ sectionRef }>
 			<Picture className="flowers-impression__image image animation--appear" src="/images/general/wespi-blumen-angebot.webp" width={ 1920 } height={ 1600 } priority />
@@ -36,4 +37,5 @@ const FlowersImpression = () => {
 
 };
 
+// EXPORT
 export default FlowersImpression;

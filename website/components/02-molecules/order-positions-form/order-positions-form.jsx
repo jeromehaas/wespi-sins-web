@@ -1,3 +1,5 @@
+'use client';
+
 // IMPORTS
 import Heading from 'components/01-atoms/heading/heading';
 import InputTable from 'components/01-atoms/input-table/input-table';

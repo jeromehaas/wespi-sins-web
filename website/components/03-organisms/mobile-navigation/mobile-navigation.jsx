@@ -9,7 +9,6 @@ import Link from 'next/link';
 import Section from 'components/04-layouts/section/section';
 import Image from 'next/image';
 import Hamburger from 'components/01-atoms/hamburger/hamburger';
-import Heading from 'components/01-atoms/heading/heading';
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 
 // COMPONENT

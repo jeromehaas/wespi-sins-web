@@ -1,8 +1,11 @@
-import PropTypes from 'prop-types';
+'use client';
+
+// IMPORTS
 import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import { gsap } from 'gsap';
 import { useEffect, useRef } from 'react';
 
+// COMPONENT
 const SliderNavigation = ({ className = '', sliderController }) => {
 
 	// SETUP REFS
@@ -20,6 +23,7 @@ const SliderNavigation = ({ className = '', sliderController }) => {
 		}, sliderNavigationRef);
 	}, [sliderController.counter]);
 
+	// RENDER
 	return (
 		<div className={ `${ className } slider-navigation` } ref={ sliderNavigationRef }>
 			{ sliderController.images.map((image, index) => {
@@ -37,8 +41,5 @@ const SliderNavigation = ({ className = '', sliderController }) => {
 
 };
 
-SliderNavigation.propTypes = {
-	className: PropTypes.string,
-};
-
+// EXPORT
 export default SliderNavigation;

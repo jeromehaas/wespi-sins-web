@@ -25,6 +25,7 @@
 			&__message {
 				grid-column: 2
 			}
+
 		}
 
 		&__progress, .progress {
@@ -78,6 +79,7 @@
 		&__toast, .toast {
 			max-width: calc(100vw - (2 * 24px));
 		}
+		
 	}
 
 }

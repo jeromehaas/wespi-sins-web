@@ -63,4 +63,5 @@ const AboutUsTeaserStore = () => {
 
 };
 
+// EXPORT
 export default AboutUsTeaserStore;

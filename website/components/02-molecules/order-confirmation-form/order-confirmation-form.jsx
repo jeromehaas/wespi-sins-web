@@ -1,3 +1,5 @@
+'use client';
+
 // IMPORTS
 import { OrderContext } from 'contexts/order-context';
 import { useContext } from 'react';

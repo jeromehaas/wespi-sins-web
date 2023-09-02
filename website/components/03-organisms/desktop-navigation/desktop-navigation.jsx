@@ -29,7 +29,7 @@ const DesktopNavigation = () => {
 			orderContext.setStep(0);
 		} else if (pathname !== '/') {
 			router.push('/');
-		} ;
+		};
 	};
 
 	// HANDLE LOGO CLICK

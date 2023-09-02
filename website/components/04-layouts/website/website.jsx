@@ -1,5 +1,4 @@
 // IMPORTS
-import PropTypes from 'prop-types';
 import Footer from 'components/03-organisms/footer/footer';
 import OpeningTimes from 'components/03-organisms/opening-times/opening-times';
 import DesktopNavigation from 'components/03-organisms/desktop-navigation/desktop-navigation';
@@ -28,12 +27,6 @@ const Website = ({ className = '', children = null }) => {
 		</OrderProvider>
 	);
 
-};
-
-// PROP-TYPES
-Website.propTypes = {
-	className: PropTypes.string,
-	children: PropTypes.node,
 };
 
 // EXPORT

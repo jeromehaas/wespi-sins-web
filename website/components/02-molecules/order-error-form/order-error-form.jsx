@@ -1,3 +1,5 @@
+'use client';
+
 // IMPORTS
 import Heading from 'components/01-atoms/heading/heading';
 import Button from 'components/01-atoms/button/button';

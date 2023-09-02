@@ -1,8 +1,11 @@
+'use client';
+
+// IMPORTS
 import Picture from 'components/01-atoms/picture/picture';
-import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 import { useRef, useEffect } from 'react';
 
+// COMPONENT
 const Slider = ({ className = '', sliderController = null }) => {
 
 	// SETUP REFS
@@ -47,8 +50,5 @@ const Slider = ({ className = '', sliderController = null }) => {
 
 };
 
-Slider.propTypes = {
-	className: PropTypes.string,
-};
-
+// EXPORT
 export default Slider;
