@@ -16,20 +16,20 @@ const Slider = ({ className = '', sliderController = null }) => {
 			if (sliderController.viewportWidth && sliderController.viewportWidth >= 950 && sliderController.direction === 'rtl') {
 				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { left: '0%' }, 0);
 				sliderTimelineRef.current.to(`.slider__item:nth-child(-n+${ sliderController.counter })`, { left: '0%' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { left: 'calc(-100% - 120px)' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { left: 'calc(-200% - 120px)' }, 0);
+				sliderController.counter < sliderController.images.length - 1 && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { left: 'calc(-100% - 120px)' }, 0);
+				sliderController.counter < sliderController.images.length - 2 && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { left: 'calc(-200% - 120px)' }, 0);
 			}
 			if (sliderController.viewportWidth && sliderController.viewportWidth >= 950 && sliderController.direction === 'ltr') {
 				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { right: '0%' }, 0);
 				sliderTimelineRef.current.to(`.slider__item:nth-child(-n+${ sliderController.counter })`, { right: '0%' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { right: 'calc(-100% - 120px)' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { right: 'calc(-200% - 120px)' }, 0);
+				sliderController.counter < sliderController.images.length - 1 && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { right: 'calc(-100% - 120px)' }, 0);
+				sliderController.counter < sliderController.images.length - 2 && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { right: 'calc(-200% - 120px)' }, 0);
 			}
 			if (sliderController.viewportWidth && sliderController.viewportWidth < 950) {
 				sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter })`, { right: '0%' }, 0);
 				sliderTimelineRef.current.to(`.slider__item:nth-child(-n+${ sliderController.counter })`, { right: '0%' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { right: 'calc(-100% - 80px)' }, 0);
-				sliderController.counter !== sliderController.images.length && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { right: 'calc(-200% - 80px)' }, 0);
+				sliderController.counter < sliderController.images.length - 1 && sliderTimelineRef.current.to(`.slider__item:nth-child(${ sliderController.counter + 1 })`, { right: 'calc(-100% - 80px)' }, 0);
+				sliderController.counter < sliderController.images.length + 2 && sliderTimelineRef.current.to(`.slider__item:nth-child(n+${ sliderController.counter + 2 })`, { right: 'calc(-200% - 80px)' }, 0);
 			}
 		}, sliderRef);
 	}, [sliderController.counter]);
