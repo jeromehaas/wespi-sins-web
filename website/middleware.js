@@ -5,7 +5,7 @@ const { next, redirect } = NextResponse;
 
 // DEFINE PATH CATEGORIES
 const websitePaths = ['/', '/flowers', '/stationery', '/about-us', '/contact', '/imprint', '/data-privacy'];
-const authPaths = ['/login', '/admin-login'];
+const authPaths = ['/login'];
 
 // MIDDLEWARE
 export const middleware = async (request) => {
@@ -22,19 +22,8 @@ export const middleware = async (request) => {
 		// HANDLE AUTH PATHS
 		if (authPaths.includes(pathname)) {
 
-			// TRY-CATCH BLOCK
-			try {
-
-				// ON LOGIN PATHS ALWAYS SHOW SHITE
-				return next();
-
-			// HANDLE ERRORS
-			} catch (error) {
-
-				// ON LOGIN PATHS ALWAYS SHOW SHITE
-				return next();
-
-			};
+			// ON LOGIN PATHS ALWAYS SHOW SHITE
+			return next();
 
 		};
 

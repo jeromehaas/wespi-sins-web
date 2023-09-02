@@ -1,0 +1,42 @@
+.cookie-banner {
+	background-color: $beige-40;
+	position: fixed !important;
+	bottom: -100vh;
+	z-index: 40;
+	opacity: 0;
+	visibility: hidden;
+
+	&__inner {
+		display: grid;
+		grid-template-rows: auto;
+		grid-template-columns: auto auto ;
+		align-items: end;
+		justify-content: end;
+		grid-gap: 32px;
+	}
+
+
+	&__text, .text {
+
+		&__link {
+			font-size: inherit;
+			color: $brown-80;
+		}
+
+	}
+
+	@media (max-width: 1050px) {
+
+		&__inner {
+			grid-template-rows: auto auto;
+			grid-template-columns: 100%;
+			grid-gap: 24px;
+		}
+
+		&__button {
+			margin-right: auto;
+		}
+
+	}
+
+}
