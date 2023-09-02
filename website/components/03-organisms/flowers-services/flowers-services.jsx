@@ -36,7 +36,7 @@ const FlowersServices = () => {
 	return (
 		<Section className="flowers-services" ref={ sectionRef }>
 			<div className="flowers-services__box box animation--fade-in">
-				<Picture className="box__image" src="/images/general/wespi-claudia-wespi.webp" width={ 540 } height={ 320 } />
+				<Picture className="box__image" src="/images/general/wespi-claudia-wespi.webp" width={ 1920 } height={ 1080 } />
 				<Article className="box__content content">
 					<Heading className="content__heading" level="h2">Individuelle Beratung</Heading>
 					<Paragraph className="content__text">Blumen haben eine eigene Sprache und wir lieben es, diese zu übersetzen. Gerne beraten wir Sie und unterstützen Sie in der Auswahl.</Paragraph>
@@ -44,7 +44,7 @@ const FlowersServices = () => {
 				</Article>
 			</div>
 			<div className="flowers-services__box box animation--fade-in">
-				<Picture className="box__image" src="/images/general/wespi-lieferung.webp" width={ 540 } height={ 320 } />
+				<Picture className="box__image" src="/images/general/wespi-lieferung.webp" width={ 1920 } height={ 1080 } />
 				<Article className="box__content content">
 					<Heading className="content__heading" level="h2">Heimlieferung im oberen Freiamt</Heading>
 					<Paragraph className="content__text">Lieferungen führen wir sehr gerne aus. Die Kosten belaufen sich von CHF 8.– bis 25.–. Bei Dekorations-Auslieferungen bis CHF 150.– (je nach Zeitaufwand). Gerne informieren wir Sie telefonisch oder persönlich im Bluemeparadies.</Paragraph>

@@ -38,7 +38,7 @@ const Order = () => {
 	useEffect(() => {
 		const context = gsap.context(() => {
 			gsap.to('.menu__navigation .step .step__line', { backgroundColor: '#E4BCB5', duration: 0 });
-			gsap.to(`.menu__navigation .step:nth-child(-n+${ orderContext.step }) .step__line`, { backgroundColor: '#9E453E', duration: 0 });
+			orderContext.step <= 4 && orderContext.step >= 1 && gsap.to(`.menu__navigation .step:nth-child(-n+${ orderContext.step }) .step__line`, { backgroundColor: '#9E453E', duration: 0 });
 		}, orderRef);
 		return () => context.revert();
 	}, [orderContext.step]);

@@ -37,7 +37,7 @@ const ContactForm = ({ className }) => {
 			// SEND THE MESSAGE
 			const response = await axios({
 				method: 'POST',
-				url: `${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/message`,
+				url: `${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/messages`,
 				data: {
 					message: message,
 				},
