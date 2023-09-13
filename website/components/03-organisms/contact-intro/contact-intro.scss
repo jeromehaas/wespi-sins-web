@@ -8,6 +8,8 @@
 
 	&__heading {
 		grid-column: 1 / span 10;
+		max-width: 960px;
+
 	}
 
 	@media (max-width: 1050px) {
