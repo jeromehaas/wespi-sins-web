@@ -1,6 +1,6 @@
 // CONFIG
 const config = {
-  locales: [],
+  locales: ['de', 'en'],
 };
 
 // BOOTSTRAP
