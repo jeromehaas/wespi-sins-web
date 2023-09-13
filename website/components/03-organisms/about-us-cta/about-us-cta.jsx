@@ -50,7 +50,7 @@ const AboutUsCta = () => {
 			<div className="about-us-cta__item item">
 				<Article className="item__content content animation--fade-in">
 					<Heading className="content__heading" level="h2">Wir sind für Sie da</Heading>
-					<Paragraph className="content__text">Alle in unserem Team bringen andere Fähigkeiten und Eigenschaften mit. Somit sind wir gemeinsam perfekt und seit über 10 Jahren ein Team, welches sich gegenseitig unterstützt und weiterbringt. Neben dem Team an der Front, unterstützen uns unsere Wichtelhelfer tatkräftig im Hintergrund.</Paragraph>
+					<Paragraph className="content__text">Alle in unserem Team bringen andere Fähigkeiten und Eigenschaften mit. Somit sind wir gemeinsam perfekt und seit über 10 Jahren ein Team, welches sich gegenseitig unterstützt und weiterbringt. Neben dem Team an der Front unterstützen uns unsere Wichtelhelfer tatkräftig im Hintergrund.</Paragraph>
 					<ListItem className="content__list-item">Claudia, Inhaberin, Floristin EFZ</ListItem>
 					<ListItem className="content__list-item">Daniela, Floristin EFZ</ListItem>
 					<ListItem className="content__list-item">Debbi, Floristin EFZ</ListItem>

@@ -39,7 +39,7 @@ const StartFlowersOffer = ({ data }) => {
 			<div className="start-flowers__intro intro">
 				<Article className="intro__content content animation--fade-in">
 					<Heading className="content__heading" level="h2">Angebot Bluemeparadies</Heading>
-					<Paragraph className="content__text">Was uns die Natur mit Blumen widerspiegelt und schenkt, begeistert uns immer wieder aufs Neue. Mittels der Schönheit von Blumen Menschen dabei zu unterstützen, besondere Momente zu unterstreichen oder gar unvergesslich zu machen, ist für uns das schönste.</Paragraph>
+					<Paragraph className="content__text">Was uns die Natur mit Blumen widerspiegelt und schenkt, begeistert uns immer wieder aufs Neue. Mittels der Schönheit von Blumen Menschen dabei zu unterstützen, besondere Momente zu unterstreichen oder gar unvergesslich zu machen, ist für uns das Schönste.</Paragraph>
 				</Article>
 			</div>
 			<div className="start-flowers⁻offer__impressions impressions">

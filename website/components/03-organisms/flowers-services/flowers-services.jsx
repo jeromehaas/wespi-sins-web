@@ -47,7 +47,7 @@ const FlowersServices = () => {
 				<Picture className="box__image" src="/images/general/wespi-lieferung.webp" width={ 1920 } height={ 1080 } />
 				<Article className="box__content content">
 					<Heading className="content__heading" level="h2">Heimlieferung im oberen Freiamt</Heading>
-					<Paragraph className="content__text">Lieferungen führen wir sehr gerne aus. Die Kosten belaufen sich von CHF 8.– bis 25.–. Bei Dekorations-Auslieferungen bis CHF 150.– (je nach Zeitaufwand). Gerne informieren wir Sie telefonisch oder persönlich im Bluemeparadies.</Paragraph>
+					<Paragraph className="content__text">Lieferungen führen wir sehr gerne aus. Die Kosten belaufen sich von CHF 8.– bis 25.–. Bei Dekorationsauslieferungen bis CHF 150.– (je nach Zeitaufwand). Gerne informieren wir Sie telefonisch oder persönlich im Bluemeparadies.</Paragraph>
 					<Anchor className="content__link" href="/contact#contact-guide" hasArrow>Mehr erfahren</Anchor>
 				</Article>
 			</div>

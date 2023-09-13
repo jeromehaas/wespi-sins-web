@@ -87,7 +87,7 @@ const StartHero = () => {
 				<div className="boxes__item item" data-theme="stationery">
 					<Article className="item__content content content">
 						<Heading className="content__heading" level="h2">Papeterie</Heading>
-						<Paragraph className="content__text">Von Schul oder Büromaterial über Geschenkideen bis zu Grusskarten</Paragraph>
+						<Paragraph className="content__text">Von Schul- oder Büromaterial über Geschenkideen bis zu Grusskarten.</Paragraph>
 						<Anchor className="content__link" href="/stationery" hasArrow>Mehr erfahren</Anchor>
 					</Article>
 					<div className="item__progress progress">

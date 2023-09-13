@@ -43,7 +43,7 @@ const StationeryIntro = () => {
 	return (
 		<Section className="stationery-intro" ref={ sectionRef }>
 			<Heading className="stationery-intro__heading heading animation--fade-in" level="h1">
-				Bei uns finden Sie eine grosse Auswahl an <HyperLink onClick={ (event) => handleClick(event, '#stationery-services') }>Büro-</HyperLink> und <HyperLink onClick={ (event) => handleClick(event, '#stationery-services') }>Schulmaterial</HyperLink>. In Sins oder Online.
+				Bei uns finden Sie eine grosse Auswahl an <HyperLink onClick={ (event) => handleClick(event, '#stationery-services') }>Büro-</HyperLink> und <HyperLink onClick={ (event) => handleClick(event, '#stationery-services') }>Schulmaterial</HyperLink>. In Sins oder online.
 			</Heading>
 		</Section>
 	);
