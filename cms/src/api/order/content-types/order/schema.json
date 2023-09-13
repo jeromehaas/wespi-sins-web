@@ -4,12 +4,13 @@
   "info": {
     "singularName": "order",
     "pluralName": "orders",
-    "displayName": "Order",
+    "displayName": "Bestellungen",
     "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "address": {
       "type": "component",
@@ -24,11 +25,10 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "open",
-        "in-progress",
-        "closed"
+        "offen",
+        "erledigt"
       ],
-      "default": "open"
+      "default": "offen"
     }
   }
 }

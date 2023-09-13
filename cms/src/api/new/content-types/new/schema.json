@@ -4,7 +4,8 @@
   "info": {
     "singularName": "new",
     "pluralName": "news",
-    "displayName": "News"
+    "displayName": "Neuigkeiten",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,11 +17,12 @@
       "required": true
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "text": {
       "type": "richtext",

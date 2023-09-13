@@ -4,12 +4,13 @@
   "info": {
     "singularName": "message",
     "pluralName": "messages",
-    "displayName": "Message",
+    "displayName": "Nachrichten",
     "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
+  "pluginOptions": {},
   "attributes": {
     "company": {
       "type": "string"
@@ -40,11 +41,10 @@
     "status": {
       "type": "enumeration",
       "enum": [
-        "open",
-        "in-progress",
-        "done"
+        "offen",
+        "erledigt"
       ],
-      "default": "open"
+      "default": "offen"
     }
   }
 }
