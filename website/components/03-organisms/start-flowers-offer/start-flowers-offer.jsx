@@ -10,6 +10,7 @@ import Heading from 'components/01-atoms/heading/heading';
 import Picture from 'components/01-atoms/picture/picture';
 import Anchor from 'components/01-atoms/anchor/anchor';
 import Article from 'components/04-layouts/article/article';
+import Link from 'next/link';
 
 // COMPONENT
 const StartFlowersOffer = ({ data }) => {
@@ -44,9 +45,9 @@ const StartFlowersOffer = ({ data }) => {
 			</div>
 			<div className="start-flowers⁻offer__impressions impressions">
 				<div className="impressions__item item animation--fade-in">
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-house-creations">
 						{ data.flowers[0] && data.flowers[0].attributes.cover && <Picture className="item__image" src={ data.flowers[0].attributes.cover.data.attributes.url } /> }
-					</div>
+					</Link>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hauskreationen</Heading>
 						<Anchor className="item__link" href="/flowers#flowers-teaser-house-creations" hasArrow>Mehr erfahren</Anchor>
@@ -57,14 +58,14 @@ const StartFlowersOffer = ({ data }) => {
 						<Heading className="item__heading" level="h3">Saisonales</Heading>
 						<Anchor className="item__link" href="/flowers#flowers-teaser-seasonal" hasArrow>Mehr erfahren</Anchor>
 					</div>
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-seasonal">
 						{ data.flowers[1] && data.flowers[1].attributes.cover.data && <Picture className="item__image" src={ data.flowers[1].attributes.cover.data.attributes.url } /> }
-					</div>
+					</Link>
 				</div>
 				<div className="impressions__item item animation--fade-in">
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-weddings">
 						{ data.flowers[2] && data.flowers[2].attributes.cover.data && <Picture className="item__image" src={ data.flowers[2].attributes.cover.data.attributes.url } /> }
-					</div>
+					</Link>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hochzeit</Heading>
 						<Anchor className="item__link" href="/flowers#flowers-teaser-weddings" hasArrow>Mehr erfahren</Anchor>
@@ -75,9 +76,9 @@ const StartFlowersOffer = ({ data }) => {
 						<Heading className="item__heading" level="h3">Trauer / Beerdigung</Heading>
 						<Anchor className="item__link" href="/flowers#flowers-teaser-mourning" hasArrow>Mehr erfahren</Anchor>
 					</div>
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-mourning">
 						{ data.flowers[3] && data.flowers[0].attributes.cover.data && <Picture className="item__image" src={ data.flowers[3].attributes.cover.data.attributes.url } /> }
-					</div>
+					</Link>
 				</div>
 			</div>
 		</Section>

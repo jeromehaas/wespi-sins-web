@@ -10,6 +10,7 @@ import Heading from 'components/01-atoms/heading/heading';
 import Picture from 'components/01-atoms/picture/picture';
 import Anchor from 'components/01-atoms/anchor/anchor';
 import Article from 'components/04-layouts/article/article';
+import Link from 'next/link';
 
 // COMPONENT
 const StartStationeryOffer = () => {
@@ -44,9 +45,9 @@ const StartStationeryOffer = () => {
 			</div>
 			<div className="start-stationery⁻offer__impressions impressions">
 				<div className="impressions__item item animation--fade-in">
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/stationery#stationery-services">
 						<Picture className="item__image" src="/images/general/wespi-schulartikel.webp" />
-					</div>
+					</Link>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Schule</Heading>
 						<Anchor className="item__link" href="/stationery#stationery-services" hasArrow>Mehr erfahren</Anchor>
@@ -57,9 +58,9 @@ const StartStationeryOffer = () => {
 						<Heading className="item__heading" level="h3">Büro</Heading>
 						<Anchor className="item__link" href="/stationery#stationery-services" hasArrow>Mehr erfahren</Anchor>
 					</div>
-					<div className="item__image-wrapper">
+					<Link className="item__image-wrapper" href="/stationery#stationery-services">
 						<Picture className="item__image" src="/images/general/wespi-papeterie-artikel.webp" />
-					</div>
+					</Link>
 				</div>
 			</div>
 		</Section>

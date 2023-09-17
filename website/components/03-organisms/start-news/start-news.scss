@@ -1,5 +1,8 @@
 .start-news {
 	background-color: $yellow-40;
+	padding-top: 48px !important;
+	padding-bottom: 48px !important;
+
 
 	&__banner, .banner {
 		display: grid;
@@ -208,7 +211,7 @@
 
 					&__heading {
 						grid-column: 1 / span 12;
-						margin-bottom: 4px;
+						margin-bottom: 8px;
 					}
 
 					&__link {

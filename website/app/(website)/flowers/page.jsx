@@ -20,7 +20,6 @@ const Page = async () => {
 
 	// FETCH FLOWERS
 	const flowers = await fetchFlowers();
-	console.log(flowers);
 
 	// RENDER
 	return (
