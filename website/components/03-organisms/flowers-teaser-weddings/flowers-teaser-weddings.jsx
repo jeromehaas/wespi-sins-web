@@ -20,7 +20,7 @@ const FlowersTeaserWeddings = ({ data }) => {
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data && data.flowers.data[2].attributes.images.data,
+		images: data.flowers && data.flowers[2].attributes.images.data,
 		direction: 'ltr',
 	});
 
@@ -42,11 +42,11 @@ const FlowersTeaserWeddings = ({ data }) => {
 	// RENDER
 	return (
 		<Section className="flowers-teaser-weddings" ref={ sectionRef }>
-			{ data.flowers.data ? (
+			{ data.flowers ? (
 				<Fragment>
 					<div className="flowers-teaser-weddings__content content animation--fade-in">
-						<Heading className="content__heading" level="h3">{ data.flowers.data[2].attributes.heading }</Heading>
-						<Paragraph className="content__text">{ data.flowers.data[2].attributes.text }</Paragraph>
+						<Heading className="content__heading" level="h3">{ data.flowers[2].attributes.heading }</Heading>
+						<Paragraph className="content__text">{ data.flowers[2].attributes.text }</Paragraph>
 						<SliderNavigation className="content__navigation" sliderController={ sliderController } />
 					</div>
 					<Slider className="flowers-teaser-weddings__slider slider animation--fade-in" sliderController={ sliderController } />
