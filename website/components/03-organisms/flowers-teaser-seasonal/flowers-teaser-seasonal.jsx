@@ -1,7 +1,7 @@
 'use client';
 
 // IMPORTS
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, Fragment } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Section from 'components/04-layouts/section/section';
@@ -20,7 +20,7 @@ const FlowersTeaserSeasonal = ({ data }) => {
 
 	// BRING IN SLIDER
 	const sliderController = useSlider({
-		images: data.flowers.data[0].attributes.images.data,
+		images: data.flowers.data && data.flowers.data[0].attributes.images.data,
 		direction: 'ltr',
 	});
 
@@ -42,12 +42,16 @@ const FlowersTeaserSeasonal = ({ data }) => {
 	// RENDER
 	return (
 		<Section className="flowers-teaser-seasonal" ref={ sectionRef }>
-			<div className="flowers-teaser-seasonal__content content animation--fade-in">
-				<Heading className="content__heading" level="h3">{ data.flowers.data[0].attributes.heading }</Heading>
-				<Paragraph className="content__text">{ data.flowers.data[0].attributes.text }</Paragraph>
-				<SliderNavigation className="content__navigation" sliderController={ sliderController } />
-			</div>
-			<Slider className="flowers-teaser-seasonal__slider slider animation--fade-in" sliderController={ sliderController } />
+			{ data.flowers.data ? (
+				<Fragment>
+					<div className="flowers-teaser-seasonal__content content animation--fade-in">
+						<Heading className="content__heading" level="h3">{ data.flowers.data && data.flowers.data[0].attributes.heading }</Heading>
+						<Paragraph className="content__text">{ data.flowers.data && data.flowers.data[0].attributes.text }</Paragraph>
+						<SliderNavigation className="content__navigation" sliderController={ sliderController } />
+					</div>
+					<Slider className="flowers-teaser-seasonal__slider slider animation--fade-in" sliderController={ sliderController } />
+				</Fragment>
+			) : null}
 		</Section>
 	);
 

@@ -81,9 +81,9 @@ const useSlider = ({ images, direction }) => {
 
 	// STOP AUTOPLAY ON LAST SLIDE
 	useEffect(() => {
-		if (counter >= images.length) {
+		if (images && images.length && counter >= images.length) {
 			clearInterval(sliderIntervalRef.current);
-		}
+		};
 	}, [counter]);
 
 	// STOP INTERVAL ON USER INTERACTION

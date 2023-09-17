@@ -7,6 +7,7 @@ import FlowersTeaserHouseCreations from 'components/03-organisms/flowers-teaser-
 import FlowersTeaserSeasonal from 'components/03-organisms/flowers-teaser-seasonal/flowers-teaser-seasonal';
 import FlowersTeaserWeddings from 'components/03-organisms/flowers-teaser-weddings/flowers-teaser-weddings';
 import FlowersTeaserMourning from 'components/03-organisms/flowers-teaser-mourning/flowers-teaser-mourning';
+import fetchFlowers from 'services/fetch-flowers';
 
 // META DESCRIPTION
 const metadata = {
@@ -14,18 +15,12 @@ const metadata = {
 	description: 'Bei uns finden Sie Geschenke der Natur; saisonale Blumen, originelle Hauskreationen, Blumiges zu Hochzeiten oder Trauerfeiern.',
 };
 
-// FETCH FLOWERS
-const fetchFlowers = async () => {
-	const res = await fetch(`${ process.env.NEXT_PUBLIC_CMS_BASE_URL }/api/flowers?populate=deep&sort=id`);
-	const data = await res.json();
-	return data;
-};
-
 // PAGE
 const Page = async () => {
 
 	// FETCH FLOWERS
 	const flowers = await fetchFlowers();
+	console.log(flowers);
 
 	// RENDER
 	return (
