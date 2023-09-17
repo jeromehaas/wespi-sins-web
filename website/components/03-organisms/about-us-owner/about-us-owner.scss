@@ -16,6 +16,10 @@
 			grid-column: 1 / span 7;
 		}
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 	}
 
 	@media (max-width: 1050px) {

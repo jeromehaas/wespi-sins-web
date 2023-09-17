@@ -1,4 +1,6 @@
 .flowers-intro {
+	padding-top: 64px !important;
+	padding-bottom: 40px !important;
 
 	&__inner {
 		display: grid; 
@@ -16,6 +18,10 @@
 			grid-column: 1 / span 12;
 		}
 
+	}
+
+	@media (max-width: 850px) {
+		padding-top: 40px !important;
 	}
 
 	@media (max-width: 600px) {

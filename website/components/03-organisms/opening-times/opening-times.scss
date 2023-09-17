@@ -1,5 +1,7 @@
 .opening-times {
 	background-color: $yellow-40;
+	padding-top: 32px !important;
+	padding-bottom: 32px !important;
 
 	&__inner {
 		display: grid;

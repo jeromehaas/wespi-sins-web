@@ -1,9 +1,7 @@
 .start-stationery-offer {
+	padding-top: 160px !important;
+	padding-bottom: 160px !important;
 
-	&__inner {
-		padding: 96px 0;
-	}
-	
 	&__intro, .intro {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
@@ -43,12 +41,12 @@
 			}
 
 			&__heading {
-				margin-top: 28px;
+				margin-top: 32px;
 				margin-bottom: 8px;
 			}
 
 			&__link {
-				margin-bottom: 28px;
+				margin-bottom: 32px;
 			}
 
 
@@ -121,10 +119,6 @@
 
 	@media (max-width: 950px) {
 
-		&__inner {
-			padding: 80px 0;
-		}
-
 		&__impressions, .impressions {
 			grid-template-rows: repeat(8, 48px);
 
@@ -145,6 +139,8 @@
 	}
 
 	@media (max-width: 850px) {
+		padding-top: 120px !important;
+		padding-bottom: 120px !important;
 
 		&__impressions, .impressions {
 			grid-template-rows: unset;

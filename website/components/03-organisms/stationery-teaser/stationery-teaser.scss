@@ -1,11 +1,10 @@
 .stationery-teaser {
+	padding-bottom: 160px !important;
 
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-column-gap: 32px;
-		padding-top: 64px;
-		padding-bottom: 96px;
 	}
 
 	&__content, .content {
@@ -20,11 +19,12 @@
 
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 850px) {
+		padding-top: 40px !important;
+		padding-bottom: 120px !important;
+	}
 
-		&__inner {
-			padding-bottom: 48px;
-		}
+	@media (max-width: 750px) {
 	
 		&__content, .content {
 			grid-column: 1 / span 13;
@@ -36,7 +36,6 @@
 
 		&__inner {
 			grid-column-gap: 24px;
-			padding-top: 32px;
 		}
 
 	}

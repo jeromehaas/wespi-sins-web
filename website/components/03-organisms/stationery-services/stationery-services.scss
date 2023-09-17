@@ -1,14 +1,12 @@
 .stationery-services {
-
-	&__inner {
-		padding-top: 80px;
-	}
+	padding-top: 160px !important;
+	padding-bottom: 80px !important;
 
 	&__item, .item {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-gap: 32px;
-		margin-bottom: 120px;
+		margin-bottom: 160px;
 		justify-content: center;
 		align-items: center;
 
@@ -18,6 +16,10 @@
 
 		&_image {
 			grid-column: span 7;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
 		}
 
 		&:nth-child(1) {
@@ -48,12 +50,8 @@
 
 	@media (max-width: 1050px) {
 
-		&__inner {
-			padding-top: 24px;
-		}
-
 		&__item, .item {
-			margin-bottom: 80px;
+			margin-bottom: 120px;
 
 			&:nth-child(1) {
 
@@ -81,6 +79,10 @@
 			
 		}
 
+	}
+
+	@media (max-width: 850px) {
+		padding-top: 120px !important;
 	}
 
 	@media (max-width: 750px) {

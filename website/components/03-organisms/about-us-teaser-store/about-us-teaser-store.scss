@@ -1,5 +1,6 @@
 .about-us-teaser-store {
 	background-color: $beige-20;
+	padding-top: 120px !important;
 
 	&__inner {
 		display: grid;
@@ -10,13 +11,13 @@
 
 	&__slider {
 		grid-column: 1 / span 7;
+		min-height: 640px;
 	}
 
 	&__content, .content {
 		grid-column: 9 / span 4;
 		display: flex;
 		flex-direction: column;
-		align-items: flex-start;
 		justify-content: center;
 		height: 100%;
 		flex-grow: 0;
@@ -63,11 +64,12 @@
 
 		&__slider {
 			grid-column: 1 / span 12;
-			// margin-bottom: 80px;
+			margin-bottom: 32px;
 		}
 
 		&__content, .content {
 			grid-column: 1 / span 12;
+			justify-content: flex-start;
 		
 			&__heading {
 				order: 2;

@@ -1,11 +1,12 @@
 .footer {
 	background-color: $beige-40;
+	padding-top: 96px !important;
+	padding-bottom: 48px !important;
 
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(12, 1fr);
 		grid-column-gap: 32px;
-		padding: 32px 0;
 	}
 
 	&__logo {
@@ -98,6 +99,7 @@
 		}
 
 	}
+
 
 	@media (max-width: 650px) {
 

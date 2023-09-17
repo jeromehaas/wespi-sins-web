@@ -1,6 +1,6 @@
 .section {
 	margin: 0 auto;
-	padding: 32px 120px;
+	padding: 80px 120px;
 	width: 100%;
 	position: relative;
 
@@ -10,22 +10,29 @@
 		margin: 0 auto;
 		height: 100%;
 	}
-	
+
+	.target {
+		position: relative;
+		top: -100px;
+	}
+
 	@media (max-width: 1200px) {
-		padding: 32px 64px;
+		padding: 80px 64px;
 	}
 
 	@media (max-width: 850px) {
-		padding: 32px;
+		padding: 80px 32px;
+
+		.target {
+			position: relative;
+			top: -80px;
+		}
+
 	}
 	
 	@media (max-width: 600px) {
-		padding: 24px;
+		padding: 80px 24px;
 	}
 	
 }
 
-.target {
-	position: relative;
-	top: -100px;
-}

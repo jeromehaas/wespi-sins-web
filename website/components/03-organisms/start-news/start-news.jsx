@@ -1,7 +1,7 @@
 'use client';
 
 // IMPORTS
-import { useEffect, useRef } from 'react';
+import { Fragment, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import Heading from 'components/01-atoms/heading/heading';
 import Anchor from 'components/01-atoms/anchor/anchor';
@@ -65,39 +65,43 @@ const StartNews = ({ data }) => {
 
 	// RENDER
 	return (
-		<Section className="start-news" ref={ sectionRef }>
-			<div className="start-news__banner banner">
-				<Heading className="banner__heading animation--fade-in" level="h2">Aktuell</Heading>
-				<div className="banner__list list animation--fade-in">
-					{ data.news ? data.news.data.map((item) => (
-						<div className="list__item item" key={ item.id }>
-							<Heading className="item__heading" level="h4">{ item.attributes.heading}</Heading>
-							<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, item.id); } }>Mehr erfahren</Anchor>
-						</div>
-					)) : null}
-				</div>
-			</div>
-			<div className="start-news__announcements announcements">
-				{ data.news ? data.news.data.map((item) => (
-					<div className="announcements__item item" data-id={ item.id } key={ item.id }>
-						<div className="item__inner">
-							<div className="item__content content">
-								<div className="item__content content">
-									<Action className="content__navigator animation--fade-in" symbol="arrow-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
-									{ item.attributes.image.data ? (
-										<Picture className="content__image animation--fade-in" src={ item.attributes.image.data.attributes.url } alt={ item.attributes.heading } width={ item.attributes.image.data.attributes.width } height={ item.attributes.image.data.attributes.height } />
-									) : null }
-									<Heading className="content__heading animation--fade-in" level="h2">{ item.attributes.heading }</Heading>
-									<Markdown className="content__text animation--fade-in">
-										{ item.attributes.text }
-									</Markdown>
+		<Fragment>
+			{ data.news && data.news.data.length ? (
+				<Section className="start-news" ref={ sectionRef }>
+					<div className="start-news__banner banner">
+						<Heading className="banner__heading animation--fade-in" level="h2">Aktuell</Heading>
+						<div className="banner__list list animation--fade-in">
+							{ data.news ? data.news.data.map((item) => (
+								<div className="list__item item" key={ item.id }>
+									<Heading className="item__heading" level="h4">{ item.attributes.heading}</Heading>
+									<Anchor className="item__link" href="/" hasArrow onClick={ (event) => { return showAnnouncement(event, item.id); } }>Mehr erfahren</Anchor>
 								</div>
-							</div>
+							)) : null}
 						</div>
 					</div>
-				)) : null }
-			</div>
-		</Section>
+					<div className="start-news__announcements announcements">
+						{ data.news ? data.news.data.map((item) => (
+							<div className="announcements__item item" data-id={ item.id } key={ item.id }>
+								<div className="item__inner">
+									<div className="item__content content">
+										<div className="item__content content">
+											<Action className="content__navigator animation--fade-in" symbol="arrow-left" onClick={ (event) => { return closeAnnouncement(event); } }>zurück</Action>
+											{ item.attributes.image.data ? (
+												<Picture className="content__image animation--fade-in" src={ item.attributes.image.data.attributes.url } alt={ item.attributes.heading } width={ item.attributes.image.data.attributes.width } height={ item.attributes.image.data.attributes.height } />
+											) : null }
+											<Heading className="content__heading animation--fade-in" level="h2">{ item.attributes.heading }</Heading>
+											<Markdown className="content__text animation--fade-in">
+												{ item.attributes.text }
+											</Markdown>
+										</div>
+									</div>
+								</div>
+							</div>
+						)) : null }
+					</div>
+				</Section>
+			) : null }
+		</Fragment>
 	);
 
 };
