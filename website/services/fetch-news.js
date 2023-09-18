@@ -4,7 +4,7 @@ const fetchNews = async () => {
 		next: { revalidate: 300 },
 		method: 'GET',
 	});
-	const data = await res.json();
+	const { data } = await res.json();
 	return data;
 };
 
