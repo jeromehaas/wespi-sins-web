@@ -33,13 +33,13 @@ const InputTable = ({ className, category, options, control, defaultValue, regis
 						<div className={ `row__input-field input-field ${ formState.errors[category] && formState.errors[category][index] && formState.errors[category][index][option.id] ? 'input-field--error' : null }` } key={ option.id }>
 							<label className="input-field__label" htmlFor={ `${ category }-${ index }-${ option.id }` }>{ `${ option.label }` }</label>
 							<input className="input-field__input" id={ `${ category }-${ index }-${ option.id }` } type={ option.type } placeholder={ option.placeholder } { ...register(`${category}.${index}.${option.id}`, option.validation) } defaultValue={ option.defaultValue } />
-							{ option.info 
-							? ( 
-								<div className="input-filed__info info">
-									<figure className="info__symbol paragraph--small">?</figure>
-									<Paragraph className="info__text paragraph--small">{ option.info }</Paragraph>
-								</div>
-							) : null } 
+							{ option.info
+								? (
+									<div className="input-filed__info info">
+										<figure className="info__symbol paragraph--small">?</figure>
+										<Paragraph className="info__text paragraph--small">{ option.info }</Paragraph>
+									</div>
+								) : null }
 						</div>
 					))}
 					{ fields.length >= 2 ? (

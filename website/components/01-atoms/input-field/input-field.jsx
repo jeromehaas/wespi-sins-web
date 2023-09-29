@@ -11,13 +11,13 @@ const InputField = ({ className = '', category = '', info = '', id = '', label =
 			<label className="input-field__label" htmlFor={ id }>{ `${ label }` }</label>
 			<input className="input-field__input" id={ id } type={ type } placeholder={ placeholder } { ...register(`${ category }.${ id }`, validation) } defaultValue={ defaultValue } />
 			{ error && error[id] && error[id].message ? <Paragraph className="input-field__error paragraph--small">{ error[id].message }</Paragraph> : null }
-			{ info 
-				? ( 
+			{ info
+				? (
 					<div className="input-filed__info info">
 						<figure className="info__symbol paragraph paragraph--small">?</figure>
 						<Paragraph className="info__text paragraph paragraph--small">{ info }</Paragraph>
 					</div>
-				) : null } 
+				) : null }
 		</div>
 	);
 

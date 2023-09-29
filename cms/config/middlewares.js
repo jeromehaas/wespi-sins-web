@@ -8,8 +8,8 @@ module.exports = ({ env }) => [
 				useDefaults: true,
 				directives: {
 					'connect-src': ['\'self\'', 'https:'],
-					'img-src': ['\'self\'', 'data:', 'blob:', 'strapi.io', `${ env('SPACE_BUCKET')}.${ env('SPACE_ENDPOINT')}`],
-					'media-src': ['\'self\'', 'data:', 'blob:', 'strapi.io', `${ env('SPACE_BUCKET')}.${ env('SPACE_ENDPOINT')}`],
+					'img-src': ['\'self\'', 'data:', 'blob:', 'strapi.io', 'market-assets.strapi.io', `${ env('SPACE_BUCKET')}.${ env('SPACE_ENDPOINT')}`],
+					'media-src': ['\'self\'', 'data:', 'blob:', 'strapi.io', 'market-assets.strapi.io', `${ env('SPACE_BUCKET')}.${ env('SPACE_ENDPOINT')}`],
 					upgradeInsecureRequests: null,
 				},
 			},
