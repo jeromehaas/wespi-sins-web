@@ -121,6 +121,15 @@ h1, h2, h3, h4, p, a, li, td, label, input {
 
 	}
 
+	&__info, .info {
+
+		&__symbol {
+			font-size: 6px !important;
+			line-height: 1;
+		}
+
+	}
+
 }
 
 .text-area {

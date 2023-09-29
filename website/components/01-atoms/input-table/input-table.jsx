@@ -2,6 +2,7 @@
 import Action from 'components/01-atoms/action/action';
 import PropTypes from 'prop-types';
 import { useFieldArray } from 'react-hook-form';
+import Paragraph from '../paragraph/paragraph';
 
 // COMPONENT
 const InputTable = ({ className, category, options, control, defaultValue, register, formState, labels }) => {
@@ -29,9 +30,16 @@ const InputTable = ({ className, category, options, control, defaultValue, regis
 			{ fields.map((field, index) => (
 				<div className="input-table__row row" key={ field.id }>
 					{ options.map((option) => (
-						<div className={ `row__input-field ${ formState.errors[category] && formState.errors[category][index] && formState.errors[category][index][option.id] ? 'input-field--error' : null }` } key={ option.id }>
+						<div className={ `row__input-field input-field ${ formState.errors[category] && formState.errors[category][index] && formState.errors[category][index][option.id] ? 'input-field--error' : null }` } key={ option.id }>
 							<label className="input-field__label" htmlFor={ `${ category }-${ index }-${ option.id }` }>{ `${ option.label }` }</label>
 							<input className="input-field__input" id={ `${ category }-${ index }-${ option.id }` } type={ option.type } placeholder={ option.placeholder } { ...register(`${category}.${index}.${option.id}`, option.validation) } defaultValue={ option.defaultValue } />
+							{ option.info 
+							? ( 
+								<div className="input-filed__info info">
+									<figure className="info__symbol paragraph--small">?</figure>
+									<Paragraph className="info__text paragraph--small">{ option.info }</Paragraph>
+								</div>
+							) : null } 
 						</div>
 					))}
 					{ fields.length >= 2 ? (
@@ -54,6 +62,7 @@ InputTable.propTypes = {
 	options: PropTypes.arrayOf(PropTypes.shape({
 		id: PropTypes.string.isRequired,
 		label: PropTypes.string.isRequired,
+		info: PropTypes.string,
 		placeholder: PropTypes.string.isRequired,
 		defautlValue: PropTypes.string,
 		validation: PropTypes.shape({

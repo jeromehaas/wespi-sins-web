@@ -3,7 +3,7 @@ import Paragraph from 'components/01-atoms/paragraph/paragraph';
 import PropTypes from 'prop-types';
 
 // COMPONENT
-const InputField = ({ className = '', category = '', id = '', label = '', placeholder = '', type = 'text', register = null, validation = null, error = null, defaultValue = null }) => {
+const InputField = ({ className = '', category = '', info = '', id = '', label = '', placeholder = '', type = 'text', register = null, validation = null, error = null, defaultValue = null }) => {
 
 	// RENDER
 	return (
@@ -11,6 +11,13 @@ const InputField = ({ className = '', category = '', id = '', label = '', placeh
 			<label className="input-field__label" htmlFor={ id }>{ `${ label }` }</label>
 			<input className="input-field__input" id={ id } type={ type } placeholder={ placeholder } { ...register(`${ category }.${ id }`, validation) } defaultValue={ defaultValue } />
 			{ error && error[id] && error[id].message ? <Paragraph className="input-field__error paragraph--small">{ error[id].message }</Paragraph> : null }
+			{ info 
+				? ( 
+					<div className="input-filed__info info">
+						<figure className="info__symbol paragraph paragraph--small">?</figure>
+						<Paragraph className="info__text paragraph paragraph--small">{ info }</Paragraph>
+					</div>
+				) : null } 
 		</div>
 	);
 
@@ -20,6 +27,7 @@ const InputField = ({ className = '', category = '', id = '', label = '', placeh
 InputField.propTypes = {
 	className: PropTypes.string,
 	id: PropTypes.string.isRequired,
+	info: PropTypes.string,
 	category: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
 	label: PropTypes.string.isRequired,
