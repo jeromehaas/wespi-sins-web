@@ -73,7 +73,7 @@ module.exports = `
                                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                                          <tbody>
                                                             <tr>
-                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-development.fra1.digitaloceanspaces.com/logo_wespi_sins_ab3302c8aa.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
+                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-production.fra1.digitaloceanspaces.com/logo_wespi_sins_5153d167b3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
@@ -171,7 +171,7 @@ module.exports = `
                                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                                          <tr>
                                                             <td align="center" bgcolor="#000000" role="presentation" style="border:none;border-radius:0;cursor:auto;padding:10px 25px;background:#000000;" valign="middle">
-                                                               <p style="background:#000000;color:#FFFFFF;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">zur Bestellung</p>
+																															 <a href="https://cms.wespi-sins.ch/admin/content-manager/collectionType/api::order.order" style="background:#000000;color:#FFFFFF;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">zur Bestellung</a>
                                                             </td>
                                                          </tr>
                                                       </table>

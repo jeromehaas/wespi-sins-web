@@ -72,7 +72,7 @@ module.exports = `
                                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                                          <tbody>
                                                             <tr>
-                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-development.fra1.digitaloceanspaces.com/logo_wespi_sins_ab3302c8aa.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
+                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-production.fra1.digitaloceanspaces.com/logo_wespi_sins_5153d167b3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
@@ -154,31 +154,31 @@ module.exports = `
                                                    <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                                       <table cellpadding="0" cellspacing="0" width="100%" border="0" style="cellspacing:0;color:#000000;font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;">
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Firma</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Firma:</td>
                                                             <td style="padding: 0;"><%= data.message.company %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Vorname</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Vorname:</td>
                                                             <td style="padding: 0;"><%= data.message.firstname %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachname</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Nachname:</td>
                                                             <td style="padding: 0;"><%= data.message.lastname %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">E-Mail-Adresse</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">E-Mail-Adresse:</td>
                                                             <td style="padding: 0;"><%= data.message.email %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Telefonnummer</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Telefonnummer:</td>
                                                             <td style="padding: 0;"><%= data.message.phone %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Betreff</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Betreff:</td>
                                                             <td style="padding: 0;"><%= data.message.subject %></td>
                                                          </tr>
                                                          <tr>
-                                                            <td style="padding: 0 16px 0 0;" width="120">Nachricht</td>
+                                                            <td style="padding: 0 16px 0 0;" width="120">Nachricht:</td>
                                                             <td style="padding: 0;"><%= data.message.content %></td>
                                                          </tr>
                                                       </table>

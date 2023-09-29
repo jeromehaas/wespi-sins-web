@@ -1,6 +1,6 @@
 module.exports = `
 
-Guten Tag <%= user.firstname %> <%= user.lastname %>.
+Guten Tag <%= data.message.firstname %> <%= data.message.lastname %>.
 
 Vielen Dank für Ihre Nachricht!
 Wir werden uns so bald wie möglich mit einer Antwort bei Ihnen melden.

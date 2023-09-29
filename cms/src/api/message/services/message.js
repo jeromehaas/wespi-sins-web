@@ -27,8 +27,7 @@ module.exports = createCoreService('api::message.message', ({ strapi }) => ({
 			// EMAIL VARIABLES
 			const emailVariables = {
 				data: {
-					firstname: message.firstname,
-					lastname: message.lastname,
+					message: message,
 				},
 			};
 

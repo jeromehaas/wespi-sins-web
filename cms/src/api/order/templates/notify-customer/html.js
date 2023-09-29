@@ -70,7 +70,7 @@ module.exports = `
                                                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                                          <tbody>
                                                             <tr>
-                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-development.fra1.digitaloceanspaces.com/logo_wespi_sins_ab3302c8aa.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
+                                                               <td style="width:160px;"><img alt="Papeterie- und Bluemeparadies Sins" height="auto" src="https://wespi-sins-web-production.fra1.digitaloceanspaces.com/logo_wespi_sins_5153d167b3.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;" width="160"></td>
                                                             </tr>
                                                          </tbody>
                                                       </table>
@@ -125,7 +125,7 @@ module.exports = `
                                                 </tr>
                                                 <tr>
                                                    <td align="left" style="font-size:0px;padding:0 24px;word-break:break-word;">
-                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Guten Tag<%= data.address.firstname %> <%= data.address.lastname %>.</div>
+                                                      <div style="font-family:Arial, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">Guten Tag <%= data.address.firstname %> <%= data.address.lastname %>.</div>
                                                    </td>
                                                 </tr>
                                                 <tr>

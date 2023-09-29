@@ -1,7 +1,7 @@
 // EXPORTS
 module.exports = `
 
-Guten Tag <%= user.firstname %> <%= user.lastname %>.
+Guten Tag <%= data.address.firstname %> <%= data.address.lastname %>.
 
 Vielen Dank für Ihre Bestellung!
 Wir werden ihre Bestellung gerne innerhalb den nächsten fünf Arbeitstagen bearbeiten. Sie werden von uns benachrichtigt, sobald Sie die Bestellung bei uns in Sins abholen können. 
