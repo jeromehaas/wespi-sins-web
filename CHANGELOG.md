@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.5] - 29.09.2023
+- Fix: remove beige background for pictures
+- Setup: plausible provider
+- Fix: allow scroll in order forms
+
 ## [v0.1.4] - 29.09.2023
 - Refactor: set correct link for logo in email templates
 - Fix: remove overflow property form info-text in input-field
