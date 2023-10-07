@@ -54,11 +54,12 @@
 			right: 0;
 			background-color: $black-100;
 			color: $white-100;
-			max-width: 240px;
+			// max-width: 240px;
 			z-index: 25;
 			display: none;
 			padding: 8px;
 			border-radius: 4px;
+			min-width: 240px;
 		}
 
 		&:hover {
@@ -79,6 +80,20 @@
 
 		& .input-field__input {
 			border-bottom: 2px solid $red-80;
+		}
+
+	}
+
+	@media (max-width: 750px) {
+
+		&__info, .info {
+
+			&__text {
+				max-width: 240px;
+				width: 100%;
+				min-width: unset;
+			}
+
 		}
 
 	}

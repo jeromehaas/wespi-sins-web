@@ -57,10 +57,10 @@ const OrderPositionsForm = ({ className }) => {
 					defaultValues={ { 'description': '', 'manufacturer': '', 'serial': '', 'quantity': '' } }
 					labels={ { add: 'Weitere Artikel hinzufügen', remove: 'Artikel entfernen' } }
 					options={ [
-						{ id: 'description', label: 'Artikelbezeichnung', placeholder: 'Artikelbezeichnung', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Artikelbezeichnung an' } }, type: 'text' },
-						{ id: 'manufacturer', label: 'Artikelhersteller', placeholder: 'Artikelhersteller', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie den Artikelhersteller an' } }, type: 'text' },
-						{ id: 'serial', label: 'Bestellnummer', info: 'Die Bestellnummer finden Sie im Office World Katalog oder im Web unter der URL «www.officeworld.ch».', placeholder: 'Bestellnummer', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie die Bestellnummer an' } }, type: 'text' },
-						{ id: 'quantity', label: 'Anzahl', placeholder: '1', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Anzahl an' } }, type: 'text' },
+						{ id: 'description', label: 'Artikelbezeichnung*', placeholder: 'Artikelbezeichnung', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Artikelbezeichnung an' } }, type: 'text' },
+						{ id: 'manufacturer', label: 'Artikelhersteller*', placeholder: 'Artikelhersteller', defaultValue: '', validation: { 	required: { value: true, message: 'Bitte geben Sie den Artikelhersteller an' } }, type: 'text' },
+						{ id: 'serial', label: 'Bestellnummer', info: 'Die Bestellnummer finden Sie im Katalog von Waser. Wenn Sie über keinen Katalog verfügen, können Sie sich gerne einen über unser Kontakt-Formular bestellen.', placeholder: 'Bestellnummer', defaultValue: '', validation: { 	required: { value: false } }, type: 'text' },
+						{ id: 'quantity', label: 'Anzahl*', placeholder: '1', defaultValue: '', validation: { required: { value: true, message: 'Bitte geben Sie die Anzahl an' } }, type: 'number' },
 					] }
 				/>
 			</div>
