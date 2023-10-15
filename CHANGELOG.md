@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.6] - 15.10.2023
+- Fix: typo in imprint list
+
 ## [v0.1.5] - 29.09.2023
 - Fix: remove beige background for pictures
 - Setup: plausible provider
