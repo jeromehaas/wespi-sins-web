@@ -51,7 +51,7 @@ const ImprintResponsiibilities = () => {
 			<div className="imprint-responsibilities__contributor contributor animation--fade-in">
 				<Paragraph className="contributor__heading paragraph--bold">Webkonzeption und Gestaltung</Paragraph>
 				<Paragraph className="contributor__item">heller grafik</Paragraph>
-				<Paragraph className="contributor__item">Isabel Heller grafik</Paragraph>
+				<Paragraph className="contributor__item">Isabel Heller</Paragraph>
 				<Link className="contributor__item item" href="https://hellergrafik.ch" target="_blank">
 					<Paragraph className="item__label">hellergrafik.ch</Paragraph>
 				</Link>
