@@ -46,7 +46,7 @@ const StartFlowersOffer = ({ data }) => {
 			<div className="start-flowers⁻offer__impressions impressions">
 				<div className="impressions__item item animation--fade-in">
 					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-house-creations">
-						{ data.flowers[0] && data.flowers[0].attributes.cover && <Picture className="item__image" src={ data.flowers[0].attributes.cover.data.attributes.url } /> }
+						{ data.flowers[1] && data.flowers[1].attributes.cover && <Picture className="item__image" src={ data.flowers[1].attributes.cover.data.attributes.url } /> }
 					</Link>
 					<div className="item__heading-wrapper">
 						<Heading className="item__heading" level="h3">Hauskreationen</Heading>
@@ -59,7 +59,7 @@ const StartFlowersOffer = ({ data }) => {
 						<Anchor className="item__link" href="/flowers#flowers-teaser-seasonal" hasArrow>Mehr erfahren</Anchor>
 					</div>
 					<Link className="item__image-wrapper" href="/flowers#flowers-teaser-seasonal">
-						{ data.flowers[1] && data.flowers[1].attributes.cover.data && <Picture className="item__image" src={ data.flowers[1].attributes.cover.data.attributes.url } /> }
+						{ data.flowers[0] && data.flowers[0].attributes.cover.data && <Picture className="item__image" src={ data.flowers[0].attributes.cover.data.attributes.url } /> }
 					</Link>
 				</div>
 				<div className="impressions__item item animation--fade-in">
