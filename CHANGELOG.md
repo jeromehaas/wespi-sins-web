@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [v0.1.7] - 20.07.2024
+- Fix: for flowers offer
+
 ## [v0.1.6] - 15.10.2023
 - Fix: typo in imprint list
 
